@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://savicmarko690:CrungPLL6zJuaqRQ@cluster0.geeztze.mongodb.net/?retryWrites=true&w=majority
+      database: accommodation-db
+  mongodb:
+    auto-index-creation: true
