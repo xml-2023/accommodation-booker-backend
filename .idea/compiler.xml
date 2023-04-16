@@ -7,6 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="discovery-server" />
         <module name="account-service" />
         <module name="accommodation-service" />
         <module name="reservation-service" />
@@ -21,6 +23,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="accommodation-service" options="-parameters" />
       <module name="account-service" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="discovery-server" options="-parameters" />
       <module name="reservation-service" options="-parameters" />
     </option>
   </component>
