@@ -5,11 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("photos")
+@Document("images")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Photo {
+public class Image {
     private Long id;
     private String path;
 }

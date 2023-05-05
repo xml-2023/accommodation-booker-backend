@@ -1,16 +1,17 @@
 package com.kncm.accommodationservice.controller;
 
 import com.kncm.accommodationservice.SequenceGenerator;
-import com.kncm.accommodationservice.dto.AccommodationTestDTO;
+import com.kncm.accommodationservice.dto.CreateAccommodationRequest;
+import com.kncm.accommodationservice.handler.exceptions.CreateAccommodationException;
 import com.kncm.accommodationservice.model.Accommodation;
+import com.kncm.accommodationservice.model.Address;
 import com.kncm.accommodationservice.service.AccommodationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
 
 @RestController
 @RequestMapping("/api/accommodation")
@@ -20,19 +21,39 @@ public class AccommodationController {
     private final SequenceGenerator generator;
 
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody AccommodationTestDTO dto){
+    public ResponseEntity<Void> create(@RequestBody CreateAccommodationRequest dto){
         Accommodation accommodation = new Accommodation();
         Map(dto, accommodation);
         accommodation.setId(generator.getSequenceNumber(Accommodation.SEQUENCE_NAME));
-        accommodationService.create(accommodation);
+        try{
+            accommodationService.create(accommodation);
+        }
+        catch (CreateAccommodationException e){
+            throw new CreateAccommodationException();
+        }
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    private void Map(AccommodationTestDTO dto, Accommodation accommodation){
+    @GetMapping
+    public ResponseEntity<Collection<Accommodation>> search(
+            @RequestParam String location,
+            @RequestParam Integer numOfGuests,
+            @RequestParam String startDate,
+            @RequestParam String endDate){
+        return new ResponseEntity<>(accommodationService.search(location, numOfGuests, startDate, endDate), HttpStatus.OK);
+    }
+
+    private void Map(CreateAccommodationRequest dto, Accommodation accommodation){
         accommodation.setName(dto.getName());
         accommodation.setDescription(dto.getDescription());
         accommodation.setAutomaticConfirmation(dto.isAutomaticConfirmation());
         accommodation.setMinGuests(dto.getMinGuests());
         accommodation.setMaxGuests(dto.getMaxGuests());
+        Address address = new Address();
+        address.setCountry(dto.getCountry());
+        address.setCity(dto.getCity());
+        address.setStreet(dto.getStreet());
+        address.setNumber(dto.getNumber());
+        accommodation.setAddress(address);
     }
 }
