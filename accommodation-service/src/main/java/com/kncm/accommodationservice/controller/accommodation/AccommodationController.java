@@ -1,7 +1,7 @@
 package com.kncm.accommodationservice.controller.accommodation;
 
 import com.kncm.accommodationservice.SequenceGenerator;
-import com.kncm.accommodationservice.dto.CreateAccommodationRequest;
+import com.kncm.accommodationservice.dto.accommodation.CreateAccommodationRequest;
 import com.kncm.accommodationservice.handler.exceptions.CreateAccommodationException;
 import com.kncm.accommodationservice.model.Accommodation;
 import com.kncm.accommodationservice.model.Address;
@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
@@ -25,6 +26,7 @@ public class AccommodationController {
         Accommodation accommodation = new Accommodation();
         Map(dto, accommodation);
         accommodation.setId(generator.getSequenceNumber(Accommodation.SEQUENCE_NAME));
+        accommodation.setAvailableSlots(new ArrayList<>());
         accommodation.setImagesPath("accommodation-service/src/main/resources/images/" + accommodation.getName());
         try{
             accommodationService.create(accommodation);

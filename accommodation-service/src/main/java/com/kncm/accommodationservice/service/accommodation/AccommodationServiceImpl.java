@@ -1,7 +1,7 @@
 package com.kncm.accommodationservice.service.accommodation;
 
 import com.kncm.accommodationservice.model.Accommodation;
-import com.kncm.accommodationservice.repository.AccommodationRepository;
+import com.kncm.accommodationservice.repository.accommodation.AccommodationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,6 +22,10 @@ public class AccommodationServiceImpl implements AccommodationService{
     public void create(Accommodation accommodation) {
         accommodationRepository.save(accommodation);
     }
+    @Override
+    public void update(Accommodation accommodation) { accommodationRepository.save(accommodation); }
+    @Override
+    public Accommodation findById(Long id){ return accommodationRepository.findById(id).orElse(null); }
 
     @Override
     public Collection<Accommodation> search(String location, Integer numOfGuests, String startDate, String endDate) {

@@ -1,4 +1,4 @@
-package com.kncm.accommodationservice.dto;
+package com.kncm.accommodationservice.dto.accommodation;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

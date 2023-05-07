@@ -21,7 +21,7 @@ public class ImageController {
     private final ImageService imageService;
 
     @PostMapping("/upload")
-    public ResponseEntity<String> uploadImage(@RequestParam("file") List<MultipartFile> files, @RequestParam("name") String name) {
+    public ResponseEntity<String> uploadImages(@RequestParam("file") List<MultipartFile> files, @RequestParam("name") String name) {
         List<Image> images = new ArrayList<>();
         try {
             for (MultipartFile file : files) {
@@ -34,10 +34,23 @@ public class ImageController {
 
             imageService.save(images, name);
 
-            return ResponseEntity.ok().body("Image uploaded successfully!");
+            return ResponseEntity.ok().body("Images uploaded successfully!");
 
         } catch (IOException e) {
             throw new RuntimeException("Failed to upload image", e);
         }
     }
+
+    //read images
+//    @GetMapping("/images")
+//    public List<String> getImageUrls() throws IOException {
+//        Resource[] resources = new PathMatchingResourcePatternResolver().getResources("classpath*:images/*.*");
+//        List<String> urls = new ArrayList<>();
+//        for (Resource resource : resources) {
+//            String url = "data:" + Files.probeContentType(resource.getFile().toPath()) + ";base64," +
+//                    Base64.getEncoder().encodeToString(IOUtils.toByteArray(resource.getInputStream()));
+//            urls.add(url);
+//        }
+//        return urls;
+//    }
 }
