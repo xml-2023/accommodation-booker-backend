@@ -1,13 +1,18 @@
-package com.kncm.accommodationservice.service;
+package com.kncm.accommodationservice.service.accommodation;
 
+import com.kncm.accommodationservice.handler.exceptions.InvalidDateFormatException;
 import com.kncm.accommodationservice.model.Accommodation;
-import com.kncm.accommodationservice.repository.AccommodationRepository;
+import com.kncm.accommodationservice.repository.accommodation.AccommodationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -21,13 +26,26 @@ public class AccommodationServiceImpl implements AccommodationService{
     public void create(Accommodation accommodation) {
         accommodationRepository.save(accommodation);
     }
+    @Override
+    public void update(Accommodation accommodation) { accommodationRepository.save(accommodation); }
+    @Override
+    public Accommodation findById(Long id){ return accommodationRepository.findById(id).orElse(null); }
 
     @Override
     public Collection<Accommodation> search(String location, Integer numOfGuests, String startDate, String endDate) {
         var query = new Query();
         final List<Criteria> criteria = new ArrayList<>();
-//        LocalDateTime start = LocalDateTime.parse(startDate);
-//        LocalDateTime end = LocalDateTime.parse(endDate);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime start;
+        LocalDateTime end;
+        try{
+            start = LocalDate.parse(startDate, formatter).atStartOfDay();
+            end = LocalDate.parse(endDate, formatter).atStartOfDay();
+        }
+        catch (DateTimeParseException e){
+            e.printStackTrace();
+            throw new InvalidDateFormatException();
+        }
         List<Accommodation> accommodations = new ArrayList<>();
 
         if (location != null && !location.isBlank())
@@ -38,7 +56,11 @@ public class AccommodationServiceImpl implements AccommodationService{
         if (numOfGuests != null && numOfGuests > 0)
             criteria.add(Criteria.where("minGuests").lte(numOfGuests).andOperator(Criteria.where("maxGuests").gte(numOfGuests)));
 
-        if(criteria.size() == 2){
+        criteria.add(Criteria.where("availableSlots").elemMatch(
+                Criteria.where("availableFrom").lte(start)
+                        .andOperator(Criteria.where("availableTo").gte(end))));
+
+        if(criteria.size() == 3){
             query.addCriteria(new Criteria().andOperator(criteria.toArray(new Criteria[0])));
             accommodations = mongoTemplate.find(query, Accommodation.class, "accommodations");
         }
