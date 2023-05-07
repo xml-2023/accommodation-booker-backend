@@ -1,4 +1,4 @@
-package com.kncm.accommodationservice.service;
+package com.kncm.accommodationservice.service.accommodation;
 
 import com.kncm.accommodationservice.model.Accommodation;
 

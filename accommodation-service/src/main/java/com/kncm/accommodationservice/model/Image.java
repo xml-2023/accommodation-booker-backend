@@ -10,6 +10,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Image {
-    private Long id;
-    private String path;
+//    private Long id;
+//    private String path;
+    private String name;
+    private String contentType;
+    private byte[] data;
 }
