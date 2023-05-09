@@ -20,4 +20,5 @@ public class AccommodationAvailability {
     private Long id;
     private LocalDateTime availableFrom;
     private LocalDateTime availableTo;
+    private double priceInEuros;
 }

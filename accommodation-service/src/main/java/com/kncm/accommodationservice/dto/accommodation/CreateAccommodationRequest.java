@@ -17,4 +17,5 @@ public class CreateAccommodationRequest {
     private String street;
     private String number;
     private boolean isAutomaticConfirmation;
+    private String priceType;
 }

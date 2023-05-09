@@ -16,4 +16,8 @@ public class SearchAccommodationResponse {
     private String city;
     private String street;
     private String number;
+    private double totalPrice;
+    private double unitPrice;
+    private String startDate;
+    private String endDate;
 }

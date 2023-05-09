@@ -25,6 +25,6 @@ public class Accommodation {
     private boolean isAutomaticConfirmation;
     private Address address;
     private String imagesPath;
-    private ArrayList<AccommodationPrice> prices;
+    private PriceType priceType;
     private ArrayList<AccommodationAvailability> availableSlots;
 }
