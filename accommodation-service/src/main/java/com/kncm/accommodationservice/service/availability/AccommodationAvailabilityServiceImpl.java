@@ -13,4 +13,10 @@ public class AccommodationAvailabilityServiceImpl implements AccommodationAvaila
     public void create(AccommodationAvailability availability) {
         repository.save(availability);
     }
+
+    @Override
+    public void update(AccommodationAvailability availability) { repository.save(availability); }
+
+    @Override
+    public AccommodationAvailability findById(Long id) { return repository.findById(id).orElse(null); }
 }

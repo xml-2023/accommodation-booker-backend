@@ -9,4 +9,5 @@ public class CreateAccommodationAvailabilityRequest {
     private String from;
     private String to;
     private Long accommodationId;
+    private double priceInEuros;
 }

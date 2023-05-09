@@ -1,9 +1,6 @@
 package com.kncm.accommodationservice.handler;
 
-import com.kncm.accommodationservice.handler.exceptions.AccommodationIsNullException;
-import com.kncm.accommodationservice.handler.exceptions.CreateAccommodationException;
-import com.kncm.accommodationservice.handler.exceptions.CreateAvailabilityException;
-import com.kncm.accommodationservice.handler.exceptions.InvalidDateFormatException;
+import com.kncm.accommodationservice.handler.exceptions.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -45,6 +42,15 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     public ErrorResponse handleAccommodationIsNullException(AccommodationIsNullException ex){
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Accommodation does not exist!");
+        return errorResponse;
+    }
+
+    @ExceptionHandler(AvailabilityIsNullException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public ErrorResponse handleAvailabilityIsNullException(AvailabilityIsNullException ex){
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setMessage("Available slot does not exist!");
         return errorResponse;
     }
 }

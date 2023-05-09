@@ -2,9 +2,11 @@ package com.kncm.accommodationservice.controller.accommodation;
 
 import com.kncm.accommodationservice.SequenceGenerator;
 import com.kncm.accommodationservice.dto.accommodation.CreateAccommodationRequest;
+import com.kncm.accommodationservice.dto.accommodation.SearchAccommodationResponse;
 import com.kncm.accommodationservice.handler.exceptions.CreateAccommodationException;
 import com.kncm.accommodationservice.model.Accommodation;
 import com.kncm.accommodationservice.model.Address;
+import com.kncm.accommodationservice.model.PriceType;
 import com.kncm.accommodationservice.service.accommodation.AccommodationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -38,7 +40,7 @@ public class AccommodationController {
     }
 
     @GetMapping
-    public ResponseEntity<Collection<Accommodation>> search(
+    public ResponseEntity<Collection<SearchAccommodationResponse>> search(
             @RequestParam String location,
             @RequestParam Integer numOfGuests,
             @RequestParam String startDate,
@@ -58,5 +60,6 @@ public class AccommodationController {
         address.setStreet(dto.getStreet());
         address.setNumber(dto.getNumber());
         accommodation.setAddress(address);
+        accommodation.setPriceType(PriceType.valueOf(dto.getPriceType()));
     }
 }
