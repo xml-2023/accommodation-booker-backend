@@ -25,5 +25,10 @@ public class UserServiceImpl implements UserService {
         return repository.findOne(id);
     }
 
+    @Override
+    public void delete(User user) {
+        repository.delete(user);
+    }
+
 
 }

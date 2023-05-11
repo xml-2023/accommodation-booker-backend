@@ -65,6 +65,22 @@ public class AccountController {
         }
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        User user = service.find(id);
+        if (user != null) {
+            //if (grpc calls) {
+                service.delete(user);
+                return new ResponseEntity<>(HttpStatus.OK);
+            //} else {
+            //      throw ../
+            // }
+        } else {
+            throw new UserWithPassedIdDoesNotExistException();
+        }
+    }
+
+
     private void Map(UserDetailsRequest dto, User user){
         user.setUsername(dto.getUsername());
         user.setPassword(dto.getPassword());

@@ -8,4 +8,6 @@ public interface UserService {
     boolean exists(String username);
 
     User find(Long id);
+
+    void delete(User user);
 }
