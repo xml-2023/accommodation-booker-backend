@@ -4,9 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-public class CreateAccommodationException extends RuntimeException{
+public class CreateAccommodationException extends RuntimeException {
 
-    public CreateAccommodationException(){
+    public CreateAccommodationException() {
         super();
     }
 }

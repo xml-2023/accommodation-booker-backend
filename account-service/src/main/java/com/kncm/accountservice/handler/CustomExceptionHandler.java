@@ -14,7 +14,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(UsernameIsNotUniqueException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleUsernameIsNotUniqueException(UsernameIsNotUniqueException ex){
+    public ErrorResponse handleUsernameIsNotUniqueException(UsernameIsNotUniqueException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Username must be unique");
         return errorResponse;
@@ -23,7 +23,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(UserWithPassedIdDoesNotExistException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleUserWithPassedIdDoesNotExistException(UserWithPassedIdDoesNotExistException ex){
+    public ErrorResponse handleUserWithPassedIdDoesNotExistException(UserWithPassedIdDoesNotExistException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("User with passed id does not exist");
         return errorResponse;
@@ -32,7 +32,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(UserDetailsRequestIsNotValidException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleUserDetailsRequestIsNotValidException(UserDetailsRequestIsNotValidException ex){
+    public ErrorResponse handleUserDetailsRequestIsNotValidException(UserDetailsRequestIsNotValidException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("All attributes must have value");
         return errorResponse;

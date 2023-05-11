@@ -23,17 +23,24 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class AccommodationServiceImpl implements AccommodationService{
+public class AccommodationServiceImpl implements AccommodationService {
     private final AccommodationRepository accommodationRepository;
     private final MongoTemplate mongoTemplate;
+
     @Override
     public void create(Accommodation accommodation) {
         accommodationRepository.save(accommodation);
     }
+
     @Override
-    public void update(Accommodation accommodation) { accommodationRepository.save(accommodation); }
+    public void update(Accommodation accommodation) {
+        accommodationRepository.save(accommodation);
+    }
+
     @Override
-    public Accommodation findById(Long id){ return accommodationRepository.findById(id).orElse(null); }
+    public Accommodation findById(Long id) {
+        return accommodationRepository.findById(id).orElse(null);
+    }
 
     @Override
     public Collection<SearchAccommodationResponse> search(String location, Integer numOfGuests, String startDate, String endDate) {
@@ -42,11 +49,10 @@ public class AccommodationServiceImpl implements AccommodationService{
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDateTime start;
         LocalDateTime end;
-        try{
+        try {
             start = LocalDate.parse(startDate, formatter).atStartOfDay();
             end = LocalDate.parse(endDate, formatter).atStartOfDay();
-        }
-        catch (DateTimeParseException e){
+        } catch (DateTimeParseException e) {
             e.printStackTrace();
             throw new InvalidDateFormatException();
         }
@@ -64,7 +70,7 @@ public class AccommodationServiceImpl implements AccommodationService{
                 Criteria.where("availableFrom").lte(start)
                         .andOperator(Criteria.where("availableTo").gte(end))));
 
-        if(criteria.size() == 3){
+        if (criteria.size() == 3) {
             query.addCriteria(new Criteria().andOperator(criteria.toArray(new Criteria[0])));
             accommodations = mongoTemplate.find(query, Accommodation.class, "accommodations");
         }
@@ -72,19 +78,18 @@ public class AccommodationServiceImpl implements AccommodationService{
         //potrebno konvertovati listu accommodation objekata u searchaccommodationDto objekte jer se oni prikazuju
         // i prikazati odgovarajucu cenu
         ArrayList<SearchAccommodationResponse> responses = new ArrayList<>();
-        for(Accommodation accommodation : accommodations){
+        for (Accommodation accommodation : accommodations) {
             SearchAccommodationResponse response = new SearchAccommodationResponse();
             Map(accommodation, response);
             response.setStartDate(startDate);
             response.setEndDate(endDate);
 
-            for(AccommodationAvailability availability : accommodation.getAvailableSlots()){
-                if((start.isEqual(availability.getAvailableFrom()) || start.isAfter(availability.getAvailableFrom())
-                && (end.isEqual(availability.getAvailableTo()) || end.isBefore(availability.getAvailableTo())))){
-                    if(accommodation.getPriceType() == PriceType.PER_PERSON){
+            for (AccommodationAvailability availability : accommodation.getAvailableSlots()) {
+                if ((start.isEqual(availability.getAvailableFrom()) || start.isAfter(availability.getAvailableFrom())
+                        && (end.isEqual(availability.getAvailableTo()) || end.isBefore(availability.getAvailableTo())))) {
+                    if (accommodation.getPriceType() == PriceType.PER_PERSON) {
                         response.setTotalPrice(availability.getPriceInEuros() * Duration.between(start, end).toDays() * numOfGuests);
-                    }
-                    else {
+                    } else {
                         response.setTotalPrice(availability.getPriceInEuros() * Duration.between(start, end).toDays());
                     }
                     response.setUnitPrice(availability.getPriceInEuros());
@@ -95,7 +100,7 @@ public class AccommodationServiceImpl implements AccommodationService{
         return responses;
     }
 
-    private void Map(Accommodation accommodation, SearchAccommodationResponse response){
+    private void Map(Accommodation accommodation, SearchAccommodationResponse response) {
         response.setName(accommodation.getName());
         response.setDescription(accommodation.getDescription());
         response.setCity(accommodation.getAddress().getCity());

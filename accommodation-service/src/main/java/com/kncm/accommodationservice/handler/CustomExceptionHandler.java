@@ -12,7 +12,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(CreateAccommodationException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleCreateAccommodationException(CreateAccommodationException ex){
+    public ErrorResponse handleCreateAccommodationException(CreateAccommodationException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Error while creating accommodation!");
         return errorResponse;
@@ -21,7 +21,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(InvalidDateFormatException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleInvalidDateFormatException(InvalidDateFormatException ex){
+    public ErrorResponse handleInvalidDateFormatException(InvalidDateFormatException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Cannot parse date!");
         return errorResponse;
@@ -30,7 +30,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(CreateAvailabilityException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleCreateAvailabilityException(CreateAvailabilityException ex){
+    public ErrorResponse handleCreateAvailabilityException(CreateAvailabilityException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Error while creating accommodation availability slot");
         return errorResponse;
@@ -39,7 +39,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(AccommodationIsNullException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleAccommodationIsNullException(AccommodationIsNullException ex){
+    public ErrorResponse handleAccommodationIsNullException(AccommodationIsNullException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Accommodation does not exist!");
         return errorResponse;
@@ -48,7 +48,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(AvailabilityIsNullException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public ErrorResponse handleAvailabilityIsNullException(AvailabilityIsNullException ex){
+    public ErrorResponse handleAvailabilityIsNullException(AvailabilityIsNullException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Available slot does not exist!");
         return errorResponse;

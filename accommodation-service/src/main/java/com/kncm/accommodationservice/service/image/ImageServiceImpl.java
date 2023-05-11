@@ -16,7 +16,7 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public void save(List<Image> images, String name) {
-        for(Image image : images) {
+        for (Image image : images) {
             try {
                 // Save the image to the upload directory
                 Path uploadPath = Paths.get(UPLOAD_DIR + "/" + name);

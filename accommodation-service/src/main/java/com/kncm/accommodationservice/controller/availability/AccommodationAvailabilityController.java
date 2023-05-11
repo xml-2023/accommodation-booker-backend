@@ -31,20 +31,19 @@ public class AccommodationAvailabilityController {
     private final AccommodationService accommodationService;
 
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody CreateAccommodationAvailabilityRequest dto){
+    public ResponseEntity<Void> create(@RequestBody CreateAccommodationAvailabilityRequest dto) {
         AccommodationAvailability availability = new AccommodationAvailability();
         Map(dto, availability);
         availability.setId(generator.getSequenceNumber(AccommodationAvailability.SEQUENCE_NAME));
         Accommodation accommodation = accommodationService.findById(dto.getAccommodationId());
-        if(accommodation == null){
+        if (accommodation == null) {
             throw new AccommodationIsNullException();
         }
-        try{
+        try {
             accommodationAvailabilityService.create(availability);
             accommodation.getAvailableSlots().add(availability);
             accommodationService.update(accommodation);
-        }
-        catch (CreateAvailabilityException e){
+        } catch (CreateAvailabilityException e) {
             throw new CreateAvailabilityException();
         }
 
@@ -52,20 +51,20 @@ public class AccommodationAvailabilityController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> update(@RequestBody UpdateAccommodationAvailabilityRequest request){
+    public ResponseEntity<Void> update(@RequestBody UpdateAccommodationAvailabilityRequest request) {
         AccommodationAvailability toUpdate = accommodationAvailabilityService.findById(request.getId());
-        if(toUpdate == null){
+        if (toUpdate == null) {
             throw new AvailabilityIsNullException();
         }
 
         MapUpdate(toUpdate, request);
         accommodationAvailabilityService.update(toUpdate);
         Accommodation accommodation = accommodationService.findById(request.getAccommodationId());
-        if (accommodation == null){
+        if (accommodation == null) {
             throw new AccommodationIsNullException();
         }
-        for(AccommodationAvailability availability : accommodation.getAvailableSlots()){
-            if(Objects.equals(availability.getId(), toUpdate.getId())){
+        for (AccommodationAvailability availability : accommodation.getAvailableSlots()) {
+            if (Objects.equals(availability.getId(), toUpdate.getId())) {
                 availability.setAvailableFrom(toUpdate.getAvailableFrom());
                 availability.setAvailableTo(toUpdate.getAvailableTo());
                 availability.setPriceInEuros(toUpdate.getPriceInEuros());
@@ -76,18 +75,17 @@ public class AccommodationAvailabilityController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    private void MapUpdate(AccommodationAvailability toUpdate, UpdateAccommodationAvailabilityRequest request){
+    private void MapUpdate(AccommodationAvailability toUpdate, UpdateAccommodationAvailabilityRequest request) {
         toUpdate.setId(request.getId());
         toUpdate.setPriceInEuros(request.getPriceInEuros());
 
         LocalDateTime from;
         LocalDateTime to;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        try{
+        try {
             from = LocalDate.parse(request.getAvailableFrom(), formatter).atStartOfDay();
             to = LocalDate.parse(request.getAvailableTo(), formatter).atStartOfDay();
-        }
-        catch (DateTimeParseException e){
+        } catch (DateTimeParseException e) {
             e.printStackTrace();
             throw new InvalidDateFormatException();
         }
@@ -95,15 +93,15 @@ public class AccommodationAvailabilityController {
         toUpdate.setAvailableFrom(from);
         toUpdate.setAvailableTo(to);
     }
+
     private void Map(CreateAccommodationAvailabilityRequest dto, AccommodationAvailability availability) {
         LocalDateTime from;
         LocalDateTime to;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        try{
-             from = LocalDate.parse(dto.getFrom(), formatter).atStartOfDay();
-             to = LocalDate.parse(dto.getTo(), formatter).atStartOfDay();
-        }
-        catch (DateTimeParseException e){
+        try {
+            from = LocalDate.parse(dto.getFrom(), formatter).atStartOfDay();
+            to = LocalDate.parse(dto.getTo(), formatter).atStartOfDay();
+        } catch (DateTimeParseException e) {
             e.printStackTrace();
             throw new InvalidDateFormatException();
         }
