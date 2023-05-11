@@ -11,7 +11,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository repository;
 
     @Override
-    public void create(User user) {
+    public void save(User user) {
         repository.save(user);
     }
 
@@ -19,4 +19,11 @@ public class UserServiceImpl implements UserService {
     public boolean exists(String username) {
         return repository.existsByUsername(username);
     }
+
+    @Override
+    public User find(Long id) {
+        return repository.findOne(id);
+    }
+
+
 }

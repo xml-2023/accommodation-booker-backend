@@ -3,7 +3,7 @@ package com.kncm.accountservice.dto;
 import lombok.Data;
 
 @Data
-public class RegisterUserRequest {
+public class UserDetailsRequest {
     private String username;
     private String password;
     private String name;
