@@ -4,11 +4,13 @@ import com.kncm.accommodationservice.dto.accommodation.SearchAccommodationRespon
 import com.kncm.accommodationservice.model.Accommodation;
 
 import java.util.Collection;
-import java.util.Optional;
 
 public interface AccommodationService {
     void create(Accommodation accommodation);
+
     void update(Accommodation accommodation);
+
     Accommodation findById(Long id);
+
     Collection<SearchAccommodationResponse> search(String location, Integer numOfGuests, String startDate, String endDate);
 }

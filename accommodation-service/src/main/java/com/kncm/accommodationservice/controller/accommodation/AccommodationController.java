@@ -24,16 +24,15 @@ public class AccommodationController {
     private final SequenceGenerator generator;
 
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody CreateAccommodationRequest dto){
+    public ResponseEntity<Void> create(@RequestBody CreateAccommodationRequest dto) {
         Accommodation accommodation = new Accommodation();
         Map(dto, accommodation);
         accommodation.setId(generator.getSequenceNumber(Accommodation.SEQUENCE_NAME));
         accommodation.setAvailableSlots(new ArrayList<>());
         accommodation.setImagesPath("accommodation-service/src/main/resources/images/" + accommodation.getName());
-        try{
+        try {
             accommodationService.create(accommodation);
-        }
-        catch (CreateAccommodationException e){
+        } catch (CreateAccommodationException e) {
             throw new CreateAccommodationException();
         }
         return new ResponseEntity<>(HttpStatus.CREATED);
@@ -44,11 +43,11 @@ public class AccommodationController {
             @RequestParam String location,
             @RequestParam Integer numOfGuests,
             @RequestParam String startDate,
-            @RequestParam String endDate){
+            @RequestParam String endDate) {
         return new ResponseEntity<>(accommodationService.search(location, numOfGuests, startDate, endDate), HttpStatus.OK);
     }
 
-    private void Map(CreateAccommodationRequest dto, Accommodation accommodation){
+    private void Map(CreateAccommodationRequest dto, Accommodation accommodation) {
         accommodation.setName(dto.getName());
         accommodation.setDescription(dto.getDescription());
         accommodation.setAutomaticConfirmation(dto.isAutomaticConfirmation());

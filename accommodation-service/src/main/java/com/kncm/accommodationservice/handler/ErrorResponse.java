@@ -9,7 +9,7 @@ public class ErrorResponse {
     private String message;
     private String title;
 
-    public ErrorResponse(){
+    public ErrorResponse() {
         this.title = "Accommodation booker application";
     }
 }
