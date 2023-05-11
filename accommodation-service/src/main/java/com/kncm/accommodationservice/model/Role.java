@@ -12,14 +12,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document("users")
-public class User {
+@Document("roles")
+public class Role {
     @Transient
-    public static final String SEQUENCE_NAME = "user_sequence";
+    public static final String SEQUENCE_NAME = "role_sequence";
     @Id
-    private String username;
-    private String password;
+    private Long id;
     private String name;
-    private String surname;
-    private Role role;
 }
