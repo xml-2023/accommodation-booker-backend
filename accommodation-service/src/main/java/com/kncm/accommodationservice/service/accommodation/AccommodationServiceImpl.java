@@ -100,6 +100,11 @@ public class AccommodationServiceImpl implements AccommodationService {
         return responses;
     }
 
+    @Override
+    public List<Accommodation> findByUserId(Long userId) {
+        return accommodationRepository.findByUserId(userId);
+    }
+
     private void Map(Accommodation accommodation, SearchAccommodationResponse response) {
         response.setName(accommodation.getName());
         response.setDescription(accommodation.getDescription());

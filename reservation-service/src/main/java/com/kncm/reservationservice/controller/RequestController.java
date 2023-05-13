@@ -1,6 +1,7 @@
 package com.kncm.reservationservice.controller;
 
 import com.kncm.reservationservice.dto.CreateReservationRequest;
+import com.kncm.reservationservice.dto.ReservationResponse;
 import com.kncm.reservationservice.model.RequestStatus;
 import com.kncm.reservationservice.model.ReservationRequest;
 import com.kncm.reservationservice.service.accommodation.AccommodationService;
@@ -8,13 +9,11 @@ import com.kncm.reservationservice.service.request.RequestService;
 import com.kncm.reservationservice.service.user.UserService;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import jakarta.ws.rs.PathParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import proto.ReservationAccommodation;
 import proto.ReservationRequestServiceGrpc;
 
@@ -22,7 +21,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import static org.apache.logging.log4j.util.Strings.isBlank;
 
@@ -33,6 +35,29 @@ public class RequestController {
     private final RequestService service;
     private final AccommodationService accommodationService;
     private final UserService userService;
+
+    @GetMapping("/{accommodationId}")
+    public ResponseEntity<Collection<ReservationResponse>> getAllRequestsByAccommodation(@PathVariable("accommodationId") Long accommodationId) {
+        List<ReservationRequest> requests = service.findByAccommodationId(accommodationId);
+
+        List<ReservationResponse> responses = requests.stream()
+                .map(request -> new ReservationResponse(request.getStatus().toString(), request.getReserveFrom().toString(), request.getReserveTo().toString(), request.getGuestsNumber(), request.getUser().getCanceledReservations()))
+                .collect(Collectors.toList());
+
+        return new ResponseEntity<>(responses, HttpStatus.OK);
+    }
+
+    @PutMapping("/{requestId}")
+    public ResponseEntity<Void> changeRequestStatus(@PathVariable("requestId") Long requestId, @RequestBody String status) {
+        ReservationRequest requestToUpdate = service.findOne(requestId);
+        if(requestToUpdate == null){
+            throw new IllegalArgumentException();
+            //bolji exception
+        }
+        requestToUpdate.setStatus(RequestStatus.valueOf(status));
+        service.save(requestToUpdate);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
     @PostMapping
     public ResponseEntity<Void> create(@RequestBody CreateReservationRequest dto) {
