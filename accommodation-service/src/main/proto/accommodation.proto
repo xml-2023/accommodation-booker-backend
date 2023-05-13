@@ -16,4 +16,5 @@ message CreateUserRequest {
 
 message CreateUserResponse {
   // Define any response fields, if needed
+  bool isCreated = 6;
 }

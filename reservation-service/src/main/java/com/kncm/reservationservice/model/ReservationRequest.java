@@ -23,4 +23,6 @@ public class ReservationRequest implements Serializable {
     private boolean isCanceled;
     @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private Accommodation accommodation;
+    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
+    private User user;
 }

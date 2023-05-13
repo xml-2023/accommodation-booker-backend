@@ -1,7 +1,10 @@
 package com.kncm.accommodationservice.grpc;
 
 import com.kncm.accommodationservice.SequenceGenerator;
+import com.kncm.accommodationservice.repository.accommodation.AccommodationRepository;
+import com.kncm.accommodationservice.repository.availability.AccommodationAvailabilityRepository;
 import com.kncm.accommodationservice.repository.user.UserRepository;
+import com.kncm.accommodationservice.service.grpc.ReservationRequestServiceImpl;
 import com.kncm.accommodationservice.service.user.UserServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -15,9 +18,15 @@ import java.io.IOException;
 public class GrpcServerConfig {
 
     private static final int GRPC_SERVER_PORT = 9091;
+    private static final int GRPC_SERVER_PORT_RESERVATION = 9092;
 
     @Autowired
     private UserRepository repository;
+
+    @Autowired
+    private AccommodationRepository accommodationRepository;
+    @Autowired
+    private AccommodationAvailabilityRepository availabilityRepository;
     @Autowired
     private SequenceGenerator generator;
 
@@ -25,6 +34,15 @@ public class GrpcServerConfig {
     public Server grpcServer() throws IOException {
         Server server = ServerBuilder.forPort(GRPC_SERVER_PORT)
                 .addService(new UserServiceImpl(generator, repository))
+                .build();
+        server.start();
+        return server;
+    }
+
+    @Bean
+    public Server grpcServerReservation() throws IOException {
+        Server server = ServerBuilder.forPort(GRPC_SERVER_PORT_RESERVATION)
+                .addService(new ReservationRequestServiceImpl(accommodationRepository, availabilityRepository, generator))
                 .build();
         server.start();
         return server;

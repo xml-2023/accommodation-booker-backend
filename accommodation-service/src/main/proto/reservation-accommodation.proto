@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+service ReservationRequestService {
+  rpc CreateReservation(CreateReservationRequest) returns (CreateReservationResponse) {}
+}
+
+message CreateReservationRequest {
+  int64 accommodationId = 1;
+  int32 guestsNumber = 2;
+  string reserveFrom = 3;
+  string reserveTo = 4;
+}
+
+message CreateReservationResponse {
+  bool areDatesValid = 5;
+  bool isGuestNumberValid = 6;
+  string status = 7;
+}

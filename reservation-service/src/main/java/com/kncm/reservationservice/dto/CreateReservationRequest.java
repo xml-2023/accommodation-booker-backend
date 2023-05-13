@@ -9,6 +9,7 @@ import lombok.Setter;
 @RequiredArgsConstructor
 public class CreateReservationRequest {
     private Long accommodationId;
+    private Long userId;
     private String reserveFrom;
     private String reserveTo;
     private Integer guestNumber;
