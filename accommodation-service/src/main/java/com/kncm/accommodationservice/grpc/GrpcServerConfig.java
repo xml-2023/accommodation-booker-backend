@@ -5,6 +5,7 @@ import com.kncm.accommodationservice.repository.accommodation.AccommodationRepos
 import com.kncm.accommodationservice.repository.availability.AccommodationAvailabilityRepository;
 import com.kncm.accommodationservice.repository.user.UserRepository;
 import com.kncm.accommodationservice.service.grpc.ReservationRequestServiceImpl;
+import com.kncm.accommodationservice.service.slotmanagement.SlotManagementService;
 import com.kncm.accommodationservice.service.user.UserServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -26,7 +27,7 @@ public class GrpcServerConfig {
     @Autowired
     private AccommodationRepository accommodationRepository;
     @Autowired
-    private AccommodationAvailabilityRepository availabilityRepository;
+    private SlotManagementService managementService;
     @Autowired
     private SequenceGenerator generator;
 
@@ -42,7 +43,7 @@ public class GrpcServerConfig {
     @Bean
     public Server grpcServerReservation() throws IOException {
         Server server = ServerBuilder.forPort(GRPC_SERVER_PORT_RESERVATION)
-                .addService(new ReservationRequestServiceImpl(accommodationRepository, availabilityRepository, generator))
+                .addService(new ReservationRequestServiceImpl(accommodationRepository, managementService))
                 .build();
         server.start();
         return server;
