@@ -1,9 +1,6 @@
 package com.kncm.reservationservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,4 +21,8 @@ public class ReservationRequest implements Serializable {
     private LocalDateTime reserveTo;
     private Integer guestsNumber;
     private boolean isCanceled;
+    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
+    private Accommodation accommodation;
+    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
+    private User user;
 }

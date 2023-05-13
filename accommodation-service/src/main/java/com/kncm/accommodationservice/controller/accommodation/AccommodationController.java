@@ -1,6 +1,7 @@
 package com.kncm.accommodationservice.controller.accommodation;
 
 import com.kncm.accommodationservice.SequenceGenerator;
+import com.kncm.accommodationservice.dto.accommodation.AccommodationByHostResponse;
 import com.kncm.accommodationservice.dto.accommodation.CreateAccommodationRequest;
 import com.kncm.accommodationservice.dto.accommodation.SearchAccommodationResponse;
 import com.kncm.accommodationservice.handler.exceptions.CreateAccommodationException;
@@ -8,6 +9,7 @@ import com.kncm.accommodationservice.model.Accommodation;
 import com.kncm.accommodationservice.model.Address;
 import com.kncm.accommodationservice.model.PriceType;
 import com.kncm.accommodationservice.service.accommodation.AccommodationService;
+import com.kncm.accommodationservice.service.user.UserService;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +22,8 @@ import proto.ReservationServiceProto;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/accommodation")
@@ -27,10 +31,22 @@ import java.util.Collection;
 public class AccommodationController {
     private final AccommodationService accommodationService;
     private final SequenceGenerator generator;
+    private final UserService userService;
     @Value("${grpc.reservation-service.host}")
     private String reservationServiceHost;
     @Value("${grpc.reservation-service.port}")
     private int reservationServicePort;
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<Collection<AccommodationByHostResponse>> getAllAccommodationsByHost(@PathVariable("userId") Long userId) {
+        List<Accommodation> accommodations = accommodationService.findByUserId(userId);
+
+        List<AccommodationByHostResponse> responses = accommodations.stream()
+                .map(request -> new AccommodationByHostResponse(request.getName(), request.getDescription(), request.getAddress().getCountry(), request.getAddress().getCity(), request.getAddress().getStreet(), request.getAddress().getNumber()))
+                .collect(Collectors.toList());
+
+        return new ResponseEntity<>(responses, HttpStatus.OK);
+    }
 
     @PostMapping
     public ResponseEntity<Void> create(@RequestBody CreateAccommodationRequest dto) {
@@ -103,5 +119,6 @@ public class AccommodationController {
         address.setNumber(dto.getNumber());
         accommodation.setAddress(address);
         accommodation.setPriceType(PriceType.valueOf(dto.getPriceType()));
+        accommodation.setUser(userService.findOne(dto.getUserId()));
     }
 }
