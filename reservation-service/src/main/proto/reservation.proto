@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+option java_outer_classname = "ReservationServiceProto";
+
+message CreateAccommodationRequest {
+  int64 id = 1;
+  string name = 2;
+  // Add any other fields that are necessary to create an Accommodation in the Reservation Service
+}
+
+message CreateAccommodationResponse {
+  bool isCreated = 3;
+  //
+}
+
+service ReservationService {
+  rpc CreateAccommodation(CreateAccommodationRequest) returns (CreateAccommodationResponse);
+}

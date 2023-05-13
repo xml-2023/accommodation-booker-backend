@@ -1,0 +1,2 @@
+org\kncm\apigateway\ApiGatewayApplication.class
+org\kncm\apigateway\configuration\CorsConfiguration.class
