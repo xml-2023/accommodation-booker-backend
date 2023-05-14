@@ -14,5 +14,9 @@ public interface AccommodationService {
     Accommodation findById(Long id);
 
     Collection<SearchAccommodationResponse> search(String location, Integer numOfGuests, String startDate, String endDate);
+
+    Collection<SearchAccommodationResponse> findAll();
+
     List<Accommodation> findByUserId(Long userId);
+
 }

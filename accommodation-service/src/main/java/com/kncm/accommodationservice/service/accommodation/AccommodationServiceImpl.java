@@ -101,6 +101,19 @@ public class AccommodationServiceImpl implements AccommodationService {
     }
 
     @Override
+    public Collection<SearchAccommodationResponse> findAll() {
+        Collection<Accommodation> accommodations = accommodationRepository.findAll();
+        ArrayList<SearchAccommodationResponse> responses = new ArrayList<>();
+        for (Accommodation accommodation : accommodations) {
+            SearchAccommodationResponse response = new SearchAccommodationResponse();
+            Map(accommodation, response);
+
+            responses.add(response);
+        }
+
+        return responses;
+    }
+    @Override
     public List<Accommodation> findByUserId(Long userId) {
         return accommodationRepository.findByUserId(userId);
     }
@@ -114,5 +127,6 @@ public class AccommodationServiceImpl implements AccommodationService {
         response.setNumber(accommodation.getAddress().getNumber());
         response.setMinGuests(accommodation.getMinGuests());
         response.setMaxGuests(accommodation.getMaxGuests());
+        response.setId(accommodation.getId());
     }
 }

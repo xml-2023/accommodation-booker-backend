@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SearchAccommodationResponse {
+    private Long id;
     private String name;
     private Integer minGuests;
     private Integer maxGuests;
