@@ -24,6 +24,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import proto.Accommodation;
+import proto.AccountReservation;
+import proto.CreateGuestServiceGrpc;
 import proto.UserServiceGrpc;
 
 import java.util.concurrent.TimeUnit;
@@ -40,12 +42,13 @@ public class AccountController {
     private TokenGenerator tokenGenerator;
     private final PasswordEncoder passwordEncoder;
 
-    @PostMapping
-    public ResponseEntity<Void> create(@RequestBody UserDetailsRequest dto) {
+    @PostMapping("/host")
+    public ResponseEntity<Void> createHost(@RequestBody UserDetailsRequest dto) {
         if (isUserDetailsRequestValid(dto)) {
             User user = new User();
             Map(dto, user);
             boolean responseStatus = false;
+            Long userId = 0L;
 
             if (!service.exists(user.getUsername())) {
                 // Create a gRPC channel to the accommodation-service
@@ -69,6 +72,7 @@ public class AccountController {
                     Accommodation.CreateUserResponse accommodationResponse = userServiceStub.createUser(accommodationRequest);
                     if (accommodationResponse.getIsCreated()) {
                         responseStatus = true;
+                        userId = accommodationResponse.getUserId();
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -88,6 +92,7 @@ public class AccountController {
             }
 
             if (responseStatus) {
+                user.setId(userId);
                 user.setPassword(passwordEncoder.encode(user.getPassword()));
                 service.save(user);
                 return new ResponseEntity<>(HttpStatus.CREATED);
@@ -99,12 +104,105 @@ public class AccountController {
         }
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Void> update(@PathVariable Long id, @RequestBody UserDetailsRequest dto) {
+
+    @PostMapping("/guest")
+    public ResponseEntity<Void> createGuest(@RequestBody UserDetailsRequest dto) {
         if (isUserDetailsRequestValid(dto)) {
+            User user = new User();
+            Map(dto, user);
+            if (!service.exists(user.getUsername())) {
+                user.setId(Long.valueOf(System.currentTimeMillis()));
+                user.setPassword(passwordEncoder.encode(user.getPassword()));
+                service.save(user);
+
+                // Create a gRPC channel to the accommodation-service
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9094)
+                        .usePlaintext()
+                        .build();
+
+                // Create a gRPC client stub for the accommodation-service
+                CreateGuestServiceGrpc.CreateGuestServiceBlockingStub guestServiceStub = CreateGuestServiceGrpc.newBlockingStub(channel);
+                try {
+                    // Create a gRPC request to create a user in the accommodation-service
+                    AccountReservation.CreateGuestRequest reservationRequest = AccountReservation.CreateGuestRequest.newBuilder()
+                            .setUserId(service.find(user.getUsername()).getId())
+                            .setUsername(dto.getUsername())
+                            .setPassword(dto.getPassword())
+                            .setName(dto.getName())
+                            .setSurname(dto.getSurname())
+                            .setRole(dto.getRoleName())
+                            .build();
+
+                    // Make the gRPC request to create the user in the accommodation-service
+                    AccountReservation.CreateGuestResponse guestResponse = guestServiceStub.createUser(reservationRequest);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    // Shutdown the gRPC channel
+                    channel.shutdown();
+                    try {
+                        channel.awaitTermination(5, TimeUnit.SECONDS);
+                    } catch (InterruptedException e) {
+                        // Handle channel shutdown interruption
+                        System.out.println("Shutdown interruption happened");
+                    }
+                }
+                return new ResponseEntity<>(HttpStatus.CREATED);
+            } else {
+                throw new UsernameIsNotUniqueException();
+            }
+
+
+        } else {
+            throw new UserDetailsRequestIsNotValidException();
+        }
+    }
+
+    @PutMapping("/host/{id}")
+    public ResponseEntity<Void> updateHost(@PathVariable Long id, @RequestBody UserDetailsRequest dto) {
+        if (isUserDetailsRequestValid(dto)) {
+            boolean responseStatus = false;
             User user = service.find(id);
             if (user != null) {
-                if (dto.getUsername().equals(user.getUsername())) {
+                // Create a gRPC channel to the accommodation-service
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9091)
+                        .usePlaintext()
+                        .build();
+
+                // Create a gRPC client stub for the accommodation-service
+                UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel);
+                try {
+                    // Create a gRPC request to update a user in the accommodation-service
+                    Accommodation.UpdateUserRequest accommodationRequest = Accommodation.UpdateUserRequest.newBuilder()
+                            .setUserId(id)
+                            .setUsername(dto.getUsername())
+                            .setPassword(dto.getPassword())
+                            .setName(dto.getName())
+                            .setSurname(dto.getSurname())
+                            .setRole(dto.getRoleName())
+                            .build();
+
+                    // Make the gRPC request to create the user in the accommodation-service
+                    Accommodation.UpdateUserResponse accommodationResponse = userServiceStub.updateUser(accommodationRequest);
+                    if (accommodationResponse.getIsUpdated()) {
+                        responseStatus = true;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    // Shutdown the gRPC channel
+                    channel.shutdown();
+                    try {
+                        channel.awaitTermination(5, TimeUnit.SECONDS);
+                    } catch (InterruptedException e) {
+                        // Handle channel shutdown interruption
+                        System.out.println("Shutdown interruption happened");
+                    }
+                }
+
+                if (responseStatus) {
                     if (dto.getPassword().equals(user.getPassword())) {
                         Map(dto, user);
                         service.save(user);
@@ -113,16 +211,11 @@ public class AccountController {
                         user.setPassword(passwordEncoder.encode(user.getPassword()));
                         service.save(user);
                     }
-                } else {
-                    Map(dto, user);
-                    if (!service.exists(user.getUsername())) {
-                        service.save(user);
-                    } else {
-                        throw new UsernameIsNotUniqueException();
-                    }
-                }
 
-                return new ResponseEntity<>(HttpStatus.CREATED);
+                    return new ResponseEntity<>(HttpStatus.CREATED);
+                } else {
+                    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                }
             } else {
                 throw new UserWithPassedIdDoesNotExistException();
             }
@@ -130,6 +223,74 @@ public class AccountController {
             throw new UserDetailsRequestIsNotValidException();
         }
     }
+
+
+    @PutMapping("/guest/{id}")
+    public ResponseEntity<Void> updateGuest(@PathVariable Long id, @RequestBody UserDetailsRequest dto) {
+        if (isUserDetailsRequestValid(dto)) {
+            boolean responseStatus = false;
+            User user = service.find(id);
+            if (user != null) {
+                // Create a gRPC channel to the accommodation-service
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9093)
+                        .usePlaintext()
+                        .build();
+
+                // Create a gRPC client stub for the accommodation-service
+                CreateGuestServiceGrpc.CreateGuestServiceBlockingStub guestServiceStub = CreateGuestServiceGrpc.newBlockingStub(channel);
+                try {
+                    // Create a gRPC request to update a user in the accommodation-service
+                    AccountReservation.UpdateGuestRequest guestRequest = AccountReservation.UpdateGuestRequest.newBuilder()
+                            .setUserId(id)
+                            .setUsername(dto.getUsername())
+                            .setPassword(dto.getPassword())
+                            .setName(dto.getName())
+                            .setSurname(dto.getSurname())
+                            .setRole(dto.getRoleName())
+                            .build();
+
+                    // Make the gRPC request to create the user in the accommodation-service
+                    AccountReservation.UpdateGuestResponse accommodationResponse = guestServiceStub.updateUser(guestRequest);
+                    if (accommodationResponse.getIsUpdated()) {
+                        responseStatus = true;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    // Shutdown the gRPC channel
+                    channel.shutdown();
+                    try {
+                        channel.awaitTermination(5, TimeUnit.SECONDS);
+                    } catch (InterruptedException e) {
+                        // Handle channel shutdown interruption
+                        System.out.println("Shutdown interruption happened");
+                    }
+                }
+
+                if (responseStatus) {
+                    if (dto.getPassword().equals(user.getPassword())) {
+                        Map(dto, user);
+                        service.save(user);
+                    } else {
+                        Map(dto, user);
+                        user.setPassword(passwordEncoder.encode(user.getPassword()));
+                        service.save(user);
+                    }
+
+                    return new ResponseEntity<>(HttpStatus.CREATED);
+                } else {
+                    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+            } else {
+                throw new UserWithPassedIdDoesNotExistException();
+            }
+        } else {
+            throw new UserDetailsRequestIsNotValidException();
+        }
+    }
+
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {

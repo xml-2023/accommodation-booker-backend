@@ -5,4 +5,5 @@ import com.kncm.accommodationservice.repository.EntityRepository;
 
 public interface UserRepository extends EntityRepository<User> {
     User findByUsername(String username);
+    boolean existsByUsername(String username);
 }

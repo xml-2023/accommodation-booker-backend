@@ -67,10 +67,10 @@ public class WebSecurityConfig {
         http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
 
         http.authorizeHttpRequests().requestMatchers("/api/account/login").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/account").permitAll()
-                .requestMatchers(HttpMethod.PUT, "/api/account/**").hasAnyAuthority("Host", "Guest")
-                .requestMatchers(HttpMethod.DELETE, "/api/account/**").hasAnyAuthority("Host", "Guest")
-                .anyRequest().authenticated().and()
+//                .requestMatchers(HttpMethod.POST, "/api/account/host").permitAll()
+//                .requestMatchers(HttpMethod.PUT, "/api/account/**").hasAnyAuthority("Host", "Guest")
+//                .requestMatchers(HttpMethod.DELETE, "/api/account/**").hasAnyAuthority("Host", "Guest")
+                .anyRequest().permitAll().and()
                 .cors().and()
                 .addFilterBefore(new TokenAuthenticationFilter(tokenReader, tokenValidator, userDetailsService()), BasicAuthenticationFilter.class);
         http.csrf().disable();
