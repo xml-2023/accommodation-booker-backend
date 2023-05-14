@@ -1,7 +1,9 @@
 package com.kncm.reservationservice.service.request;
 
+import com.kncm.reservationservice.model.RequestStatus;
 import com.kncm.reservationservice.model.ReservationRequest;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface RequestService {
@@ -9,4 +11,7 @@ public interface RequestService {
     List<ReservationRequest> findByAccommodationId(Long accommodationId);
     ReservationRequest findOne(Long id);
     void save(ReservationRequest request);
+    List<ReservationRequest> findByStatus(RequestStatus status);
+    void rejectRequests(LocalDateTime from, LocalDateTime to);
+    void delete(ReservationRequest request);
 }

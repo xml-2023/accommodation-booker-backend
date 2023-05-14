@@ -50,10 +50,12 @@ public class ReservationRequestServiceImpl extends ReservationRequestServiceGrpc
                 }
             }
         } else if (request.getStatus().equals("CANCELLED")) {
-            for (AccommodationAvailability slot : accommodation.getAvailableSlots()) {
-                managementService.manageCancelledSlots(from, to, slot, accommodation);
-                isSuccessful = true;
-                break;
+            if (from.isAfter(LocalDateTime.now().plusDays(1))){
+                for (AccommodationAvailability slot : accommodation.getAvailableSlots()) {
+                    managementService.manageCancelledSlots(from, to, slot, accommodation);
+                    isSuccessful = true;
+                    break;
+                }
             }
         }
 

@@ -90,11 +90,14 @@ public class RequestController {
                 System.out.println("Shutdown interruption happened");
             }
         }
-        if(responseStatus) {
+        if(responseStatus && status.equals("ACCEPTED")) {
             //odbiti ostalih preklapajucih zahteva
+            service.save(requestToUpdate);
+            service.rejectRequests(requestToUpdate.getReserveFrom(), requestToUpdate.getReserveTo());
+            return new ResponseEntity<>(HttpStatus.OK);
         }
-        else {
-            //neki exception mozda ili return response entity sa errorom
+        else if (!responseStatus){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
         service.save(requestToUpdate);
@@ -158,6 +161,19 @@ public class RequestController {
         } else {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @DeleteMapping("/{requestId}")
+    public ResponseEntity<Void> deletePendingRequest(@PathVariable("requestId") Long requestId) {
+        ReservationRequest requestToDelete = service.findOne(requestId);
+        if (requestToDelete == null) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        if (requestToDelete.getStatus().equals(RequestStatus.PENDING)) {
+            service.delete(requestToDelete);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     private void Map(CreateReservationRequest dto, ReservationRequest request) {
