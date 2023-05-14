@@ -100,6 +100,20 @@ public class AccommodationServiceImpl implements AccommodationService {
         return responses;
     }
 
+    @Override
+    public Collection<SearchAccommodationResponse> findAll() {
+        Collection<Accommodation> accommodations = accommodationRepository.findAll();
+        ArrayList<SearchAccommodationResponse> responses = new ArrayList<>();
+        for (Accommodation accommodation : accommodations) {
+            SearchAccommodationResponse response = new SearchAccommodationResponse();
+            Map(accommodation, response);
+
+            responses.add(response);
+        }
+
+        return responses;
+    }
+
     private void Map(Accommodation accommodation, SearchAccommodationResponse response) {
         response.setName(accommodation.getName());
         response.setDescription(accommodation.getDescription());
@@ -109,5 +123,6 @@ public class AccommodationServiceImpl implements AccommodationService {
         response.setNumber(accommodation.getAddress().getNumber());
         response.setMinGuests(accommodation.getMinGuests());
         response.setMaxGuests(accommodation.getMaxGuests());
+        response.setId(accommodation.getId());
     }
 }

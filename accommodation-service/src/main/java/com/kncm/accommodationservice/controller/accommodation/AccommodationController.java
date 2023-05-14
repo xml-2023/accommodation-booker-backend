@@ -47,6 +47,16 @@ public class AccommodationController {
         return new ResponseEntity<>(accommodationService.search(location, numOfGuests, startDate, endDate), HttpStatus.OK);
     }
 
+    @GetMapping("/findById")
+    public ResponseEntity<Accommodation> findById(@RequestParam Long id){
+        return new ResponseEntity<>(accommodationService.findById(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/findAll")
+    public ResponseEntity<Collection<SearchAccommodationResponse>> findAll() {
+        return new ResponseEntity<>(accommodationService.findAll(), HttpStatus.OK);
+    }
+
     private void Map(CreateAccommodationRequest dto, Accommodation accommodation) {
         accommodation.setName(dto.getName());
         accommodation.setDescription(dto.getDescription());

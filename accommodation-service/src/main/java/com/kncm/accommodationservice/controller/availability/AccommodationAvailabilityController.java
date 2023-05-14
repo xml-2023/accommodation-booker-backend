@@ -75,6 +75,11 @@ public class AccommodationAvailabilityController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping("/findById")
+    public ResponseEntity<AccommodationAvailability> findById(@RequestParam Long id){
+        return new ResponseEntity<>(accommodationAvailabilityService.findById(id), HttpStatus.OK);
+    }
+
     private void MapUpdate(AccommodationAvailability toUpdate, UpdateAccommodationAvailabilityRequest request) {
         toUpdate.setId(request.getId());
         toUpdate.setPriceInEuros(request.getPriceInEuros());

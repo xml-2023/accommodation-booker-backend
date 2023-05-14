@@ -3,6 +3,7 @@ package com.kncm.accommodationservice.controller.image;
 import com.kncm.accommodationservice.model.Image;
 import com.kncm.accommodationservice.service.image.ImageService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +35,8 @@ public class ImageController {
 
             imageService.save(images, name);
 
-            return ResponseEntity.ok().body("Images uploaded successfully!");
+//            return ResponseEntity.ok().body("Images uploaded successfully!");
+            return new ResponseEntity<>(HttpStatus.CREATED);
 
         } catch (IOException e) {
             throw new RuntimeException("Failed to upload image", e);
