@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
-public class SlotManagementServiceImpl implements SlotManagementService{
+public class SlotManagementServiceImpl implements SlotManagementService {
     private final AccommodationRepository repository;
     private final AccommodationAvailabilityRepository availabilityRepository;
     private final SequenceGenerator generator;
@@ -63,5 +63,97 @@ public class SlotManagementServiceImpl implements SlotManagementService{
             repository.save(accommodationToUpdate);
             availabilityRepository.save(availability);
         }
+    }
+
+    @Override
+    public void manageCancelledSlots(LocalDateTime from, LocalDateTime to, AccommodationAvailability availability, Accommodation accommodationToUpdate) {
+        //18 - 20, 10 - 14, 25 - 29,     rezervacija: 21 - 22 , 22 - 23, 23 - 24       6 - 29, 2 - 2,  rez 3 - 5
+        for (AccommodationAvailability slot : accommodationToUpdate.getAvailableSlots()) {
+            if (from.isEqual(slot.getAvailableTo().plusDays(1))) {
+                for(AccommodationAvailability secondSlot : accommodationToUpdate.getAvailableSlots()) {
+                    if (to.isEqual(secondSlot.getAvailableFrom().minusDays(1))) {
+                        //create new slot
+                        AccommodationAvailability newSlot = new AccommodationAvailability();
+                        newSlot.setId(generator.getSequenceNumber(AccommodationAvailability.SEQUENCE_NAME));
+                        newSlot.setPriceInEuros(availability.getPriceInEuros());
+                        newSlot.setAvailableFrom(slot.getAvailableFrom());
+                        newSlot.setAvailableTo(secondSlot.getAvailableTo());
+
+                        //remove previous slots
+                        accommodationToUpdate.getAvailableSlots().remove(slot);
+                        accommodationToUpdate.getAvailableSlots().remove(secondSlot);
+                        availabilityRepository.delete(slot);
+                        availabilityRepository.delete(secondSlot);
+
+                        accommodationToUpdate.getAvailableSlots().add(newSlot);
+                        repository.save(accommodationToUpdate);
+                        availabilityRepository.save(newSlot);
+                        return;
+                    }
+                }
+                //create new slot
+                AccommodationAvailability newSlot = new AccommodationAvailability();
+                newSlot.setId(generator.getSequenceNumber(AccommodationAvailability.SEQUENCE_NAME));
+                newSlot.setPriceInEuros(availability.getPriceInEuros());
+                newSlot.setAvailableFrom(slot.getAvailableFrom());
+                newSlot.setAvailableTo(to);
+
+                //remove previous slot
+                accommodationToUpdate.getAvailableSlots().remove(slot);
+                availabilityRepository.delete(slot);
+
+                accommodationToUpdate.getAvailableSlots().add(newSlot);
+                repository.save(accommodationToUpdate);
+                availabilityRepository.save(newSlot);
+                return;
+            } else if (to.isEqual(slot.getAvailableFrom().minusDays(1))) {
+                for(AccommodationAvailability secondSlot : accommodationToUpdate.getAvailableSlots()) {
+                    if (from.isEqual(secondSlot.getAvailableTo().plusDays(1))) {
+                        //create new slot
+                        AccommodationAvailability newSlot = new AccommodationAvailability();
+                        newSlot.setId(generator.getSequenceNumber(AccommodationAvailability.SEQUENCE_NAME));
+                        newSlot.setPriceInEuros(availability.getPriceInEuros());
+                        newSlot.setAvailableFrom(secondSlot.getAvailableFrom());
+                        newSlot.setAvailableTo(slot.getAvailableTo());
+
+                        //remove previous slots
+                        accommodationToUpdate.getAvailableSlots().remove(slot);
+                        accommodationToUpdate.getAvailableSlots().remove(secondSlot);
+                        availabilityRepository.delete(slot);
+                        availabilityRepository.delete(secondSlot);
+
+                        accommodationToUpdate.getAvailableSlots().add(newSlot);
+                        repository.save(accommodationToUpdate);
+                        availabilityRepository.save(newSlot);
+                        return;
+                    }
+                }
+                //create new slot
+                AccommodationAvailability newSlot = new AccommodationAvailability();
+                newSlot.setId(generator.getSequenceNumber(AccommodationAvailability.SEQUENCE_NAME));
+                newSlot.setPriceInEuros(availability.getPriceInEuros());
+                newSlot.setAvailableFrom(from);
+                newSlot.setAvailableTo(slot.getAvailableTo());
+
+                //remove previous slot
+                accommodationToUpdate.getAvailableSlots().remove(slot);
+                availabilityRepository.delete(slot);
+
+                accommodationToUpdate.getAvailableSlots().add(newSlot);
+                repository.save(accommodationToUpdate);
+                availabilityRepository.save(newSlot);
+                return;
+            }
+        }
+        //create new slot
+        AccommodationAvailability newSlot = new AccommodationAvailability();
+        newSlot.setId(generator.getSequenceNumber(AccommodationAvailability.SEQUENCE_NAME));
+        newSlot.setPriceInEuros(availability.getPriceInEuros());
+        newSlot.setAvailableFrom(from);
+        newSlot.setAvailableTo(to);
+
+        accommodationToUpdate.getAvailableSlots().add(newSlot);
+        repository.save(accommodationToUpdate);
+        availabilityRepository.save(newSlot);
     }
 }

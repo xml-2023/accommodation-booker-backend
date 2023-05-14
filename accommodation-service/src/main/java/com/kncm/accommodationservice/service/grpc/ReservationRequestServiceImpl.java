@@ -17,9 +17,53 @@ import java.time.format.DateTimeParseException;
 
 @GrpcService
 @RequiredArgsConstructor
-public class ReservationRequestServiceImpl extends ReservationRequestServiceGrpc.ReservationRequestServiceImplBase{
+public class ReservationRequestServiceImpl extends ReservationRequestServiceGrpc.ReservationRequestServiceImplBase {
     private final AccommodationRepository repository;
     private final SlotManagementService managementService;
+
+    @Override
+    public void acceptOrCancelReservation(ReservationAccommodation.AcceptOrCancelReservationRequest request, StreamObserver<ReservationAccommodation.AcceptOrCancelReservationResponse> responseObserver) {
+
+        boolean isSuccessful = false;
+        LocalDateTime from = null;
+        LocalDateTime to = null;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        try {
+            from = LocalDate.parse(request.getReserveFrom(), formatter).atStartOfDay();
+            to = LocalDate.parse(request.getReserveTo(), formatter).atStartOfDay();
+        } catch (DateTimeParseException e) {
+            e.printStackTrace();
+//            throw new InvalidDateFormatException();
+        }
+        Accommodation accommodation = repository.findOne(request.getAccommodationId());
+        if (accommodation == null) {
+            //
+        }
+
+        if (request.getStatus().equals("ACCEPTED")) {
+            for (AccommodationAvailability slot : accommodation.getAvailableSlots()) {
+                if (!from.isBefore(slot.getAvailableFrom()) && !from.isAfter(slot.getAvailableTo())
+                        && !to.isBefore(slot.getAvailableFrom()) && !to.isAfter(slot.getAvailableTo())) {
+                    managementService.manageAvailableSlots(from, to, slot, accommodation);
+                    isSuccessful = true;
+                    break;
+                }
+            }
+        } else if (request.getStatus().equals("CANCELLED")) {
+            for (AccommodationAvailability slot : accommodation.getAvailableSlots()) {
+                managementService.manageCancelledSlots(from, to, slot, accommodation);
+                isSuccessful = true;
+                break;
+            }
+        }
+
+        ReservationAccommodation.AcceptOrCancelReservationResponse response = ReservationAccommodation.AcceptOrCancelReservationResponse.newBuilder()
+                .setIsSuccessful(isSuccessful)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
 
     @Override
     public void createReservation(ReservationAccommodation.CreateReservationRequest request, StreamObserver<ReservationAccommodation.CreateReservationResponse> responseObserver) {
@@ -29,7 +73,7 @@ public class ReservationRequestServiceImpl extends ReservationRequestServiceGrpc
         boolean areValidDates = false;
         boolean isGuestNumberValid = false;
         LocalDateTime from = null;
-        LocalDateTime to = null ;
+        LocalDateTime to = null;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         try {
             from = LocalDate.parse(request.getReserveFrom(), formatter).atStartOfDay();
@@ -40,21 +84,20 @@ public class ReservationRequestServiceImpl extends ReservationRequestServiceGrpc
         }
         // Create a new Accommodation object
         Accommodation accommodation = repository.findOne(request.getAccommodationId());
-        if(accommodation == null){
+        if (accommodation == null) {
             status = "Accommodation does not exist";
         }
 
-        if(accommodation.isAutomaticConfirmation()){
+        if (accommodation.isAutomaticConfirmation()) {
             status = "ACCEPTED";
-        }
-        else {
+        } else {
             status = "PENDING";
         }
 
-        for(AccommodationAvailability slot : accommodation.getAvailableSlots()) {
-            if(!from.isBefore(slot.getAvailableFrom()) && !from.isAfter(slot.getAvailableTo())
-                && !to.isBefore(slot.getAvailableFrom()) && !to.isAfter(slot.getAvailableTo())) {
-                if(accommodation.isAutomaticConfirmation()) {
+        for (AccommodationAvailability slot : accommodation.getAvailableSlots()) {
+            if (!from.isBefore(slot.getAvailableFrom()) && !from.isAfter(slot.getAvailableTo())
+                    && !to.isBefore(slot.getAvailableFrom()) && !to.isAfter(slot.getAvailableTo())) {
+                if (accommodation.isAutomaticConfirmation()) {
                     managementService.manageAvailableSlots(from, to, slot, accommodation);
                 }
                 areValidDates = true;
@@ -62,7 +105,7 @@ public class ReservationRequestServiceImpl extends ReservationRequestServiceGrpc
             }
         }
 
-        if(accommodation.getMinGuests() <= request.getGuestsNumber() &&  request.getGuestsNumber() <= accommodation.getMaxGuests()){
+        if (accommodation.getMinGuests() <= request.getGuestsNumber() && request.getGuestsNumber() <= accommodation.getMaxGuests()) {
             isGuestNumberValid = true;
         }
 

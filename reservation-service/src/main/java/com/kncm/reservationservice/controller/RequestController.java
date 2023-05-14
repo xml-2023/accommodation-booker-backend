@@ -9,7 +9,6 @@ import com.kncm.reservationservice.service.request.RequestService;
 import com.kncm.reservationservice.service.user.UserService;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import jakarta.ws.rs.PathParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,6 +54,49 @@ public class RequestController {
             //bolji exception
         }
         requestToUpdate.setStatus(RequestStatus.valueOf(status));
+        boolean responseStatus = false;
+
+        //grpc za accommodation da se updatuju termini
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9092)
+                .usePlaintext()
+                .build();
+        ReservationRequestServiceGrpc.ReservationRequestServiceBlockingStub requestServiceBlockingStub = ReservationRequestServiceGrpc.newBlockingStub(channel);
+        try {
+            // Create a gRPC request to create a user in the accommodation-service
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            ReservationAccommodation.AcceptOrCancelReservationRequest request = ReservationAccommodation.AcceptOrCancelReservationRequest.newBuilder()
+                    .setAccommodationId(requestToUpdate.getAccommodation().getId())
+                    .setReserveFrom(requestToUpdate.getReserveFrom().format(formatter))
+                    .setReserveTo(requestToUpdate.getReserveTo().format(formatter))
+                    .setStatus(status)
+                    .build();
+
+            // Make the gRPC request to create the user in the accommodation-service
+            ReservationAccommodation.AcceptOrCancelReservationResponse response = requestServiceBlockingStub.acceptOrCancelReservation(request);
+            if(response.getIsSuccessful())
+            {
+                responseStatus = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Grpc exception happened");
+        } finally {
+            // Shutdown the gRPC channel
+            channel.shutdown();
+            try {
+                channel.awaitTermination(5, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                // Handle channel shutdown interruption
+                System.out.println("Shutdown interruption happened");
+            }
+        }
+        if(responseStatus) {
+            //odbiti ostalih preklapajucih zahteva
+        }
+        else {
+            //neki exception mozda ili return response entity sa errorom
+        }
+
         service.save(requestToUpdate);
         return new ResponseEntity<>(HttpStatus.OK);
     }

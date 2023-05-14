@@ -46,6 +46,37 @@ public final class ReservationRequestServiceGrpc {
     return getCreateReservationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.ReservationAccommodation.AcceptOrCancelReservationRequest,
+      proto.ReservationAccommodation.AcceptOrCancelReservationResponse> getAcceptOrCancelReservationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AcceptOrCancelReservation",
+      requestType = proto.ReservationAccommodation.AcceptOrCancelReservationRequest.class,
+      responseType = proto.ReservationAccommodation.AcceptOrCancelReservationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.ReservationAccommodation.AcceptOrCancelReservationRequest,
+      proto.ReservationAccommodation.AcceptOrCancelReservationResponse> getAcceptOrCancelReservationMethod() {
+    io.grpc.MethodDescriptor<proto.ReservationAccommodation.AcceptOrCancelReservationRequest, proto.ReservationAccommodation.AcceptOrCancelReservationResponse> getAcceptOrCancelReservationMethod;
+    if ((getAcceptOrCancelReservationMethod = ReservationRequestServiceGrpc.getAcceptOrCancelReservationMethod) == null) {
+      synchronized (ReservationRequestServiceGrpc.class) {
+        if ((getAcceptOrCancelReservationMethod = ReservationRequestServiceGrpc.getAcceptOrCancelReservationMethod) == null) {
+          ReservationRequestServiceGrpc.getAcceptOrCancelReservationMethod = getAcceptOrCancelReservationMethod =
+              io.grpc.MethodDescriptor.<proto.ReservationAccommodation.AcceptOrCancelReservationRequest, proto.ReservationAccommodation.AcceptOrCancelReservationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AcceptOrCancelReservation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ReservationAccommodation.AcceptOrCancelReservationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.ReservationAccommodation.AcceptOrCancelReservationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ReservationRequestServiceMethodDescriptorSupplier("AcceptOrCancelReservation"))
+              .build();
+        }
+      }
+    }
+    return getAcceptOrCancelReservationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class ReservationRequestServiceGrpc {
         io.grpc.stub.StreamObserver<proto.ReservationAccommodation.CreateReservationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateReservationMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void acceptOrCancelReservation(proto.ReservationAccommodation.AcceptOrCancelReservationRequest request,
+        io.grpc.stub.StreamObserver<proto.ReservationAccommodation.AcceptOrCancelReservationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAcceptOrCancelReservationMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +174,14 @@ public final class ReservationRequestServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateReservationMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void acceptOrCancelReservation(proto.ReservationAccommodation.AcceptOrCancelReservationRequest request,
+        io.grpc.stub.StreamObserver<proto.ReservationAccommodation.AcceptOrCancelReservationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAcceptOrCancelReservationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -159,6 +205,13 @@ public final class ReservationRequestServiceGrpc {
     public proto.ReservationAccommodation.CreateReservationResponse createReservation(proto.ReservationAccommodation.CreateReservationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateReservationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public proto.ReservationAccommodation.AcceptOrCancelReservationResponse acceptOrCancelReservation(proto.ReservationAccommodation.AcceptOrCancelReservationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAcceptOrCancelReservationMethod(), getCallOptions(), request);
     }
   }
 
@@ -185,9 +238,18 @@ public final class ReservationRequestServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateReservationMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.ReservationAccommodation.AcceptOrCancelReservationResponse> acceptOrCancelReservation(
+        proto.ReservationAccommodation.AcceptOrCancelReservationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAcceptOrCancelReservationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_RESERVATION = 0;
+  private static final int METHODID_ACCEPT_OR_CANCEL_RESERVATION = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -209,6 +271,10 @@ public final class ReservationRequestServiceGrpc {
         case METHODID_CREATE_RESERVATION:
           serviceImpl.createReservation((proto.ReservationAccommodation.CreateReservationRequest) request,
               (io.grpc.stub.StreamObserver<proto.ReservationAccommodation.CreateReservationResponse>) responseObserver);
+          break;
+        case METHODID_ACCEPT_OR_CANCEL_RESERVATION:
+          serviceImpl.acceptOrCancelReservation((proto.ReservationAccommodation.AcceptOrCancelReservationRequest) request,
+              (io.grpc.stub.StreamObserver<proto.ReservationAccommodation.AcceptOrCancelReservationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -235,6 +301,13 @@ public final class ReservationRequestServiceGrpc {
               proto.ReservationAccommodation.CreateReservationRequest,
               proto.ReservationAccommodation.CreateReservationResponse>(
                 service, METHODID_CREATE_RESERVATION)))
+        .addMethod(
+          getAcceptOrCancelReservationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.ReservationAccommodation.AcceptOrCancelReservationRequest,
+              proto.ReservationAccommodation.AcceptOrCancelReservationResponse>(
+                service, METHODID_ACCEPT_OR_CANCEL_RESERVATION)))
         .build();
   }
 
@@ -284,6 +357,7 @@ public final class ReservationRequestServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ReservationRequestServiceFileDescriptorSupplier())
               .addMethod(getCreateReservationMethod())
+              .addMethod(getAcceptOrCancelReservationMethod())
               .build();
         }
       }
