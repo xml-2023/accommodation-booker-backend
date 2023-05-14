@@ -13,7 +13,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class User implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String password;

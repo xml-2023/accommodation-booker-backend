@@ -1,5 +1,6 @@
 package com.kncm.reservationservice.service.grpc;
 
+import com.kncm.reservationservice.model.Role;
 import com.kncm.reservationservice.model.User;
 import com.kncm.reservationservice.repository.RoleRepository;
 import com.kncm.reservationservice.repository.UserRepository;
@@ -27,7 +28,8 @@ public class CreateGuestServiceGrpcImpl extends CreateGuestServiceGrpc.CreateGue
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setName(request.getName());
         user.setSurname(request.getSurname());
-        user.setRole(roleRepository.findByName(request.getName()));
+        Role role = roleRepository.findByName(request.getRole());
+        user.setRole(role);
         user.setCanceledReservations(0);
 
         repository.save(user);

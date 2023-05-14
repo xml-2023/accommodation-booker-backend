@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package proto;
+
+service CreateGuestService {
+  rpc CreateUser(CreateGuestRequest) returns (CreateGuestResponse) {}
+  rpc UpdateUser(UpdateGuestRequest) returns (UpdateGuestResponse) {}
+  rpc DeleteUser(DeleteGuestRequest) returns (DeleteGuestResponse) {}
+}
+
+message CreateGuestRequest {
+  int64 userId = 25;
+  string username = 1;
+  string password = 2;
+  string name = 3;
+  string surname = 4;
+  string role = 5;
+}
+
+message CreateGuestResponse {
+  // Define any response fields, if needed
+  bool isCreated = 6;
+  int64 userId = 12;
+}
+
+message UpdateGuestRequest {
+  int64 userId = 16;
+  string username = 7;
+  string password = 8;
+  string name = 9;
+  string surname = 10;
+  string role = 11;
+}
+
+message UpdateGuestResponse {
+  // Define any response fields, if needed
+  bool isUpdated = 13;
+}
+
+message DeleteGuestRequest {
+  int64 userId = 14;
+}
+
+message DeleteGuestResponse {
+  // Define any response fields, if needed
+  bool isDeleted = 15;
+}

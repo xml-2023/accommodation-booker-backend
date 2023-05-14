@@ -110,8 +110,9 @@ public class AccountController {
         if (isUserDetailsRequestValid(dto)) {
             User user = new User();
             Map(dto, user);
+            Long userId = Long.valueOf(System.currentTimeMillis());
             if (!service.exists(user.getUsername())) {
-                user.setId(Long.valueOf(System.currentTimeMillis()));
+                user.setId(userId);
                 user.setPassword(passwordEncoder.encode(user.getPassword()));
                 service.save(user);
 
@@ -125,7 +126,7 @@ public class AccountController {
                 try {
                     // Create a gRPC request to create a user in the accommodation-service
                     AccountReservation.CreateGuestRequest reservationRequest = AccountReservation.CreateGuestRequest.newBuilder()
-                            .setUserId(service.find(user.getUsername()).getId())
+                            .setUserId(userId)
                             .setUsername(dto.getUsername())
                             .setPassword(dto.getPassword())
                             .setName(dto.getName())
@@ -232,7 +233,7 @@ public class AccountController {
             User user = service.find(id);
             if (user != null) {
                 // Create a gRPC channel to the accommodation-service
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9093)
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9094)
                         .usePlaintext()
                         .build();
 
