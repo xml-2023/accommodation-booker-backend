@@ -11,6 +11,8 @@ import com.kncm.accountservice.model.User;
 import com.kncm.accountservice.security.util.TokenGenerator;
 import com.kncm.accountservice.service.RoleService;
 import com.kncm.accountservice.service.UserService;
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,6 +23,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import proto.Accommodation;
+import proto.UserServiceGrpc;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.apache.commons.lang.StringUtils.isBlank;
 
@@ -39,14 +45,55 @@ public class AccountController {
         if (isUserDetailsRequestValid(dto)) {
             User user = new User();
             Map(dto, user);
+            boolean responseStatus = false;
+
             if (!service.exists(user.getUsername())) {
-                user.setPassword(passwordEncoder.encode(user.getPassword()));
-                service.save(user);
+                // Create a gRPC channel to the accommodation-service
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9091)
+                        .usePlaintext()
+                        .build();
+
+                // Create a gRPC client stub for the accommodation-service
+                UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel);
+                try {
+                    // Create a gRPC request to create a user in the accommodation-service
+                    Accommodation.CreateUserRequest accommodationRequest = Accommodation.CreateUserRequest.newBuilder()
+                            .setUsername(dto.getUsername())
+                            .setPassword(dto.getPassword())
+                            .setName(dto.getName())
+                            .setSurname(dto.getSurname())
+                            .setRole(dto.getRoleName())
+                            .build();
+
+                    // Make the gRPC request to create the user in the accommodation-service
+                    Accommodation.CreateUserResponse accommodationResponse = userServiceStub.createUser(accommodationRequest);
+                    if (accommodationResponse.getIsCreated()) {
+                        responseStatus = true;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    // Shutdown the gRPC channel
+                    channel.shutdown();
+                    try {
+                        channel.awaitTermination(5, TimeUnit.SECONDS);
+                    } catch (InterruptedException e) {
+                        // Handle channel shutdown interruption
+                        System.out.println("Shutdown interruption happened");
+                    }
+                }
             } else {
                 throw new UsernameIsNotUniqueException();
             }
 
-            return new ResponseEntity<>(HttpStatus.CREATED);
+            if (responseStatus) {
+                user.setPassword(passwordEncoder.encode(user.getPassword()));
+                service.save(user);
+                return new ResponseEntity<>(HttpStatus.CREATED);
+            } else {
+                return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            }
         } else {
             throw new UserDetailsRequestIsNotValidException();
         }

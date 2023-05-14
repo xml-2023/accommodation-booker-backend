@@ -27,4 +27,5 @@ public class Accommodation {
     private String imagesPath;
     private PriceType priceType;
     private ArrayList<AccommodationAvailability> availableSlots;
+    private User user;
 }

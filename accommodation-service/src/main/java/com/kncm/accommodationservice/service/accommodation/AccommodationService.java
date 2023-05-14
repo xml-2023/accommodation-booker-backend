@@ -4,6 +4,7 @@ import com.kncm.accommodationservice.dto.accommodation.SearchAccommodationRespon
 import com.kncm.accommodationservice.model.Accommodation;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface AccommodationService {
     void create(Accommodation accommodation);
@@ -15,5 +16,7 @@ public interface AccommodationService {
     Collection<SearchAccommodationResponse> search(String location, Integer numOfGuests, String startDate, String endDate);
 
     Collection<SearchAccommodationResponse> findAll();
+
+    List<Accommodation> findByUserId(Long userId);
 
 }

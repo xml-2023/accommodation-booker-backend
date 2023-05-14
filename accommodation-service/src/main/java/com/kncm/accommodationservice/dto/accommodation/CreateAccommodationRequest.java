@@ -18,4 +18,5 @@ public class CreateAccommodationRequest {
     private String number;
     private boolean isAutomaticConfirmation;
     private String priceType;
+    private Long userId;
 }
