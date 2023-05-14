@@ -9,6 +9,7 @@ import java.util.List;
 public interface RequestService {
     void createRequest(ReservationRequest request);
     List<ReservationRequest> findByAccommodationId(Long accommodationId);
+    List<ReservationRequest> findByUserId(Long userId);
     ReservationRequest findOne(Long id);
     void save(ReservationRequest request);
     List<ReservationRequest> findByStatus(RequestStatus status);
