@@ -25,6 +25,11 @@ public class RequestServiceImpl implements RequestService {
     }
 
     @Override
+    public List<ReservationRequest> findByUserId(Long userId) {
+        return repository.findByUserId(userId);
+    }
+
+    @Override
     public ReservationRequest findOne(Long id) {
         return repository.findOne(id);
     }

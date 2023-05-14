@@ -1,6 +1,7 @@
 package com.kncm.reservationservice.controller;
 
 import com.kncm.reservationservice.dto.CreateReservationRequest;
+import com.kncm.reservationservice.dto.GuestReservationResponse;
 import com.kncm.reservationservice.dto.ReservationResponse;
 import com.kncm.reservationservice.model.RequestStatus;
 import com.kncm.reservationservice.model.ReservationRequest;
@@ -20,6 +21,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -40,10 +42,26 @@ public class RequestController {
         List<ReservationRequest> requests = service.findByAccommodationId(accommodationId);
 
         List<ReservationResponse> responses = requests.stream()
-                .map(request -> new ReservationResponse(request.getStatus().toString(), request.getReserveFrom().toString(), request.getReserveTo().toString(), request.getGuestsNumber(), request.getUser().getCanceledReservations()))
+                .map(request -> new ReservationResponse(request.getId(), request.getStatus().toString(),
+                        request.getReserveFrom().toString(), request.getReserveTo().toString(), request.getGuestsNumber(),
+                        request.getUser().getCanceledReservations()))
                 .collect(Collectors.toList());
 
         return new ResponseEntity<>(responses, HttpStatus.OK);
+    }
+
+    @GetMapping("/getByUserId/{userId}")
+    public ResponseEntity<Collection<GuestReservationResponse>> getAllRequestsByUser(@PathVariable("userId") Long userId) {
+        List<ReservationRequest> requests = new ArrayList<>();
+        requests = service.findByUserId(userId);
+
+        List<GuestReservationResponse> responses = requests.stream()
+                .map(request -> new GuestReservationResponse(request.getId(), request.getAccommodation().getName(),
+                        request.getStatus().toString(), request.getReserveFrom().toString(), request.getReserveTo().toString(),
+                        request.getGuestsNumber())).toList();
+
+        return new ResponseEntity<>(responses, HttpStatus.OK);
+
     }
 
     @PutMapping("/{requestId}")
@@ -96,7 +114,12 @@ public class RequestController {
             service.rejectRequests(requestToUpdate.getReserveFrom(), requestToUpdate.getReserveTo());
             return new ResponseEntity<>(HttpStatus.OK);
         }
-        else if (!responseStatus){
+        else if (!responseStatus && status.equals("REJECTED")){
+            requestToUpdate.setStatus(RequestStatus.REJECTED);
+            service.save(requestToUpdate);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        else if (!responseStatus) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
