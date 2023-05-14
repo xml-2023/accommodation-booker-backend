@@ -110,73 +110,6 @@ public final class Accommodation {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateUserRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              username_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              password_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              surname_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              role_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.Accommodation.internal_static_proto_CreateUserRequest_descriptor;
@@ -394,22 +327,22 @@ public final class Accommodation {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (!getSurnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(surname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, surname_);
       }
-      if (!getRoleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(role_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, role_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -418,22 +351,22 @@ public final class Accommodation {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (!getSurnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(surname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, surname_);
       }
-      if (!getRoleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(role_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, role_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -458,7 +391,7 @@ public final class Accommodation {
           .equals(other.getSurname())) return false;
       if (!getRole()
           .equals(other.getRole())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -479,7 +412,7 @@ public final class Accommodation {
       hash = (53 * hash) + getSurname().hashCode();
       hash = (37 * hash) + ROLE_FIELD_NUMBER;
       hash = (53 * hash) + getRole().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -596,18 +529,13 @@ public final class Accommodation {
 
       // Construct using proto.Accommodation.CreateUserRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -721,7 +649,7 @@ public final class Accommodation {
           role_ = other.role_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -736,17 +664,55 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Accommodation.CreateUserRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                username_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                password_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                surname_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                role_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Accommodation.CreateUserRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1162,7 +1128,18 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateUserRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1187,10 +1164,20 @@ public final class Accommodation {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Define any response fields, if needed
+     * </pre>
+     *
      * <code>bool isCreated = 6;</code>
      * @return The isCreated.
      */
     boolean getIsCreated();
+
+    /**
+     * <code>int64 userId = 12;</code>
+     * @return The userId.
+     */
+    long getUserId();
   }
   /**
    * Protobuf type {@code proto.CreateUserResponse}
@@ -1219,48 +1206,6 @@ public final class Accommodation {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateUserResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 48: {
-
-              isCreated_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.Accommodation.internal_static_proto_CreateUserResponse_descriptor;
@@ -1277,12 +1222,27 @@ public final class Accommodation {
     public static final int ISCREATED_FIELD_NUMBER = 6;
     private boolean isCreated_;
     /**
+     * <pre>
+     * Define any response fields, if needed
+     * </pre>
+     *
      * <code>bool isCreated = 6;</code>
      * @return The isCreated.
      */
     @java.lang.Override
     public boolean getIsCreated() {
       return isCreated_;
+    }
+
+    public static final int USERID_FIELD_NUMBER = 12;
+    private long userId_;
+    /**
+     * <code>int64 userId = 12;</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public long getUserId() {
+      return userId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1302,7 +1262,10 @@ public final class Accommodation {
       if (isCreated_ != false) {
         output.writeBool(6, isCreated_);
       }
-      unknownFields.writeTo(output);
+      if (userId_ != 0L) {
+        output.writeInt64(12, userId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1315,7 +1278,11 @@ public final class Accommodation {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, isCreated_);
       }
-      size += unknownFields.getSerializedSize();
+      if (userId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(12, userId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1332,7 +1299,9 @@ public final class Accommodation {
 
       if (getIsCreated()
           != other.getIsCreated()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getUserId()
+          != other.getUserId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1346,7 +1315,10 @@ public final class Accommodation {
       hash = (37 * hash) + ISCREATED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsCreated());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + USERID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1463,23 +1435,20 @@ public final class Accommodation {
 
       // Construct using proto.Accommodation.CreateUserResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         isCreated_ = false;
+
+        userId_ = 0L;
 
         return this;
       }
@@ -1508,6 +1477,7 @@ public final class Accommodation {
       public proto.Accommodation.CreateUserResponse buildPartial() {
         proto.Accommodation.CreateUserResponse result = new proto.Accommodation.CreateUserResponse(this);
         result.isCreated_ = isCreated_;
+        result.userId_ = userId_;
         onBuilt();
         return result;
       }
@@ -1559,7 +1529,10 @@ public final class Accommodation {
         if (other.getIsCreated() != false) {
           setIsCreated(other.getIsCreated());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getUserId() != 0L) {
+          setUserId(other.getUserId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1574,22 +1547,49 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Accommodation.CreateUserResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 48: {
+                isCreated_ = input.readBool();
+
+                break;
+              } // case 48
+              case 96: {
+                userId_ = input.readInt64();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Accommodation.CreateUserResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isCreated_ ;
       /**
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
        * <code>bool isCreated = 6;</code>
        * @return The isCreated.
        */
@@ -1598,6 +1598,10 @@ public final class Accommodation {
         return isCreated_;
       }
       /**
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
        * <code>bool isCreated = 6;</code>
        * @param value The isCreated to set.
        * @return This builder for chaining.
@@ -1609,12 +1613,47 @@ public final class Accommodation {
         return this;
       }
       /**
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
        * <code>bool isCreated = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsCreated() {
         
         isCreated_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long userId_ ;
+      /**
+       * <code>int64 userId = 12;</code>
+       * @return The userId.
+       */
+      @java.lang.Override
+      public long getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>int64 userId = 12;</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(long value) {
+        
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 userId = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        
+        userId_ = 0L;
         onChanged();
         return this;
       }
@@ -1651,7 +1690,18 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateUserResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1674,6 +1724,12 @@ public final class Accommodation {
   public interface UpdateUserRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.UpdateUserRequest)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 userId = 16;</code>
+     * @return The userId.
+     */
+    long getUserId();
 
     /**
      * <code>string username = 7;</code>
@@ -1767,73 +1823,6 @@ public final class Accommodation {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private UpdateUserRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              username_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              password_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              surname_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              role_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.Accommodation.internal_static_proto_UpdateUserRequest_descriptor;
@@ -1845,6 +1834,17 @@ public final class Accommodation {
       return proto.Accommodation.internal_static_proto_UpdateUserRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               proto.Accommodation.UpdateUserRequest.class, proto.Accommodation.UpdateUserRequest.Builder.class);
+    }
+
+    public static final int USERID_FIELD_NUMBER = 16;
+    private long userId_;
+    /**
+     * <code>int64 userId = 16;</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public long getUserId() {
+      return userId_;
     }
 
     public static final int USERNAME_FIELD_NUMBER = 7;
@@ -2051,22 +2051,25 @@ public final class Accommodation {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, password_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, name_);
       }
-      if (!getSurnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(surname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, surname_);
       }
-      if (!getRoleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(role_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, role_);
       }
-      unknownFields.writeTo(output);
+      if (userId_ != 0L) {
+        output.writeInt64(16, userId_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2075,22 +2078,26 @@ public final class Accommodation {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, password_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, name_);
       }
-      if (!getSurnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(surname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, surname_);
       }
-      if (!getRoleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(role_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, role_);
       }
-      size += unknownFields.getSerializedSize();
+      if (userId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(16, userId_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2105,6 +2112,8 @@ public final class Accommodation {
       }
       proto.Accommodation.UpdateUserRequest other = (proto.Accommodation.UpdateUserRequest) obj;
 
+      if (getUserId()
+          != other.getUserId()) return false;
       if (!getUsername()
           .equals(other.getUsername())) return false;
       if (!getPassword()
@@ -2115,7 +2124,7 @@ public final class Accommodation {
           .equals(other.getSurname())) return false;
       if (!getRole()
           .equals(other.getRole())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2126,6 +2135,9 @@ public final class Accommodation {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USERID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserId());
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
       hash = (53 * hash) + getUsername().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
@@ -2136,7 +2148,7 @@ public final class Accommodation {
       hash = (53 * hash) + getSurname().hashCode();
       hash = (37 * hash) + ROLE_FIELD_NUMBER;
       hash = (53 * hash) + getRole().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2253,22 +2265,19 @@ public final class Accommodation {
 
       // Construct using proto.Accommodation.UpdateUserRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        userId_ = 0L;
+
         username_ = "";
 
         password_ = "";
@@ -2305,6 +2314,7 @@ public final class Accommodation {
       @java.lang.Override
       public proto.Accommodation.UpdateUserRequest buildPartial() {
         proto.Accommodation.UpdateUserRequest result = new proto.Accommodation.UpdateUserRequest(this);
+        result.userId_ = userId_;
         result.username_ = username_;
         result.password_ = password_;
         result.name_ = name_;
@@ -2358,6 +2368,9 @@ public final class Accommodation {
 
       public Builder mergeFrom(proto.Accommodation.UpdateUserRequest other) {
         if (other == proto.Accommodation.UpdateUserRequest.getDefaultInstance()) return this;
+        if (other.getUserId() != 0L) {
+          setUserId(other.getUserId());
+        }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
           onChanged();
@@ -2378,7 +2391,7 @@ public final class Accommodation {
           role_ = other.role_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2393,17 +2406,91 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Accommodation.UpdateUserRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 58: {
+                username_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 66: {
+                password_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+              case 74: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 82: {
+                surname_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 82
+              case 90: {
+                role_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 128: {
+                userId_ = input.readInt64();
+
+                break;
+              } // case 128
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Accommodation.UpdateUserRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private long userId_ ;
+      /**
+       * <code>int64 userId = 16;</code>
+       * @return The userId.
+       */
+      @java.lang.Override
+      public long getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>int64 userId = 16;</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(long value) {
+        
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 userId = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        
+        userId_ = 0L;
+        onChanged();
         return this;
       }
 
@@ -2819,7 +2906,18 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UpdateUserRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2844,7 +2942,11 @@ public final class Accommodation {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool isUpdated = 12;</code>
+     * <pre>
+     * Define any response fields, if needed
+     * </pre>
+     *
+     * <code>bool isUpdated = 13;</code>
      * @return The isUpdated.
      */
     boolean getIsUpdated();
@@ -2876,48 +2978,6 @@ public final class Accommodation {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private UpdateUserResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 96: {
-
-              isUpdated_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.Accommodation.internal_static_proto_UpdateUserResponse_descriptor;
@@ -2931,10 +2991,14 @@ public final class Accommodation {
               proto.Accommodation.UpdateUserResponse.class, proto.Accommodation.UpdateUserResponse.Builder.class);
     }
 
-    public static final int ISUPDATED_FIELD_NUMBER = 12;
+    public static final int ISUPDATED_FIELD_NUMBER = 13;
     private boolean isUpdated_;
     /**
-     * <code>bool isUpdated = 12;</code>
+     * <pre>
+     * Define any response fields, if needed
+     * </pre>
+     *
+     * <code>bool isUpdated = 13;</code>
      * @return The isUpdated.
      */
     @java.lang.Override
@@ -2957,9 +3021,9 @@ public final class Accommodation {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isUpdated_ != false) {
-        output.writeBool(12, isUpdated_);
+        output.writeBool(13, isUpdated_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2970,9 +3034,9 @@ public final class Accommodation {
       size = 0;
       if (isUpdated_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isUpdated_);
+          .computeBoolSize(13, isUpdated_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2989,7 +3053,7 @@ public final class Accommodation {
 
       if (getIsUpdated()
           != other.getIsUpdated()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3003,7 +3067,7 @@ public final class Accommodation {
       hash = (37 * hash) + ISUPDATED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsUpdated());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3120,18 +3184,13 @@ public final class Accommodation {
 
       // Construct using proto.Accommodation.UpdateUserResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3216,7 +3275,7 @@ public final class Accommodation {
         if (other.getIsUpdated() != false) {
           setIsUpdated(other.getIsUpdated());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3231,23 +3290,45 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Accommodation.UpdateUserResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 104: {
+                isUpdated_ = input.readBool();
+
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Accommodation.UpdateUserResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isUpdated_ ;
       /**
-       * <code>bool isUpdated = 12;</code>
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
+       * <code>bool isUpdated = 13;</code>
        * @return The isUpdated.
        */
       @java.lang.Override
@@ -3255,7 +3336,11 @@ public final class Accommodation {
         return isUpdated_;
       }
       /**
-       * <code>bool isUpdated = 12;</code>
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
+       * <code>bool isUpdated = 13;</code>
        * @param value The isUpdated to set.
        * @return This builder for chaining.
        */
@@ -3266,7 +3351,11 @@ public final class Accommodation {
         return this;
       }
       /**
-       * <code>bool isUpdated = 12;</code>
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
+       * <code>bool isUpdated = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsUpdated() {
@@ -3308,7 +3397,18 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UpdateUserResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3333,16 +3433,10 @@ public final class Accommodation {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string username = 13;</code>
-     * @return The username.
+     * <code>int64 userId = 14;</code>
+     * @return The userId.
      */
-    java.lang.String getUsername();
-    /**
-     * <code>string username = 13;</code>
-     * @return The bytes for username.
-     */
-    com.google.protobuf.ByteString
-        getUsernameBytes();
+    long getUserId();
   }
   /**
    * Protobuf type {@code proto.DeleteUserRequest}
@@ -3357,7 +3451,6 @@ public final class Accommodation {
       super(builder);
     }
     private DeleteUserRequest() {
-      username_ = "";
     }
 
     @java.lang.Override
@@ -3372,49 +3465,6 @@ public final class Accommodation {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DeleteUserRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              username_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.Accommodation.internal_static_proto_DeleteUserRequest_descriptor;
@@ -3428,42 +3478,15 @@ public final class Accommodation {
               proto.Accommodation.DeleteUserRequest.class, proto.Accommodation.DeleteUserRequest.Builder.class);
     }
 
-    public static final int USERNAME_FIELD_NUMBER = 13;
-    private volatile java.lang.Object username_;
+    public static final int USERID_FIELD_NUMBER = 14;
+    private long userId_;
     /**
-     * <code>string username = 13;</code>
-     * @return The username.
+     * <code>int64 userId = 14;</code>
+     * @return The userId.
      */
     @java.lang.Override
-    public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        username_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string username = 13;</code>
-     * @return The bytes for username.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUsernameBytes() {
-      java.lang.Object ref = username_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        username_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getUserId() {
+      return userId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3480,10 +3503,10 @@ public final class Accommodation {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, username_);
+      if (userId_ != 0L) {
+        output.writeInt64(14, userId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3492,10 +3515,11 @@ public final class Accommodation {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, username_);
+      if (userId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(14, userId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3510,9 +3534,9 @@ public final class Accommodation {
       }
       proto.Accommodation.DeleteUserRequest other = (proto.Accommodation.DeleteUserRequest) obj;
 
-      if (!getUsername()
-          .equals(other.getUsername())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getUserId()
+          != other.getUserId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3523,9 +3547,10 @@ public final class Accommodation {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getUsername().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + USERID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3642,23 +3667,18 @@ public final class Accommodation {
 
       // Construct using proto.Accommodation.DeleteUserRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        username_ = "";
+        userId_ = 0L;
 
         return this;
       }
@@ -3686,7 +3706,7 @@ public final class Accommodation {
       @java.lang.Override
       public proto.Accommodation.DeleteUserRequest buildPartial() {
         proto.Accommodation.DeleteUserRequest result = new proto.Accommodation.DeleteUserRequest(this);
-        result.username_ = username_;
+        result.userId_ = userId_;
         onBuilt();
         return result;
       }
@@ -3735,11 +3755,10 @@ public final class Accommodation {
 
       public Builder mergeFrom(proto.Accommodation.DeleteUserRequest other) {
         if (other == proto.Accommodation.DeleteUserRequest.getDefaultInstance()) return this;
-        if (!other.getUsername().isEmpty()) {
-          username_ = other.username_;
-          onChanged();
+        if (other.getUserId() != 0L) {
+          setUserId(other.getUserId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3754,92 +3773,65 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Accommodation.DeleteUserRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 112: {
+                userId_ = input.readInt64();
+
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Accommodation.DeleteUserRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
-      private java.lang.Object username_ = "";
+      private long userId_ ;
       /**
-       * <code>string username = 13;</code>
-       * @return The username.
+       * <code>int64 userId = 14;</code>
+       * @return The userId.
        */
-      public java.lang.String getUsername() {
-        java.lang.Object ref = username_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          username_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public long getUserId() {
+        return userId_;
       }
       /**
-       * <code>string username = 13;</code>
-       * @return The bytes for username.
-       */
-      public com.google.protobuf.ByteString
-          getUsernameBytes() {
-        java.lang.Object ref = username_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          username_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string username = 13;</code>
-       * @param value The username to set.
+       * <code>int64 userId = 14;</code>
+       * @param value The userId to set.
        * @return This builder for chaining.
        */
-      public Builder setUsername(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        username_ = value;
+      public Builder setUserId(long value) {
+        
+        userId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string username = 13;</code>
+       * <code>int64 userId = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUsername() {
+      public Builder clearUserId() {
         
-        username_ = getDefaultInstance().getUsername();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string username = 13;</code>
-       * @param value The bytes for username to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUsernameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        username_ = value;
+        userId_ = 0L;
         onChanged();
         return this;
       }
@@ -3876,7 +3868,18 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteUserRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3901,7 +3904,11 @@ public final class Accommodation {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool isDeleted = 14;</code>
+     * <pre>
+     * Define any response fields, if needed
+     * </pre>
+     *
+     * <code>bool isDeleted = 15;</code>
      * @return The isDeleted.
      */
     boolean getIsDeleted();
@@ -3933,48 +3940,6 @@ public final class Accommodation {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DeleteUserResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 112: {
-
-              isDeleted_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.Accommodation.internal_static_proto_DeleteUserResponse_descriptor;
@@ -3988,10 +3953,14 @@ public final class Accommodation {
               proto.Accommodation.DeleteUserResponse.class, proto.Accommodation.DeleteUserResponse.Builder.class);
     }
 
-    public static final int ISDELETED_FIELD_NUMBER = 14;
+    public static final int ISDELETED_FIELD_NUMBER = 15;
     private boolean isDeleted_;
     /**
-     * <code>bool isDeleted = 14;</code>
+     * <pre>
+     * Define any response fields, if needed
+     * </pre>
+     *
+     * <code>bool isDeleted = 15;</code>
      * @return The isDeleted.
      */
     @java.lang.Override
@@ -4014,9 +3983,9 @@ public final class Accommodation {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isDeleted_ != false) {
-        output.writeBool(14, isDeleted_);
+        output.writeBool(15, isDeleted_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4027,9 +3996,9 @@ public final class Accommodation {
       size = 0;
       if (isDeleted_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(14, isDeleted_);
+          .computeBoolSize(15, isDeleted_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4046,7 +4015,7 @@ public final class Accommodation {
 
       if (getIsDeleted()
           != other.getIsDeleted()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4060,7 +4029,7 @@ public final class Accommodation {
       hash = (37 * hash) + ISDELETED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsDeleted());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4177,18 +4146,13 @@ public final class Accommodation {
 
       // Construct using proto.Accommodation.DeleteUserResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4273,7 +4237,7 @@ public final class Accommodation {
         if (other.getIsDeleted() != false) {
           setIsDeleted(other.getIsDeleted());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4288,23 +4252,45 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Accommodation.DeleteUserResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 120: {
+                isDeleted_ = input.readBool();
+
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Accommodation.DeleteUserResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
       private boolean isDeleted_ ;
       /**
-       * <code>bool isDeleted = 14;</code>
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
+       * <code>bool isDeleted = 15;</code>
        * @return The isDeleted.
        */
       @java.lang.Override
@@ -4312,7 +4298,11 @@ public final class Accommodation {
         return isDeleted_;
       }
       /**
-       * <code>bool isDeleted = 14;</code>
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
+       * <code>bool isDeleted = 15;</code>
        * @param value The isDeleted to set.
        * @return This builder for chaining.
        */
@@ -4323,7 +4313,11 @@ public final class Accommodation {
         return this;
       }
       /**
-       * <code>bool isDeleted = 14;</code>
+       * <pre>
+       * Define any response fields, if needed
+       * </pre>
+       *
+       * <code>bool isDeleted = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsDeleted() {
@@ -4365,7 +4359,18 @@ public final class Accommodation {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteUserResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4427,19 +4432,20 @@ public final class Accommodation {
       "\n\023accommodation.proto\022\005proto\"d\n\021CreateUs" +
       "erRequest\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030" +
       "\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\017\n\007surname\030\004 \001(\t\022\014\n\004" +
-      "role\030\005 \001(\t\"\'\n\022CreateUserResponse\022\021\n\tisCr" +
-      "eated\030\006 \001(\010\"d\n\021UpdateUserRequest\022\020\n\010user" +
-      "name\030\007 \001(\t\022\020\n\010password\030\010 \001(\t\022\014\n\004name\030\t \001" +
-      "(\t\022\017\n\007surname\030\n \001(\t\022\014\n\004role\030\013 \001(\t\"\'\n\022Upd" +
-      "ateUserResponse\022\021\n\tisUpdated\030\014 \001(\010\"%\n\021De" +
-      "leteUserRequest\022\020\n\010username\030\r \001(\t\"\'\n\022Del" +
-      "eteUserResponse\022\021\n\tisDeleted\030\016 \001(\0102\334\001\n\013U" +
-      "serService\022C\n\nCreateUser\022\030.proto.CreateU" +
-      "serRequest\032\031.proto.CreateUserResponse\"\000\022" +
-      "C\n\nUpdateUser\022\030.proto.UpdateUserRequest\032" +
-      "\031.proto.UpdateUserResponse\"\000\022C\n\nDeleteUs" +
-      "er\022\030.proto.DeleteUserRequest\032\031.proto.Del" +
-      "eteUserResponse\"\000b\006proto3"
+      "role\030\005 \001(\t\"7\n\022CreateUserResponse\022\021\n\tisCr" +
+      "eated\030\006 \001(\010\022\016\n\006userId\030\014 \001(\003\"t\n\021UpdateUse" +
+      "rRequest\022\016\n\006userId\030\020 \001(\003\022\020\n\010username\030\007 \001" +
+      "(\t\022\020\n\010password\030\010 \001(\t\022\014\n\004name\030\t \001(\t\022\017\n\007su" +
+      "rname\030\n \001(\t\022\014\n\004role\030\013 \001(\t\"\'\n\022UpdateUserR" +
+      "esponse\022\021\n\tisUpdated\030\r \001(\010\"#\n\021DeleteUser" +
+      "Request\022\016\n\006userId\030\016 \001(\003\"\'\n\022DeleteUserRes" +
+      "ponse\022\021\n\tisDeleted\030\017 \001(\0102\334\001\n\013UserService" +
+      "\022C\n\nCreateUser\022\030.proto.CreateUserRequest" +
+      "\032\031.proto.CreateUserResponse\"\000\022C\n\nUpdateU" +
+      "ser\022\030.proto.UpdateUserRequest\032\031.proto.Up" +
+      "dateUserResponse\"\000\022C\n\nDeleteUser\022\030.proto" +
+      ".DeleteUserRequest\032\031.proto.DeleteUserRes" +
+      "ponse\"\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4456,13 +4462,13 @@ public final class Accommodation {
     internal_static_proto_CreateUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CreateUserResponse_descriptor,
-        new java.lang.String[] { "IsCreated", });
+        new java.lang.String[] { "IsCreated", "UserId", });
     internal_static_proto_UpdateUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_proto_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "Username", "Password", "Name", "Surname", "Role", });
+        new java.lang.String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
     internal_static_proto_UpdateUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_proto_UpdateUserResponse_fieldAccessorTable = new
@@ -4474,7 +4480,7 @@ public final class Accommodation {
     internal_static_proto_DeleteUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_DeleteUserRequest_descriptor,
-        new java.lang.String[] { "Username", });
+        new java.lang.String[] { "UserId", });
     internal_static_proto_DeleteUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_proto_DeleteUserResponse_fieldAccessorTable = new

@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.42.0)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: accommodation.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UserServiceGrpc {
@@ -154,59 +154,46 @@ public final class UserServiceGrpc {
 
   /**
    */
-  public static abstract class UserServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void createUser(proto.Accommodation.CreateUserRequest request,
+    default void createUser(proto.Accommodation.CreateUserRequest request,
         io.grpc.stub.StreamObserver<proto.Accommodation.CreateUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateUser(proto.Accommodation.UpdateUserRequest request,
+    default void updateUser(proto.Accommodation.UpdateUserRequest request,
         io.grpc.stub.StreamObserver<proto.Accommodation.UpdateUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteUser(proto.Accommodation.DeleteUserRequest request,
+    default void deleteUser(proto.Accommodation.DeleteUserRequest request,
         io.grpc.stub.StreamObserver<proto.Accommodation.DeleteUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteUserMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.Accommodation.CreateUserRequest,
-                proto.Accommodation.CreateUserResponse>(
-                  this, METHODID_CREATE_USER)))
-          .addMethod(
-            getUpdateUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.Accommodation.UpdateUserRequest,
-                proto.Accommodation.UpdateUserResponse>(
-                  this, METHODID_UPDATE_USER)))
-          .addMethod(
-            getDeleteUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.Accommodation.DeleteUserRequest,
-                proto.Accommodation.DeleteUserResponse>(
-                  this, METHODID_DELETE_USER)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service UserService.
    */
-  public static final class UserServiceStub extends io.grpc.stub.AbstractAsyncStub<UserServiceStub> {
+  public static abstract class UserServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return UserServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service UserService.
+   */
+  public static final class UserServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<UserServiceStub> {
     private UserServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -244,8 +231,10 @@ public final class UserServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service UserService.
    */
-  public static final class UserServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserServiceBlockingStub> {
+  public static final class UserServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<UserServiceBlockingStub> {
     private UserServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -280,8 +269,10 @@ public final class UserServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service UserService.
    */
-  public static final class UserServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserServiceFutureStub> {
+  public static final class UserServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<UserServiceFutureStub> {
     private UserServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -327,10 +318,10 @@ public final class UserServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final UserServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(UserServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -365,6 +356,32 @@ public final class UserServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.Accommodation.CreateUserRequest,
+              proto.Accommodation.CreateUserResponse>(
+                service, METHODID_CREATE_USER)))
+        .addMethod(
+          getUpdateUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.Accommodation.UpdateUserRequest,
+              proto.Accommodation.UpdateUserResponse>(
+                service, METHODID_UPDATE_USER)))
+        .addMethod(
+          getDeleteUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.Accommodation.DeleteUserRequest,
+              proto.Accommodation.DeleteUserResponse>(
+                service, METHODID_DELETE_USER)))
+        .build();
   }
 
   private static abstract class UserServiceBaseDescriptorSupplier
