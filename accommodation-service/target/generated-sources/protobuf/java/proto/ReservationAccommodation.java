@@ -1544,6 +1544,1395 @@ public final class ReservationAccommodation {
 
   }
 
+  public interface AcceptOrCancelReservationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.AcceptOrCancelReservationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 accommodationId = 8;</code>
+     * @return The accommodationId.
+     */
+    long getAccommodationId();
+
+    /**
+     * <code>string reserveFrom = 9;</code>
+     * @return The reserveFrom.
+     */
+    java.lang.String getReserveFrom();
+    /**
+     * <code>string reserveFrom = 9;</code>
+     * @return The bytes for reserveFrom.
+     */
+    com.google.protobuf.ByteString
+        getReserveFromBytes();
+
+    /**
+     * <code>string reserveTo = 10;</code>
+     * @return The reserveTo.
+     */
+    java.lang.String getReserveTo();
+    /**
+     * <code>string reserveTo = 10;</code>
+     * @return The bytes for reserveTo.
+     */
+    com.google.protobuf.ByteString
+        getReserveToBytes();
+
+    /**
+     * <code>string status = 11;</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 11;</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+  }
+  /**
+   * Protobuf type {@code proto.AcceptOrCancelReservationRequest}
+   */
+  public static final class AcceptOrCancelReservationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.AcceptOrCancelReservationRequest)
+      AcceptOrCancelReservationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AcceptOrCancelReservationRequest.newBuilder() to construct.
+    private AcceptOrCancelReservationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AcceptOrCancelReservationRequest() {
+      reserveFrom_ = "";
+      reserveTo_ = "";
+      status_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AcceptOrCancelReservationRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.ReservationAccommodation.AcceptOrCancelReservationRequest.class, proto.ReservationAccommodation.AcceptOrCancelReservationRequest.Builder.class);
+    }
+
+    public static final int ACCOMMODATIONID_FIELD_NUMBER = 8;
+    private long accommodationId_;
+    /**
+     * <code>int64 accommodationId = 8;</code>
+     * @return The accommodationId.
+     */
+    @java.lang.Override
+    public long getAccommodationId() {
+      return accommodationId_;
+    }
+
+    public static final int RESERVEFROM_FIELD_NUMBER = 9;
+    private volatile java.lang.Object reserveFrom_;
+    /**
+     * <code>string reserveFrom = 9;</code>
+     * @return The reserveFrom.
+     */
+    @java.lang.Override
+    public java.lang.String getReserveFrom() {
+      java.lang.Object ref = reserveFrom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reserveFrom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string reserveFrom = 9;</code>
+     * @return The bytes for reserveFrom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReserveFromBytes() {
+      java.lang.Object ref = reserveFrom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reserveFrom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESERVETO_FIELD_NUMBER = 10;
+    private volatile java.lang.Object reserveTo_;
+    /**
+     * <code>string reserveTo = 10;</code>
+     * @return The reserveTo.
+     */
+    @java.lang.Override
+    public java.lang.String getReserveTo() {
+      java.lang.Object ref = reserveTo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reserveTo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string reserveTo = 10;</code>
+     * @return The bytes for reserveTo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReserveToBytes() {
+      java.lang.Object ref = reserveTo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reserveTo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 11;
+    private volatile java.lang.Object status_;
+    /**
+     * <code>string status = 11;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 11;</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (accommodationId_ != 0L) {
+        output.writeInt64(8, accommodationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveFrom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, reserveFrom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveTo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, reserveTo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (accommodationId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, accommodationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveFrom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, reserveFrom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveTo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, reserveTo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.ReservationAccommodation.AcceptOrCancelReservationRequest)) {
+        return super.equals(obj);
+      }
+      proto.ReservationAccommodation.AcceptOrCancelReservationRequest other = (proto.ReservationAccommodation.AcceptOrCancelReservationRequest) obj;
+
+      if (getAccommodationId()
+          != other.getAccommodationId()) return false;
+      if (!getReserveFrom()
+          .equals(other.getReserveFrom())) return false;
+      if (!getReserveTo()
+          .equals(other.getReserveTo())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOMMODATIONID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAccommodationId());
+      hash = (37 * hash) + RESERVEFROM_FIELD_NUMBER;
+      hash = (53 * hash) + getReserveFrom().hashCode();
+      hash = (37 * hash) + RESERVETO_FIELD_NUMBER;
+      hash = (53 * hash) + getReserveTo().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.ReservationAccommodation.AcceptOrCancelReservationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.AcceptOrCancelReservationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.AcceptOrCancelReservationRequest)
+        proto.ReservationAccommodation.AcceptOrCancelReservationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.ReservationAccommodation.AcceptOrCancelReservationRequest.class, proto.ReservationAccommodation.AcceptOrCancelReservationRequest.Builder.class);
+      }
+
+      // Construct using proto.ReservationAccommodation.AcceptOrCancelReservationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accommodationId_ = 0L;
+
+        reserveFrom_ = "";
+
+        reserveTo_ = "";
+
+        status_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.ReservationAccommodation.AcceptOrCancelReservationRequest getDefaultInstanceForType() {
+        return proto.ReservationAccommodation.AcceptOrCancelReservationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.ReservationAccommodation.AcceptOrCancelReservationRequest build() {
+        proto.ReservationAccommodation.AcceptOrCancelReservationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.ReservationAccommodation.AcceptOrCancelReservationRequest buildPartial() {
+        proto.ReservationAccommodation.AcceptOrCancelReservationRequest result = new proto.ReservationAccommodation.AcceptOrCancelReservationRequest(this);
+        result.accommodationId_ = accommodationId_;
+        result.reserveFrom_ = reserveFrom_;
+        result.reserveTo_ = reserveTo_;
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.ReservationAccommodation.AcceptOrCancelReservationRequest) {
+          return mergeFrom((proto.ReservationAccommodation.AcceptOrCancelReservationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.ReservationAccommodation.AcceptOrCancelReservationRequest other) {
+        if (other == proto.ReservationAccommodation.AcceptOrCancelReservationRequest.getDefaultInstance()) return this;
+        if (other.getAccommodationId() != 0L) {
+          setAccommodationId(other.getAccommodationId());
+        }
+        if (!other.getReserveFrom().isEmpty()) {
+          reserveFrom_ = other.reserveFrom_;
+          onChanged();
+        }
+        if (!other.getReserveTo().isEmpty()) {
+          reserveTo_ = other.reserveTo_;
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 64: {
+                accommodationId_ = input.readInt64();
+
+                break;
+              } // case 64
+              case 74: {
+                reserveFrom_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 82: {
+                reserveTo_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 82
+              case 90: {
+                status_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private long accommodationId_ ;
+      /**
+       * <code>int64 accommodationId = 8;</code>
+       * @return The accommodationId.
+       */
+      @java.lang.Override
+      public long getAccommodationId() {
+        return accommodationId_;
+      }
+      /**
+       * <code>int64 accommodationId = 8;</code>
+       * @param value The accommodationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccommodationId(long value) {
+        
+        accommodationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 accommodationId = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccommodationId() {
+        
+        accommodationId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reserveFrom_ = "";
+      /**
+       * <code>string reserveFrom = 9;</code>
+       * @return The reserveFrom.
+       */
+      public java.lang.String getReserveFrom() {
+        java.lang.Object ref = reserveFrom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reserveFrom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string reserveFrom = 9;</code>
+       * @return The bytes for reserveFrom.
+       */
+      public com.google.protobuf.ByteString
+          getReserveFromBytes() {
+        java.lang.Object ref = reserveFrom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reserveFrom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string reserveFrom = 9;</code>
+       * @param value The reserveFrom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveFrom(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reserveFrom_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reserveFrom = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReserveFrom() {
+        
+        reserveFrom_ = getDefaultInstance().getReserveFrom();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reserveFrom = 9;</code>
+       * @param value The bytes for reserveFrom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reserveFrom_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reserveTo_ = "";
+      /**
+       * <code>string reserveTo = 10;</code>
+       * @return The reserveTo.
+       */
+      public java.lang.String getReserveTo() {
+        java.lang.Object ref = reserveTo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reserveTo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string reserveTo = 10;</code>
+       * @return The bytes for reserveTo.
+       */
+      public com.google.protobuf.ByteString
+          getReserveToBytes() {
+        java.lang.Object ref = reserveTo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reserveTo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string reserveTo = 10;</code>
+       * @param value The reserveTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveTo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reserveTo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reserveTo = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReserveTo() {
+        
+        reserveTo_ = getDefaultInstance().getReserveTo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reserveTo = 10;</code>
+       * @param value The bytes for reserveTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveToBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reserveTo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 11;</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 11;</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 11;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 11;</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.AcceptOrCancelReservationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.AcceptOrCancelReservationRequest)
+    private static final proto.ReservationAccommodation.AcceptOrCancelReservationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.ReservationAccommodation.AcceptOrCancelReservationRequest();
+    }
+
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AcceptOrCancelReservationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AcceptOrCancelReservationRequest>() {
+      @java.lang.Override
+      public AcceptOrCancelReservationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AcceptOrCancelReservationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AcceptOrCancelReservationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.ReservationAccommodation.AcceptOrCancelReservationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AcceptOrCancelReservationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.AcceptOrCancelReservationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool isSuccessful = 12;</code>
+     * @return The isSuccessful.
+     */
+    boolean getIsSuccessful();
+  }
+  /**
+   * Protobuf type {@code proto.AcceptOrCancelReservationResponse}
+   */
+  public static final class AcceptOrCancelReservationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.AcceptOrCancelReservationResponse)
+      AcceptOrCancelReservationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AcceptOrCancelReservationResponse.newBuilder() to construct.
+    private AcceptOrCancelReservationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AcceptOrCancelReservationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AcceptOrCancelReservationResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.ReservationAccommodation.AcceptOrCancelReservationResponse.class, proto.ReservationAccommodation.AcceptOrCancelReservationResponse.Builder.class);
+    }
+
+    public static final int ISSUCCESSFUL_FIELD_NUMBER = 12;
+    private boolean isSuccessful_;
+    /**
+     * <code>bool isSuccessful = 12;</code>
+     * @return The isSuccessful.
+     */
+    @java.lang.Override
+    public boolean getIsSuccessful() {
+      return isSuccessful_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isSuccessful_ != false) {
+        output.writeBool(12, isSuccessful_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isSuccessful_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, isSuccessful_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.ReservationAccommodation.AcceptOrCancelReservationResponse)) {
+        return super.equals(obj);
+      }
+      proto.ReservationAccommodation.AcceptOrCancelReservationResponse other = (proto.ReservationAccommodation.AcceptOrCancelReservationResponse) obj;
+
+      if (getIsSuccessful()
+          != other.getIsSuccessful()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISSUCCESSFUL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsSuccessful());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.ReservationAccommodation.AcceptOrCancelReservationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.AcceptOrCancelReservationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.AcceptOrCancelReservationResponse)
+        proto.ReservationAccommodation.AcceptOrCancelReservationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.ReservationAccommodation.AcceptOrCancelReservationResponse.class, proto.ReservationAccommodation.AcceptOrCancelReservationResponse.Builder.class);
+      }
+
+      // Construct using proto.ReservationAccommodation.AcceptOrCancelReservationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        isSuccessful_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.ReservationAccommodation.internal_static_proto_AcceptOrCancelReservationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.ReservationAccommodation.AcceptOrCancelReservationResponse getDefaultInstanceForType() {
+        return proto.ReservationAccommodation.AcceptOrCancelReservationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.ReservationAccommodation.AcceptOrCancelReservationResponse build() {
+        proto.ReservationAccommodation.AcceptOrCancelReservationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.ReservationAccommodation.AcceptOrCancelReservationResponse buildPartial() {
+        proto.ReservationAccommodation.AcceptOrCancelReservationResponse result = new proto.ReservationAccommodation.AcceptOrCancelReservationResponse(this);
+        result.isSuccessful_ = isSuccessful_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.ReservationAccommodation.AcceptOrCancelReservationResponse) {
+          return mergeFrom((proto.ReservationAccommodation.AcceptOrCancelReservationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.ReservationAccommodation.AcceptOrCancelReservationResponse other) {
+        if (other == proto.ReservationAccommodation.AcceptOrCancelReservationResponse.getDefaultInstance()) return this;
+        if (other.getIsSuccessful() != false) {
+          setIsSuccessful(other.getIsSuccessful());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 96: {
+                isSuccessful_ = input.readBool();
+
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private boolean isSuccessful_ ;
+      /**
+       * <code>bool isSuccessful = 12;</code>
+       * @return The isSuccessful.
+       */
+      @java.lang.Override
+      public boolean getIsSuccessful() {
+        return isSuccessful_;
+      }
+      /**
+       * <code>bool isSuccessful = 12;</code>
+       * @param value The isSuccessful to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsSuccessful(boolean value) {
+        
+        isSuccessful_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isSuccessful = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsSuccessful() {
+        
+        isSuccessful_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.AcceptOrCancelReservationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.AcceptOrCancelReservationResponse)
+    private static final proto.ReservationAccommodation.AcceptOrCancelReservationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.ReservationAccommodation.AcceptOrCancelReservationResponse();
+    }
+
+    public static proto.ReservationAccommodation.AcceptOrCancelReservationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AcceptOrCancelReservationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AcceptOrCancelReservationResponse>() {
+      @java.lang.Override
+      public AcceptOrCancelReservationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AcceptOrCancelReservationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AcceptOrCancelReservationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.ReservationAccommodation.AcceptOrCancelReservationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_proto_CreateReservationRequest_descriptor;
   private static final 
@@ -1554,6 +2943,16 @@ public final class ReservationAccommodation {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_proto_CreateReservationResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_AcceptOrCancelReservationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_AcceptOrCancelReservationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_AcceptOrCancelReservationResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_AcceptOrCancelReservationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1569,10 +2968,17 @@ public final class ReservationAccommodation {
       "eserveFrom\030\003 \001(\t\022\021\n\treserveTo\030\004 \001(\t\"^\n\031C" +
       "reateReservationResponse\022\025\n\rareDatesVali" +
       "d\030\005 \001(\010\022\032\n\022isGuestNumberValid\030\006 \001(\010\022\016\n\006s" +
-      "tatus\030\007 \001(\t2u\n\031ReservationRequestService" +
-      "\022X\n\021CreateReservation\022\037.proto.CreateRese" +
-      "rvationRequest\032 .proto.CreateReservation" +
-      "Response\"\000b\006proto3"
+      "tatus\030\007 \001(\t\"s\n AcceptOrCancelReservation" +
+      "Request\022\027\n\017accommodationId\030\010 \001(\003\022\023\n\013rese" +
+      "rveFrom\030\t \001(\t\022\021\n\treserveTo\030\n \001(\t\022\016\n\006stat" +
+      "us\030\013 \001(\t\"9\n!AcceptOrCancelReservationRes" +
+      "ponse\022\024\n\014isSuccessful\030\014 \001(\0102\347\001\n\031Reservat" +
+      "ionRequestService\022X\n\021CreateReservation\022\037" +
+      ".proto.CreateReservationRequest\032 .proto." +
+      "CreateReservationResponse\"\000\022p\n\031AcceptOrC" +
+      "ancelReservation\022\'.proto.AcceptOrCancelR" +
+      "eservationRequest\032(.proto.AcceptOrCancel" +
+      "ReservationResponse\"\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1590,6 +2996,18 @@ public final class ReservationAccommodation {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CreateReservationResponse_descriptor,
         new java.lang.String[] { "AreDatesValid", "IsGuestNumberValid", "Status", });
+    internal_static_proto_AcceptOrCancelReservationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_proto_AcceptOrCancelReservationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_AcceptOrCancelReservationRequest_descriptor,
+        new java.lang.String[] { "AccommodationId", "ReserveFrom", "ReserveTo", "Status", });
+    internal_static_proto_AcceptOrCancelReservationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_proto_AcceptOrCancelReservationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_AcceptOrCancelReservationResponse_descriptor,
+        new java.lang.String[] { "IsSuccessful", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -4,6 +4,7 @@ package proto;
 
 service ReservationRequestService {
   rpc CreateReservation(CreateReservationRequest) returns (CreateReservationResponse) {}
+  rpc AcceptOrCancelReservation(AcceptOrCancelReservationRequest) returns (AcceptOrCancelReservationResponse) {}
 }
 
 message CreateReservationRequest {
@@ -17,4 +18,15 @@ message CreateReservationResponse {
   bool areDatesValid = 5;
   bool isGuestNumberValid = 6;
   string status = 7;
+}
+
+message AcceptOrCancelReservationRequest {
+  int64 accommodationId = 8;
+  string reserveFrom = 9;
+  string reserveTo = 10;
+  string status = 11;
+}
+
+message AcceptOrCancelReservationResponse {
+  bool isSuccessful = 12;
 }
