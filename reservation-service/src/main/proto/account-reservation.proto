@@ -6,6 +6,7 @@ service CreateGuestService {
   rpc CreateUser(CreateGuestRequest) returns (CreateGuestResponse) {}
   rpc UpdateUser(UpdateGuestRequest) returns (UpdateGuestResponse) {}
   rpc DeleteUser(DeleteGuestRequest) returns (DeleteGuestResponse) {}
+  rpc CanHostBeDeleted(CanHostBeDeletedRequest) returns (CanHostBeDeletedResponse) {}
 }
 
 message CreateGuestRequest {
@@ -44,4 +45,12 @@ message DeleteGuestRequest {
 message DeleteGuestResponse {
   // Define any response fields, if needed
   bool isDeleted = 15;
+}
+
+message CanHostBeDeletedRequest {
+  repeated int64 accommodationIds = 26;
+}
+
+message CanHostBeDeletedResponse {
+  bool canBeDeleted = 27;
 }

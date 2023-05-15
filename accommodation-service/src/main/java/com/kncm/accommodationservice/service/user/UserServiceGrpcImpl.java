@@ -2,6 +2,7 @@ package com.kncm.accommodationservice.service.user;
 
 import com.kncm.accommodationservice.SequenceGenerator;
 import com.kncm.accommodationservice.model.User;
+import com.kncm.accommodationservice.repository.accommodation.AccommodationRepository;
 import com.kncm.accommodationservice.repository.role.RoleRepository;
 import com.kncm.accommodationservice.repository.user.UserRepository;
 import io.grpc.stub.StreamObserver;
@@ -11,6 +12,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import proto.Accommodation;
 import proto.UserServiceGrpc;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @GrpcService
 public class UserServiceGrpcImpl extends UserServiceGrpc.UserServiceImplBase {
@@ -18,7 +21,7 @@ public class UserServiceGrpcImpl extends UserServiceGrpc.UserServiceImplBase {
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;
     private final RoleRepository roleRepository;
-
+    private final AccommodationRepository accommodationRepository;
     @Override
     public void createUser(Accommodation.CreateUserRequest request, StreamObserver<Accommodation.CreateUserResponse> responseObserver) {
         // Perform the necessary logic to create the user in the accommodation-service
@@ -68,6 +71,19 @@ public class UserServiceGrpcImpl extends UserServiceGrpc.UserServiceImplBase {
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+
+    @Override
+    public void deleteUser(Accommodation.DeleteUserRequest request, StreamObserver<Accommodation.DeleteUserResponse> responseObserver) {
+        repository.deleteById(request.getUserId());
+        List<com.kncm.accommodationservice.model.Accommodation> accommodations = accommodationRepository.findByUserId(request.getUserId());
+        accommodationRepository.deleteAll(accommodations);
+        Accommodation.DeleteUserResponse response = Accommodation.DeleteUserResponse.newBuilder()
+                .setIsDeleted(true)
+                .build();
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
 
     private void map(User user, Accommodation.UpdateUserRequest request) {
         user.setUsername(request.getUsername());

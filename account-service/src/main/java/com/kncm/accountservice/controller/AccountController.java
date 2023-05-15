@@ -23,11 +23,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import proto.Accommodation;
-import proto.AccountReservation;
-import proto.CreateGuestServiceGrpc;
-import proto.UserServiceGrpc;
+import proto.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.apache.commons.lang.StringUtils.isBlank;
@@ -293,20 +292,167 @@ public class AccountController {
 
 
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("guest/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         User user = service.find(id);
+        boolean responseStatus = false;
         if (user != null) {
-            //if (grpc calls) {
-            service.delete(user);
-            return new ResponseEntity<>(HttpStatus.OK);
-            //} else {
-            //      throw ../
-            // }
+            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9094)
+                    .usePlaintext()
+                    .build();
+
+            CreateGuestServiceGrpc.CreateGuestServiceBlockingStub guestServiceStub = CreateGuestServiceGrpc.newBlockingStub(channel);
+            try {
+                AccountReservation.DeleteGuestRequest guestRequest = AccountReservation.DeleteGuestRequest.newBuilder()
+                        .setUserId(id)
+                        .build();
+
+                AccountReservation.DeleteGuestResponse guestResponse = guestServiceStub.deleteUser(guestRequest);
+                if (guestResponse.getIsDeleted()) {
+                    responseStatus = true;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Grpc exception happened");
+            } finally {
+                // Shutdown the gRPC channel
+                channel.shutdown();
+                try {
+                    channel.awaitTermination(5, TimeUnit.SECONDS);
+                } catch (InterruptedException e) {
+                    // Handle channel shutdown interruption
+                    System.out.println("Shutdown interruption happened");
+                }
+
+                if (responseStatus) {
+                    service.delete(user);
+                    return new ResponseEntity<>(HttpStatus.OK);
+                } else {
+                    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+            }
         } else {
             throw new UserWithPassedIdDoesNotExistException();
         }
     }
+
+
+    @DeleteMapping("host/{id}")
+    public ResponseEntity<Void> deleteHost(@PathVariable Long id) {
+        User user = service.find(id);
+        List<Long> accommodationIds = new ArrayList<>();
+        boolean canBeDeleted = false;
+        boolean responseStatus = false;
+        if (user != null) {
+            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9095)
+                    .usePlaintext()
+                    .build();
+
+            AccountAccommodationServiceGrpc.AccountAccommodationServiceBlockingStub accountAccommodationServiceStub =  AccountAccommodationServiceGrpc.newBlockingStub(channel);
+            try {
+                AccountAccommodation.CreateAccountAccommodationRequest accountAccommodationRequest = AccountAccommodation.CreateAccountAccommodationRequest.newBuilder()
+                        .setUserId(id)
+                        .build();
+
+                AccountAccommodation.CreateAccountAccommodationResponse accountAccommodationResponse = accountAccommodationServiceStub.getAccommodations(accountAccommodationRequest);
+                accommodationIds = accountAccommodationResponse.getAccommodationIdsList();
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Grpc exception happened");
+            } finally {
+                // Shutdown the gRPC channel
+                channel.shutdown();
+                try {
+                    channel.awaitTermination(5, TimeUnit.SECONDS);
+                } catch (InterruptedException e) {
+                    // Handle channel shutdown interruption
+                    System.out.println("Shutdown interruption happened");
+                }
+            }
+
+                //********************************************************************************
+
+                ManagedChannel channel1 = ManagedChannelBuilder.forAddress("localhost", 9094)
+                        .usePlaintext()
+                        .build();
+
+                CreateGuestServiceGrpc.CreateGuestServiceBlockingStub guestServiceStub = CreateGuestServiceGrpc.newBlockingStub(channel1);
+                try {
+                    AccountReservation.CanHostBeDeletedRequest.Builder requestBuilder  =  AccountReservation.CanHostBeDeletedRequest.newBuilder();
+                    for (int i = 0; i < accommodationIds.size(); i++) {
+                        requestBuilder.addAccommodationIds(accommodationIds.get(i));
+                    }
+                    AccountReservation.CanHostBeDeletedRequest request = requestBuilder.build();
+
+                    AccountReservation.CanHostBeDeletedResponse response = guestServiceStub.canHostBeDeleted(request);
+                    if (response.getCanBeDeleted()) {
+                        canBeDeleted = true;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    // Shutdown the gRPC channel
+                    channel1.shutdown();
+                    try {
+                        channel1.awaitTermination(5, TimeUnit.SECONDS);
+                    } catch (InterruptedException e) {
+                        // Handle channel shutdown interruption
+                        System.out.println("Shutdown interruption happened");
+                    }
+                }
+
+                    //*********************************************************************************
+
+                    if (canBeDeleted) {
+                        ManagedChannel channel2 = ManagedChannelBuilder.forAddress("localhost", 9091)
+                                .usePlaintext()
+                                .build();
+
+                        // Create a gRPC client stub for the accommodation-service
+                        UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel2);
+                        try {
+                            // Create a gRPC request to update a user in the accommodation-service
+                            Accommodation.DeleteUserRequest deleteRequest = Accommodation.DeleteUserRequest.newBuilder()
+                                    .setUserId(id)
+                                    .build();
+
+                            // Make the gRPC request to create the user in the accommodation-service
+                            Accommodation.DeleteUserResponse accommodationResponse = userServiceStub.deleteUser(deleteRequest);
+                            if (accommodationResponse.getIsDeleted()) {
+                                responseStatus = true;
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            System.out.println("Grpc exception happened");
+                        } finally {
+                            // Shutdown the gRPC channel
+                            channel2.shutdown();
+                            try {
+                                channel2.awaitTermination(5, TimeUnit.SECONDS);
+                            } catch (InterruptedException e) {
+                                // Handle channel shutdown interruption
+                                System.out.println("Shutdown interruption happened");
+                            }
+                        }
+
+
+                        if (responseStatus) {
+                            service.delete(user);
+                            return new ResponseEntity<>(HttpStatus.OK);
+                        } else {
+                            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                        }
+                    } else {
+                        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                    }
+        } else {
+            throw new UserWithPassedIdDoesNotExistException();
+        }
+    }
+
+
+
 
     @PostMapping("/login")
     public ResponseEntity<UserTokenState> createAuthenticationToken(

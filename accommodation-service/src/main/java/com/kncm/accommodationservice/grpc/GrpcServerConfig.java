@@ -4,6 +4,7 @@ import com.kncm.accommodationservice.SequenceGenerator;
 import com.kncm.accommodationservice.repository.accommodation.AccommodationRepository;
 import com.kncm.accommodationservice.repository.role.RoleRepository;
 import com.kncm.accommodationservice.repository.user.UserRepository;
+import com.kncm.accommodationservice.service.grpc.AccountAccommodationServiceGrpcImpl;
 import com.kncm.accommodationservice.service.grpc.ReservationRequestServiceImpl;
 import com.kncm.accommodationservice.service.slotmanagement.SlotManagementService;
 import com.kncm.accommodationservice.service.user.UserServiceGrpcImpl;
@@ -21,6 +22,7 @@ public class GrpcServerConfig {
 
     private static final int GRPC_SERVER_PORT = 9091;
     private static final int GRPC_SERVER_PORT_RESERVATION = 9092;
+    private static final int GRPC_SERVER_PORT_ACCOUNT_ACCOMMODATION = 9095;
 
     @Autowired
     private UserRepository repository;
@@ -39,7 +41,7 @@ public class GrpcServerConfig {
     @Bean
     public Server grpcServer() throws IOException {
         Server server = ServerBuilder.forPort(GRPC_SERVER_PORT)
-                .addService(new UserServiceGrpcImpl(generator, repository, passwordEncoder, roleRepository))
+                .addService(new UserServiceGrpcImpl(generator, repository, passwordEncoder, roleRepository, accommodationRepository))
                 .build();
         server.start();
         return server;
@@ -49,6 +51,15 @@ public class GrpcServerConfig {
     public Server grpcServerReservation() throws IOException {
         Server server = ServerBuilder.forPort(GRPC_SERVER_PORT_RESERVATION)
                 .addService(new ReservationRequestServiceImpl(accommodationRepository, managementService))
+                .build();
+        server.start();
+        return server;
+    }
+
+    @Bean
+    public Server grpcServerAccountAccommodation() throws IOException {
+        Server server = ServerBuilder.forPort(GRPC_SERVER_PORT_ACCOUNT_ACCOMMODATION)
+                .addService(new AccountAccommodationServiceGrpcImpl(accommodationRepository))
                 .build();
         server.start();
         return server;

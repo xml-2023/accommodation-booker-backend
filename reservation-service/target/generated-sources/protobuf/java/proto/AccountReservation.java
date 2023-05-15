@@ -4461,6 +4461,1065 @@ public final class AccountReservation {
 
   }
 
+  public interface CanHostBeDeletedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.CanHostBeDeletedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 accommodationIds = 26;</code>
+     * @return A list containing the accommodationIds.
+     */
+    java.util.List<Long> getAccommodationIdsList();
+    /**
+     * <code>repeated int64 accommodationIds = 26;</code>
+     * @return The count of accommodationIds.
+     */
+    int getAccommodationIdsCount();
+    /**
+     * <code>repeated int64 accommodationIds = 26;</code>
+     * @param index The index of the element to return.
+     * @return The accommodationIds at the given index.
+     */
+    long getAccommodationIds(int index);
+  }
+  /**
+   * Protobuf type {@code proto.CanHostBeDeletedRequest}
+   */
+  public static final class CanHostBeDeletedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.CanHostBeDeletedRequest)
+      CanHostBeDeletedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CanHostBeDeletedRequest.newBuilder() to construct.
+    private CanHostBeDeletedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CanHostBeDeletedRequest() {
+      accommodationIds_ = emptyLongList();
+    }
+
+    @Override
+    @SuppressWarnings({"unused"})
+    protected Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CanHostBeDeletedRequest();
+    }
+
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
+    }
+
+    @Override
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              CanHostBeDeletedRequest.class, Builder.class);
+    }
+
+    public static final int ACCOMMODATIONIDS_FIELD_NUMBER = 26;
+    private com.google.protobuf.Internal.LongList accommodationIds_;
+    /**
+     * <code>repeated int64 accommodationIds = 26;</code>
+     * @return A list containing the accommodationIds.
+     */
+    @Override
+    public java.util.List<Long>
+        getAccommodationIdsList() {
+      return accommodationIds_;
+    }
+    /**
+     * <code>repeated int64 accommodationIds = 26;</code>
+     * @return The count of accommodationIds.
+     */
+    public int getAccommodationIdsCount() {
+      return accommodationIds_.size();
+    }
+    /**
+     * <code>repeated int64 accommodationIds = 26;</code>
+     * @param index The index of the element to return.
+     * @return The accommodationIds at the given index.
+     */
+    public long getAccommodationIds(int index) {
+      return accommodationIds_.getLong(index);
+    }
+    private int accommodationIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getAccommodationIdsList().size() > 0) {
+        output.writeUInt32NoTag(210);
+        output.writeUInt32NoTag(accommodationIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < accommodationIds_.size(); i++) {
+        output.writeInt64NoTag(accommodationIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < accommodationIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(accommodationIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getAccommodationIdsList().isEmpty()) {
+          size += 2;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        accommodationIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof CanHostBeDeletedRequest)) {
+        return super.equals(obj);
+      }
+      CanHostBeDeletedRequest other = (CanHostBeDeletedRequest) obj;
+
+      if (!getAccommodationIdsList()
+          .equals(other.getAccommodationIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAccommodationIdsCount() > 0) {
+        hash = (37 * hash) + ACCOMMODATIONIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccommodationIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static CanHostBeDeletedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static CanHostBeDeletedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static CanHostBeDeletedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static CanHostBeDeletedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static CanHostBeDeletedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static CanHostBeDeletedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static CanHostBeDeletedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static CanHostBeDeletedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static CanHostBeDeletedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static CanHostBeDeletedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static CanHostBeDeletedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static CanHostBeDeletedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(CanHostBeDeletedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.CanHostBeDeletedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.CanHostBeDeletedRequest)
+        CanHostBeDeletedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                CanHostBeDeletedRequest.class, Builder.class);
+      }
+
+      // Construct using proto.AccountReservation.CanHostBeDeletedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+
+      }
+      @Override
+      public Builder clear() {
+        super.clear();
+        accommodationIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
+      }
+
+      @Override
+      public CanHostBeDeletedRequest getDefaultInstanceForType() {
+        return CanHostBeDeletedRequest.getDefaultInstance();
+      }
+
+      @Override
+      public CanHostBeDeletedRequest build() {
+        CanHostBeDeletedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @Override
+      public CanHostBeDeletedRequest buildPartial() {
+        CanHostBeDeletedRequest result = new CanHostBeDeletedRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          accommodationIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.accommodationIds_ = accommodationIds_;
+        onBuilt();
+        return result;
+      }
+
+      @Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof CanHostBeDeletedRequest) {
+          return mergeFrom((CanHostBeDeletedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(CanHostBeDeletedRequest other) {
+        if (other == CanHostBeDeletedRequest.getDefaultInstance()) return this;
+        if (!other.accommodationIds_.isEmpty()) {
+          if (accommodationIds_.isEmpty()) {
+            accommodationIds_ = other.accommodationIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAccommodationIdsIsMutable();
+            accommodationIds_.addAll(other.accommodationIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 208: {
+                long v = input.readInt64();
+                ensureAccommodationIdsIsMutable();
+                accommodationIds_.addLong(v);
+                break;
+              } // case 208
+              case 210: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureAccommodationIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  accommodationIds_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 210
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList accommodationIds_ = emptyLongList();
+      private void ensureAccommodationIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          accommodationIds_ = mutableCopy(accommodationIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 accommodationIds = 26;</code>
+       * @return A list containing the accommodationIds.
+       */
+      public java.util.List<Long>
+          getAccommodationIdsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(accommodationIds_) : accommodationIds_;
+      }
+      /**
+       * <code>repeated int64 accommodationIds = 26;</code>
+       * @return The count of accommodationIds.
+       */
+      public int getAccommodationIdsCount() {
+        return accommodationIds_.size();
+      }
+      /**
+       * <code>repeated int64 accommodationIds = 26;</code>
+       * @param index The index of the element to return.
+       * @return The accommodationIds at the given index.
+       */
+      public long getAccommodationIds(int index) {
+        return accommodationIds_.getLong(index);
+      }
+      /**
+       * <code>repeated int64 accommodationIds = 26;</code>
+       * @param index The index to set the value at.
+       * @param value The accommodationIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccommodationIds(
+          int index, long value) {
+        ensureAccommodationIdsIsMutable();
+        accommodationIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 accommodationIds = 26;</code>
+       * @param value The accommodationIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAccommodationIds(long value) {
+        ensureAccommodationIdsIsMutable();
+        accommodationIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 accommodationIds = 26;</code>
+       * @param values The accommodationIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAccommodationIds(
+          Iterable<? extends Long> values) {
+        ensureAccommodationIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, accommodationIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 accommodationIds = 26;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccommodationIds() {
+        accommodationIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.CanHostBeDeletedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.CanHostBeDeletedRequest)
+    private static final CanHostBeDeletedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new CanHostBeDeletedRequest();
+    }
+
+    public static CanHostBeDeletedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CanHostBeDeletedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CanHostBeDeletedRequest>() {
+      @Override
+      public CanHostBeDeletedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CanHostBeDeletedRequest> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<CanHostBeDeletedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @Override
+    public CanHostBeDeletedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CanHostBeDeletedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.CanHostBeDeletedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool canBeDeleted = 27;</code>
+     * @return The canBeDeleted.
+     */
+    boolean getCanBeDeleted();
+  }
+  /**
+   * Protobuf type {@code proto.CanHostBeDeletedResponse}
+   */
+  public static final class CanHostBeDeletedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.CanHostBeDeletedResponse)
+      CanHostBeDeletedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CanHostBeDeletedResponse.newBuilder() to construct.
+    private CanHostBeDeletedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CanHostBeDeletedResponse() {
+    }
+
+    @Override
+    @SuppressWarnings({"unused"})
+    protected Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CanHostBeDeletedResponse();
+    }
+
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
+    }
+
+    @Override
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              CanHostBeDeletedResponse.class, Builder.class);
+    }
+
+    public static final int CANBEDELETED_FIELD_NUMBER = 27;
+    private boolean canBeDeleted_;
+    /**
+     * <code>bool canBeDeleted = 27;</code>
+     * @return The canBeDeleted.
+     */
+    @Override
+    public boolean getCanBeDeleted() {
+      return canBeDeleted_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (canBeDeleted_ != false) {
+        output.writeBool(27, canBeDeleted_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (canBeDeleted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(27, canBeDeleted_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof CanHostBeDeletedResponse)) {
+        return super.equals(obj);
+      }
+      CanHostBeDeletedResponse other = (CanHostBeDeletedResponse) obj;
+
+      if (getCanBeDeleted()
+          != other.getCanBeDeleted()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CANBEDELETED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCanBeDeleted());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static CanHostBeDeletedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static CanHostBeDeletedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static CanHostBeDeletedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static CanHostBeDeletedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static CanHostBeDeletedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static CanHostBeDeletedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static CanHostBeDeletedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static CanHostBeDeletedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static CanHostBeDeletedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static CanHostBeDeletedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static CanHostBeDeletedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static CanHostBeDeletedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(CanHostBeDeletedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.CanHostBeDeletedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.CanHostBeDeletedResponse)
+        CanHostBeDeletedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                CanHostBeDeletedResponse.class, Builder.class);
+      }
+
+      // Construct using proto.AccountReservation.CanHostBeDeletedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+
+      }
+      @Override
+      public Builder clear() {
+        super.clear();
+        canBeDeleted_ = false;
+
+        return this;
+      }
+
+      @Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
+      }
+
+      @Override
+      public CanHostBeDeletedResponse getDefaultInstanceForType() {
+        return CanHostBeDeletedResponse.getDefaultInstance();
+      }
+
+      @Override
+      public CanHostBeDeletedResponse build() {
+        CanHostBeDeletedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @Override
+      public CanHostBeDeletedResponse buildPartial() {
+        CanHostBeDeletedResponse result = new CanHostBeDeletedResponse(this);
+        result.canBeDeleted_ = canBeDeleted_;
+        onBuilt();
+        return result;
+      }
+
+      @Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof CanHostBeDeletedResponse) {
+          return mergeFrom((CanHostBeDeletedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(CanHostBeDeletedResponse other) {
+        if (other == CanHostBeDeletedResponse.getDefaultInstance()) return this;
+        if (other.getCanBeDeleted() != false) {
+          setCanBeDeleted(other.getCanBeDeleted());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 216: {
+                canBeDeleted_ = input.readBool();
+
+                break;
+              } // case 216
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private boolean canBeDeleted_ ;
+      /**
+       * <code>bool canBeDeleted = 27;</code>
+       * @return The canBeDeleted.
+       */
+      @Override
+      public boolean getCanBeDeleted() {
+        return canBeDeleted_;
+      }
+      /**
+       * <code>bool canBeDeleted = 27;</code>
+       * @param value The canBeDeleted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanBeDeleted(boolean value) {
+        
+        canBeDeleted_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool canBeDeleted = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanBeDeleted() {
+        
+        canBeDeleted_ = false;
+        onChanged();
+        return this;
+      }
+      @Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.CanHostBeDeletedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.CanHostBeDeletedResponse)
+    private static final CanHostBeDeletedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new CanHostBeDeletedResponse();
+    }
+
+    public static CanHostBeDeletedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CanHostBeDeletedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CanHostBeDeletedResponse>() {
+      @Override
+      public CanHostBeDeletedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CanHostBeDeletedResponse> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<CanHostBeDeletedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @Override
+    public CanHostBeDeletedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_proto_CreateGuestRequest_descriptor;
   private static final 
@@ -4491,6 +5550,16 @@ public final class AccountReservation {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_proto_DeleteGuestResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_CanHostBeDeletedRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_CanHostBeDeletedResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4511,13 +5580,18 @@ public final class AccountReservation {
       "role\030\013 \001(\t\"(\n\023UpdateGuestResponse\022\021\n\tisU" +
       "pdated\030\r \001(\010\"$\n\022DeleteGuestRequest\022\016\n\006us" +
       "erId\030\016 \001(\003\"(\n\023DeleteGuestResponse\022\021\n\tisD" +
-      "eleted\030\017 \001(\0102\351\001\n\022CreateGuestService\022E\n\nC" +
-      "reateUser\022\031.proto.CreateGuestRequest\032\032.p" +
-      "roto.CreateGuestResponse\"\000\022E\n\nUpdateUser" +
-      "\022\031.proto.UpdateGuestRequest\032\032.proto.Upda" +
-      "teGuestResponse\"\000\022E\n\nDeleteUser\022\031.proto." +
-      "DeleteGuestRequest\032\032.proto.DeleteGuestRe" +
-      "sponse\"\000b\006proto3"
+      "eleted\030\017 \001(\010\"3\n\027CanHostBeDeletedRequest\022" +
+      "\030\n\020accommodationIds\030\032 \003(\003\"0\n\030CanHostBeDe" +
+      "letedResponse\022\024\n\014canBeDeleted\030\033 \001(\0102\300\002\n\022" +
+      "CreateGuestService\022E\n\nCreateUser\022\031.proto" +
+      ".CreateGuestRequest\032\032.proto.CreateGuestR" +
+      "esponse\"\000\022E\n\nUpdateUser\022\031.proto.UpdateGu" +
+      "estRequest\032\032.proto.UpdateGuestResponse\"\000" +
+      "\022E\n\nDeleteUser\022\031.proto.DeleteGuestReques" +
+      "t\032\032.proto.DeleteGuestResponse\"\000\022U\n\020CanHo" +
+      "stBeDeleted\022\036.proto.CanHostBeDeletedRequ" +
+      "est\032\037.proto.CanHostBeDeletedResponse\"\000b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4559,6 +5633,18 @@ public final class AccountReservation {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_DeleteGuestResponse_descriptor,
         new String[] { "IsDeleted", });
+    internal_static_proto_CanHostBeDeletedRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_CanHostBeDeletedRequest_descriptor,
+        new String[] { "AccommodationIds", });
+    internal_static_proto_CanHostBeDeletedResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_CanHostBeDeletedResponse_descriptor,
+        new String[] { "CanBeDeleted", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

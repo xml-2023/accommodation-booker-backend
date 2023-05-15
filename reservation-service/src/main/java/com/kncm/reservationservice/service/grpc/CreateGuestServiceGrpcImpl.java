@@ -1,15 +1,27 @@
 package com.kncm.reservationservice.service.grpc;
 
+import com.kncm.reservationservice.model.RequestStatus;
+import com.kncm.reservationservice.model.ReservationRequest;
 import com.kncm.reservationservice.model.Role;
 import com.kncm.reservationservice.model.User;
+import com.kncm.reservationservice.repository.RequestRepository;
 import com.kncm.reservationservice.repository.RoleRepository;
 import com.kncm.reservationservice.repository.UserRepository;
+import com.kncm.reservationservice.service.user.UserService;
 import io.grpc.stub.StreamObserver;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.apache.catalina.LifecycleState;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import proto.AccountReservation;
 import proto.CreateGuestServiceGrpc;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @GrpcService
 @RequiredArgsConstructor
@@ -17,6 +29,8 @@ public class CreateGuestServiceGrpcImpl extends CreateGuestServiceGrpc.CreateGue
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;
     private final RoleRepository roleRepository;
+    private final UserService service;
+    private final RequestRepository requestRepository;
 
     @Override
     public void createUser(AccountReservation.CreateGuestRequest request, StreamObserver<AccountReservation.CreateGuestResponse> responseObserver) {
@@ -68,6 +82,48 @@ public class CreateGuestServiceGrpcImpl extends CreateGuestServiceGrpc.CreateGue
                 .build();
         responseObserver.onNext(response);
         responseObserver.onCompleted();
+    }
+
+    @Override
+    public void deleteUser(AccountReservation.DeleteGuestRequest request, StreamObserver<AccountReservation.DeleteGuestResponse> responseObserver) {
+        boolean isDeleted = false;
+        if (!service.haveActiveReservations(request.getUserId())) {
+            List<ReservationRequest> reservationRequests = requestRepository.findByUserId(request.getUserId());
+            requestRepository.deleteAll(reservationRequests);
+            repository.deleteById(request.getUserId());
+            isDeleted = true;
+        }
+
+
+        AccountReservation.DeleteGuestResponse response = AccountReservation.DeleteGuestResponse.newBuilder()
+                .setIsDeleted(isDeleted)
+                .build();
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void canHostBeDeleted(AccountReservation.CanHostBeDeletedRequest request, StreamObserver<AccountReservation.CanHostBeDeletedResponse> responseObserver) {
+        boolean canBeDeleted = true;
+        List<Long> accommodationIds = request.getAccommodationIdsList();
+        for (Long id : accommodationIds) {
+            if (!canBeDeleted)
+                break;
+            List<ReservationRequest> reservationRequests = requestRepository.findByAccommodationId(id);
+            for (ReservationRequest r : reservationRequests) {
+                if (r.getStatus() == RequestStatus.ACCEPTED && r.getReserveTo().isAfter(LocalDateTime.now())) {
+                    canBeDeleted = false;
+                    break;
+                }
+            }
+        }
+
+        AccountReservation.CanHostBeDeletedResponse response = AccountReservation.CanHostBeDeletedResponse.newBuilder()
+                .setCanBeDeleted(canBeDeleted)
+                .build();
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+
     }
 
     private void map(User user, AccountReservation.UpdateGuestRequest request) {

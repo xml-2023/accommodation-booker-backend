@@ -1,10 +1,12 @@
 package com.kncm.reservationservice;
 
 import com.kncm.reservationservice.repository.AccommodationRepository;
+import com.kncm.reservationservice.repository.RequestRepository;
 import com.kncm.reservationservice.repository.RoleRepository;
 import com.kncm.reservationservice.repository.UserRepository;
 import com.kncm.reservationservice.service.grpc.AccommodationServiceGrpc;
 import com.kncm.reservationservice.service.grpc.CreateGuestServiceGrpcImpl;
+import com.kncm.reservationservice.service.user.UserService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,10 @@ public class GrpcServerConfig {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private RoleRepository roleRepository;
+    @Autowired
+    private UserService service;
+    @Autowired
+    private RequestRepository requestRepository;
 
     @Bean
     public Server grpcServer() throws IOException {
@@ -40,7 +46,7 @@ public class GrpcServerConfig {
     @Bean
     public Server grpcServerAccount() throws IOException {
         Server server = ServerBuilder.forPort(9094)
-                .addService(new CreateGuestServiceGrpcImpl(repository, passwordEncoder, roleRepository))
+                .addService(new CreateGuestServiceGrpcImpl(repository, passwordEncoder, roleRepository, service, requestRepository))
                 .build();
         server.start();
         System.out.println("Server on port 9093 started");
