@@ -53,4 +53,13 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         errorResponse.setMessage("Available slot does not exist!");
         return errorResponse;
     }
+
+    @ExceptionHandler(NoAvailableImagesException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public ErrorResponse handleNoAvailableImagesException(NoAvailableImagesException ex) {
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setMessage("There are no available images for this accommodation!");
+        return errorResponse;
+    }
 }
