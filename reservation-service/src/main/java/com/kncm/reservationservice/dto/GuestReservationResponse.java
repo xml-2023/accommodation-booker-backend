@@ -5,11 +5,11 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class ReservationResponse {
-    private Long id;
+public class GuestReservationResponse {
+    private Long requestId;
+    private String accommodationName;
     private String status;
     private String reserveFrom;
     private String reserveTo;
     private Integer guestsNumber;
-    private Integer cancellations;
 }
