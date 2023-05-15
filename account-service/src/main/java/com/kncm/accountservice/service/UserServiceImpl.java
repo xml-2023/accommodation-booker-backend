@@ -30,5 +30,10 @@ public class UserServiceImpl implements UserService {
         repository.delete(user);
     }
 
+    @Override
+    public User find(String username) {
+        return repository.findByUsername(username);
+    }
+
 
 }
