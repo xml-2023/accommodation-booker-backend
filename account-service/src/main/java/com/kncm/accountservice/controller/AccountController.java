@@ -467,6 +467,17 @@ public class AccountController {
         return ResponseEntity.ok(new UserTokenState(jwt, expiresIn));
     }
 
+    @GetMapping("/{username}")
+    public ResponseEntity<User> getByUsername(@PathVariable String username) {
+        System.out.println(username);
+        User user = service.find(username);
+        if (user != null){
+            return new ResponseEntity<User>(user, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
 
     private void Map(UserDetailsRequest dto, User user) {
         user.setUsername(dto.getUsername());
