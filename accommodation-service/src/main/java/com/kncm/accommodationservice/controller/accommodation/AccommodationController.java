@@ -42,7 +42,7 @@ public class AccommodationController {
         List<Accommodation> accommodations = accommodationService.findByUserId(userId);
 
         List<AccommodationByHostResponse> responses = accommodations.stream()
-                .map(request -> new AccommodationByHostResponse(request.getName(), request.getDescription(), request.getAddress().getCountry(), request.getAddress().getCity(), request.getAddress().getStreet(), request.getAddress().getNumber()))
+                .map(request -> new AccommodationByHostResponse(request.getId(), request.getName(), request.getDescription(), request.getAddress().getCountry(), request.getAddress().getCity(), request.getAddress().getStreet(), request.getAddress().getNumber()))
                 .collect(Collectors.toList());
 
         return new ResponseEntity<>(responses, HttpStatus.OK);
