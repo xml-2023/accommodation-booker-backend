@@ -293,7 +293,7 @@ public class AccountController {
 
 
 
-    @DeleteMapping("guest/{id}")
+    @DeleteMapping("/guest/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         User user = service.find(id);
         boolean responseStatus = false;
@@ -338,7 +338,7 @@ public class AccountController {
     }
 
 
-    @DeleteMapping("host/{id}")
+    @DeleteMapping("/host/{id}")
     public ResponseEntity<Void> deleteHost(@PathVariable Long id) {
         User user = service.find(id);
         List<Long> accommodationIds = new ArrayList<>();
@@ -466,6 +466,26 @@ public class AccountController {
         int expiresIn = tokenGenerator.getExpiredIn();
 
         return ResponseEntity.ok(new UserTokenState(jwt, expiresIn));
+    }
+
+    @GetMapping("/host/{id}")
+    public ResponseEntity<User> getHostById(@PathVariable Long id) {
+        User user = service.find(id);
+        if (user != null){
+            return new ResponseEntity<User>(user, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/guest/{id}")
+    public ResponseEntity<User> getGuestById(@PathVariable Long id) {
+        User user = service.find(id);
+        if (user != null){
+            return new ResponseEntity<User>(user, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("/{username}")
