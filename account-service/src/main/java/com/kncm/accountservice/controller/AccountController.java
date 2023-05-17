@@ -4,6 +4,7 @@ import com.kncm.accountservice.dto.JwtAuthenticationRequest;
 import com.kncm.accountservice.dto.UserDetailsRequest;
 import com.kncm.accountservice.dto.UserTokenState;
 import com.kncm.accountservice.handler.exceptions.UserDetailsRequestIsNotValidException;
+import com.kncm.accountservice.handler.exceptions.UserHaveActiveReservationsException;
 import com.kncm.accountservice.handler.exceptions.UserWithPassedIdDoesNotExistException;
 import com.kncm.accountservice.handler.exceptions.UsernameIsNotUniqueException;
 import com.kncm.accountservice.model.Address;
@@ -328,7 +329,7 @@ public class AccountController {
                     service.delete(user);
                     return new ResponseEntity<>(HttpStatus.OK);
                 } else {
-                    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                    throw new UserHaveActiveReservationsException();
                 }
             }
         } else {
@@ -441,7 +442,7 @@ public class AccountController {
                             service.delete(user);
                             return new ResponseEntity<>(HttpStatus.OK);
                         } else {
-                            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                            throw new UserHaveActiveReservationsException();
                         }
                     } else {
                         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

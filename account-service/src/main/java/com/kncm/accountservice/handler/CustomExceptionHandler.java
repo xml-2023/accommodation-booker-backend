@@ -1,6 +1,7 @@
 package com.kncm.accountservice.handler;
 
 import com.kncm.accountservice.handler.exceptions.UserDetailsRequestIsNotValidException;
+import com.kncm.accountservice.handler.exceptions.UserHaveActiveReservationsException;
 import com.kncm.accountservice.handler.exceptions.UserWithPassedIdDoesNotExistException;
 import com.kncm.accountservice.handler.exceptions.UsernameIsNotUniqueException;
 import org.springframework.http.HttpStatus;
@@ -35,6 +36,15 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     public ErrorResponse handleUserDetailsRequestIsNotValidException(UserDetailsRequestIsNotValidException ex) {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("All attributes must have value");
+        return errorResponse;
+    }
+
+    @ExceptionHandler(UserHaveActiveReservationsException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public ErrorResponse handleUserHaveActiveReservationsException(UserHaveActiveReservationsException ex) {
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setMessage("You are not allowed to delete your account because of registered reservations!");
         return errorResponse;
     }
 }
