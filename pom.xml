@@ -21,6 +21,7 @@
         <module>reservation-service</module>
         <module>discovery-server</module>
         <module>api-gateway</module>
+        <module>rating-service</module>
     </modules>
 
     <properties>
