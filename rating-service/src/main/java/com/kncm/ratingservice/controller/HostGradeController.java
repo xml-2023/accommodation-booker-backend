@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/rating")
 @RequiredArgsConstructor
 public class HostGradeController {
-    private HostGradeService hostGradeService;
+    private final HostGradeService hostGradeService;
 
-    @PostMapping
-    public ResponseEntity<Void> create(){
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
+//    @PostMapping
+//    public ResponseEntity<Void> create(){
+//        return new ResponseEntity<>(HttpStatus.OK);
+//    }
 }

@@ -18,5 +18,7 @@ public interface RequestRepository extends EntityRepository<ReservationRequest>{
 
     List<ReservationRequest> findByStatus(RequestStatus status);
 
+    List<ReservationRequest> findByUserIdAndAccommodationIdAndStatus(Long userId, Long accommodationId, RequestStatus status);
+
 
 }
