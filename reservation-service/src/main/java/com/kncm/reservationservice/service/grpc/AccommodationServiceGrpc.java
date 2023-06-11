@@ -26,6 +26,7 @@ public class AccommodationServiceGrpc extends ReservationServiceGrpc.Reservation
         Accommodation accommodation = new Accommodation();
         accommodation.setId(request.getId());
         accommodation.setName(request.getName());
+        accommodation.setHostId(request.getHostId());
         // Add any other fields that are necessary to create an Accommodation in the Reservation Service
 
         // Save the new Accommodation object to the database

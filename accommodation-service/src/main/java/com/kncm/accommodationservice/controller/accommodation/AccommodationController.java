@@ -73,6 +73,7 @@ public class AccommodationController {
             ReservationServiceProto.CreateAccommodationRequest request = ReservationServiceProto.CreateAccommodationRequest.newBuilder()
                     .setId(accommodation.getId())
                     .setName(accommodation.getName())
+                    .setHostId(accommodation.getUser().getId())
                     .build();
 
             // Call the reservation service
@@ -102,6 +103,7 @@ public class AccommodationController {
             ReservationServiceProto.CreateAccommodationRequest request = ReservationServiceProto.CreateAccommodationRequest.newBuilder()
                     .setId(accommodation.getId())
                     .setName(accommodation.getName())
+                    .setHostId(accommodation.getUser().getId())
                     .build();
 
             // Call the reservation service
