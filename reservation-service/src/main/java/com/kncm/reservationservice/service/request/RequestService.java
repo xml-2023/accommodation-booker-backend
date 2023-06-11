@@ -16,4 +16,5 @@ public interface RequestService {
     void rejectRequests(LocalDateTime from, LocalDateTime to);
     void delete(ReservationRequest request);
     boolean isAllowedToRate(Long userId, Long accommodationId, RequestStatus status);
+    boolean isHostAllowedToRate(Long guestId, Long hostId, RequestStatus status);
 }

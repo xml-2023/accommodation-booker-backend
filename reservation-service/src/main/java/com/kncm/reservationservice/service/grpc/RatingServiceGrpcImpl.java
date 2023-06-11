@@ -23,4 +23,16 @@ public class RatingServiceGrpcImpl extends proto.RatingServiceGrpc.RatingService
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+
+    @Override
+    public void isHostAllowedToRate(RatingReservation.IsHostAllowedToRateRequest request, StreamObserver<RatingReservation.IsHostAllowedToRateResponse> responseObserver){
+        boolean isAllowed = service.isHostAllowedToRate(request.getGuestId(), request.getHostId(), RequestStatus.ACCEPTED);
+
+        RatingReservation.IsHostAllowedToRateResponse response = RatingReservation.IsHostAllowedToRateResponse.newBuilder()
+                .setIsAllowed(isAllowed)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
 }

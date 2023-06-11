@@ -16,8 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import proto.RatingReservation;
 import proto.RatingServiceGrpc;
-import proto.ReservationServiceGrpc;
-import proto.ReservationServiceProto;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
