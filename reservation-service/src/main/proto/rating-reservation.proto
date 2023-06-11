@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package proto;
+
+service RatingService {
+  rpc IsAccommodationAllowedToRate(IsAccommodationAllowedToRateRequest) returns (IsAccommodationAllowedToRateResponse) {}
+  rpc IsHostAllowedToRate(IsHostAllowedToRateRequest) returns (IsHostAllowedToRateResponse) {}
+}
+
+message IsAccommodationAllowedToRateRequest {
+  int64 userId = 1;
+  int64 accommodationId = 2;
+}
+
+message IsAccommodationAllowedToRateResponse {
+  bool isAllowed = 3;
+}
+
+message IsHostAllowedToRateRequest {
+  int64 guestId = 1;
+  int64 hostId = 2;
+}
+
+message IsHostAllowedToRateResponse {
+  bool isAllowed = 3;
+}

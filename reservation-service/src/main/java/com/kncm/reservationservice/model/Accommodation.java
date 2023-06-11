@@ -16,4 +16,5 @@ public class Accommodation implements Serializable {
     @Id
     private Long id;
     private String name;
+    private Long hostId;
 }

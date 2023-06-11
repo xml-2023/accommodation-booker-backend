@@ -60,4 +60,32 @@ public class RequestServiceImpl implements RequestService {
     public void delete(ReservationRequest request) {
         repository.delete(request);
     }
+
+    @Override
+    public boolean isAllowedToRate(Long userId, Long accommodationId, RequestStatus status) {
+        List<ReservationRequest> requests = repository.findByUserIdAndAccommodationIdAndStatus(userId, accommodationId, status);
+
+        if (requests.size() > 0){
+            for (ReservationRequest request : requests){
+                if (request.getReserveTo().isBefore(LocalDateTime.now())){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean isHostAllowedToRate(Long guestId, Long hostId, RequestStatus status) {
+        List<ReservationRequest> requests = repository.findByUserIdAndStatusAndAccommodation_HostId(guestId, status, hostId);
+
+        if (requests.size() > 0){
+            for (ReservationRequest request : requests){
+                if (request.getReserveTo().isBefore(LocalDateTime.now())){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

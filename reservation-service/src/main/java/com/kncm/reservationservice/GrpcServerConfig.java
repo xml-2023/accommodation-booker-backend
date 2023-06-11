@@ -6,6 +6,8 @@ import com.kncm.reservationservice.repository.RoleRepository;
 import com.kncm.reservationservice.repository.UserRepository;
 import com.kncm.reservationservice.service.grpc.AccommodationServiceGrpc;
 import com.kncm.reservationservice.service.grpc.CreateGuestServiceGrpcImpl;
+import com.kncm.reservationservice.service.grpc.RatingServiceGrpcImpl;
+import com.kncm.reservationservice.service.request.RequestService;
 import com.kncm.reservationservice.service.user.UserService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -33,6 +35,8 @@ public class GrpcServerConfig {
     private UserService service;
     @Autowired
     private RequestRepository requestRepository;
+    @Autowired
+    private RequestService requestService;
 
     @Bean
     public Server grpcServer() throws IOException {
@@ -50,6 +54,15 @@ public class GrpcServerConfig {
                 .build();
         server.start();
         System.out.println("Server on port 9093 started");
+        return server;
+    }
+
+    @Bean
+    public Server grpcServerRatingAccommodation() throws IOException {
+        Server server = ServerBuilder.forPort(9080)
+                .addService(new RatingServiceGrpcImpl(requestService))
+                .build();
+        server.start();
         return server;
     }
 }

@@ -48,10 +48,12 @@ public class AccountController {
             User user = new User();
             Map(dto, user);
             boolean responseStatus = false;
+            boolean responseStatusRating = false;
             Long userId = 0L;
 
             if (!service.exists(user.getUsername())) {
                 // Create a gRPC channel to the accommodation-service
+                //-------------------------------------------Create host in accommodation service----------------------------------------------
                 ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9091)
                         .usePlaintext()
                         .build();
@@ -87,11 +89,43 @@ public class AccountController {
                         System.out.println("Shutdown interruption happened");
                     }
                 }
+                //-------------------------------------------Create host in accommodation service end ----------------------------------------------
+
+                //-------------------------------------------Create host in rating service----------------------------------------------
+                ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("localhost", 9099)
+                        .usePlaintext()
+                        .build();
+
+                try {
+                    ManageUserServiceGrpc.ManageUserServiceBlockingStub stub = ManageUserServiceGrpc.newBlockingStub(ratingChannel);
+
+                    AccountRating.CreateUserRequest request = AccountRating.CreateUserRequest.newBuilder()
+                            .setUserId(userId)
+                            .setUsername(dto.getUsername())
+                            .setPassword(dto.getPassword())
+                            .setName(dto.getName())
+                            .setSurname(dto.getSurname())
+                            .setRole(dto.getRoleName())
+                            .build();
+
+                    AccountRating.CreateUserResponse response = stub.createUser(request);
+                    if (response.getIsCreated()) {
+                        responseStatusRating = true;
+                        userId = response.getUserId();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    // Shutdown the gRPC channel
+                    channel.shutdown();
+                }
+                //-------------------------------------------Create host in rating service end ----------------------------------------------
             } else {
                 throw new UsernameIsNotUniqueException();
             }
 
-            if (responseStatus) {
+            if (responseStatus && responseStatusRating) {
                 user.setId(userId);
                 user.setPassword(passwordEncoder.encode(user.getPassword()));
                 service.save(user);
@@ -116,6 +150,7 @@ public class AccountController {
                 user.setPassword(passwordEncoder.encode(user.getPassword()));
                 service.save(user);
 
+                //-------------------------------------------Create host in reservation service----------------------------------------------
                 // Create a gRPC channel to the accommodation-service
                 ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9094)
                         .usePlaintext()
@@ -149,6 +184,35 @@ public class AccountController {
                         System.out.println("Shutdown interruption happened");
                     }
                 }
+                //-------------------------------------------Create host in reservation service end----------------------------------------------
+                //-------------------------------------------Create host in rating service----------------------------------------------
+                ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("localhost", 9099)
+                        .usePlaintext()
+                        .build();
+
+                // Create a gRPC client stub for the accommodation-service
+                ManageUserServiceGrpc.ManageUserServiceBlockingStub stub = ManageUserServiceGrpc.newBlockingStub(ratingChannel);
+                try {
+                    // Create a gRPC request to create a user in the accommodation-service
+                    AccountRating.CreateUserRequest request = AccountRating.CreateUserRequest.newBuilder()
+                            .setUserId(userId)
+                            .setUsername(dto.getUsername())
+                            .setPassword(dto.getPassword())
+                            .setName(dto.getName())
+                            .setSurname(dto.getSurname())
+                            .setRole(dto.getRoleName())
+                            .build();
+
+                    // Make the gRPC request to create the user in the accommodation-service
+                    AccountRating.CreateUserResponse response = stub.createUser(request);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    // Shutdown the gRPC channel
+                    ratingChannel.shutdown();
+                }
+                //-------------------------------------------Create host in rating service end----------------------------------------------
                 return new ResponseEntity<>(HttpStatus.CREATED);
             } else {
                 throw new UsernameIsNotUniqueException();

@@ -56,8 +56,10 @@ public class AccommodationController {
         accommodation.setAvailableSlots(new ArrayList<>());
         accommodation.setImagesPath("accommodation-service/src/main/resources/images/" + accommodation.getName());
         boolean responseStatus = false;
+        boolean responseStatusRating = false;
 //        ReservationServiceProto.CreateAccommodationResponse response = null;
 
+        //------------------------------------------Create accommodation in reservation service------------------------------
         //grpc starts
         ManagedChannel channel = ManagedChannelBuilder.forAddress(reservationServiceHost, reservationServicePort)
                 .usePlaintext()
@@ -71,6 +73,7 @@ public class AccommodationController {
             ReservationServiceProto.CreateAccommodationRequest request = ReservationServiceProto.CreateAccommodationRequest.newBuilder()
                     .setId(accommodation.getId())
                     .setName(accommodation.getName())
+                    .setHostId(accommodation.getUser().getId())
                     .build();
 
             // Call the reservation service
@@ -85,8 +88,37 @@ public class AccommodationController {
             channel.shutdown();
         }
         //grpc ends
+        //------------------------------------------Create accommodation in reservation service end------------------------------
 
-        if(responseStatus){
+        //------------------------------------------Create accommodation in rating service------------------------------
+        ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("localhost", 9098)
+                .usePlaintext()
+                .build();
+
+        try {
+            // Create a blocking stub for the reservation service
+            ReservationServiceGrpc.ReservationServiceBlockingStub stub = ReservationServiceGrpc.newBlockingStub(ratingChannel);
+
+            // Create the request for the reservation service
+            ReservationServiceProto.CreateAccommodationRequest request = ReservationServiceProto.CreateAccommodationRequest.newBuilder()
+                    .setId(accommodation.getId())
+                    .setName(accommodation.getName())
+                    .setHostId(accommodation.getUser().getId())
+                    .build();
+
+            // Call the reservation service
+            ReservationServiceProto.CreateAccommodationResponse response = stub.createAccommodation(request);
+            if(response.getIsCreated()){
+                responseStatusRating = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Shutdown the channel after use
+            ratingChannel.shutdown();
+        }
+        //------------------------------------------Create accommodation in rating service end------------------------------
+        if(responseStatus && responseStatusRating){
             try {
                 accommodationService.create(accommodation);
             } catch (CreateAccommodationException e) {
