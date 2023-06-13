@@ -143,6 +143,11 @@ public class AccommodationController {
         return new ResponseEntity<>(accommodationService.findById(id), HttpStatus.OK);
     }
 
+    @GetMapping("/findByName")
+    public ResponseEntity<Accommodation> findById(@RequestParam String name){
+        return new ResponseEntity<>(accommodationService.findByName(name), HttpStatus.OK);
+    }
+
     @GetMapping("/findAll")
     public ResponseEntity<Collection<SearchAccommodationResponse>> findAll() {
         return new ResponseEntity<>(accommodationService.findAll(), HttpStatus.OK);

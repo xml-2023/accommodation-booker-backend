@@ -13,6 +13,8 @@ public interface AccommodationService {
 
     Accommodation findById(Long id);
 
+    Accommodation findByName(String name);
+
     Collection<SearchAccommodationResponse> search(String location, Integer numOfGuests, String startDate, String endDate);
 
     Collection<SearchAccommodationResponse> findAll();
