@@ -43,6 +43,11 @@ public class AccommodationServiceImpl implements AccommodationService {
     }
 
     @Override
+    public Accommodation findByName(String name) {
+        return accommodationRepository.findByName(name);
+    }
+
+    @Override
     public Collection<SearchAccommodationResponse> search(String location, Integer numOfGuests, String startDate, String endDate) {
         var query = new Query();
         final List<Criteria> criteria = new ArrayList<>();

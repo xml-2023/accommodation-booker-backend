@@ -28,4 +28,5 @@ public class Accommodation {
     private PriceType priceType;
     private ArrayList<AccommodationAvailability> availableSlots;
     private User user;
+
 }
