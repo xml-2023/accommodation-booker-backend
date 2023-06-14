@@ -7,4 +7,5 @@ import java.util.List;
 public interface AccommodationGradeRepository extends EntityRepository<AccommodationGrade>{
     List<AccommodationGrade> findAllByGradeGiverId(Long id);
     List<AccommodationGrade> findAllByAccommodationId(Long id);
+    List<AccommodationGrade> findAllById(Long id);
 }
