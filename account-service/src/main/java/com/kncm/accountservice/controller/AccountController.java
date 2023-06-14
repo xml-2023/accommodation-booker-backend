@@ -593,9 +593,13 @@ public class AccountController {
         }
         //-------------------------------------------Grpc end ----------------------------------------------
         if (responseStatus){
+            user.setDistinguishedHost(true);
+            service.save(user);
             return new ResponseEntity<>(true, HttpStatus.OK);
         }
         else {
+            user.setDistinguishedHost(false);
+            service.save(user);
             return new ResponseEntity<>(false, HttpStatus.OK);
         }
     }
@@ -614,6 +618,7 @@ public class AccountController {
         address.setNumber(dto.getNumber());
         user.setAddress(address);
         user.setRole(roleService.find(dto.getRoleName()));
+        user.setDistinguishedHost(false);
 
     }
 
