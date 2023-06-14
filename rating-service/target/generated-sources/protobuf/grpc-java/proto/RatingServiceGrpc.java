@@ -77,6 +77,37 @@ public final class RatingServiceGrpc {
     return getIsHostAllowedToRateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.RatingReservation.DistinguishedHostReservationRequest,
+      proto.RatingReservation.DistinguishedHostReservationResponse> getGetDistinguishedHostStatusFromReservationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDistinguishedHostStatusFromReservations",
+      requestType = proto.RatingReservation.DistinguishedHostReservationRequest.class,
+      responseType = proto.RatingReservation.DistinguishedHostReservationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.RatingReservation.DistinguishedHostReservationRequest,
+      proto.RatingReservation.DistinguishedHostReservationResponse> getGetDistinguishedHostStatusFromReservationsMethod() {
+    io.grpc.MethodDescriptor<proto.RatingReservation.DistinguishedHostReservationRequest, proto.RatingReservation.DistinguishedHostReservationResponse> getGetDistinguishedHostStatusFromReservationsMethod;
+    if ((getGetDistinguishedHostStatusFromReservationsMethod = RatingServiceGrpc.getGetDistinguishedHostStatusFromReservationsMethod) == null) {
+      synchronized (RatingServiceGrpc.class) {
+        if ((getGetDistinguishedHostStatusFromReservationsMethod = RatingServiceGrpc.getGetDistinguishedHostStatusFromReservationsMethod) == null) {
+          RatingServiceGrpc.getGetDistinguishedHostStatusFromReservationsMethod = getGetDistinguishedHostStatusFromReservationsMethod =
+              io.grpc.MethodDescriptor.<proto.RatingReservation.DistinguishedHostReservationRequest, proto.RatingReservation.DistinguishedHostReservationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDistinguishedHostStatusFromReservations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.RatingReservation.DistinguishedHostReservationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.RatingReservation.DistinguishedHostReservationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RatingServiceMethodDescriptorSupplier("GetDistinguishedHostStatusFromReservations"))
+              .build();
+        }
+      }
+    }
+    return getGetDistinguishedHostStatusFromReservationsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +169,13 @@ public final class RatingServiceGrpc {
         io.grpc.stub.StreamObserver<proto.RatingReservation.IsHostAllowedToRateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIsHostAllowedToRateMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getDistinguishedHostStatusFromReservations(proto.RatingReservation.DistinguishedHostReservationRequest request,
+        io.grpc.stub.StreamObserver<proto.RatingReservation.DistinguishedHostReservationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDistinguishedHostStatusFromReservationsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -182,6 +220,14 @@ public final class RatingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIsHostAllowedToRateMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getDistinguishedHostStatusFromReservations(proto.RatingReservation.DistinguishedHostReservationRequest request,
+        io.grpc.stub.StreamObserver<proto.RatingReservation.DistinguishedHostReservationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDistinguishedHostStatusFromReservationsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -212,6 +258,13 @@ public final class RatingServiceGrpc {
     public proto.RatingReservation.IsHostAllowedToRateResponse isHostAllowedToRate(proto.RatingReservation.IsHostAllowedToRateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIsHostAllowedToRateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public proto.RatingReservation.DistinguishedHostReservationResponse getDistinguishedHostStatusFromReservations(proto.RatingReservation.DistinguishedHostReservationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDistinguishedHostStatusFromReservationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -246,10 +299,19 @@ public final class RatingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIsHostAllowedToRateMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.RatingReservation.DistinguishedHostReservationResponse> getDistinguishedHostStatusFromReservations(
+        proto.RatingReservation.DistinguishedHostReservationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDistinguishedHostStatusFromReservationsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_IS_ACCOMMODATION_ALLOWED_TO_RATE = 0;
   private static final int METHODID_IS_HOST_ALLOWED_TO_RATE = 1;
+  private static final int METHODID_GET_DISTINGUISHED_HOST_STATUS_FROM_RESERVATIONS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,6 +337,10 @@ public final class RatingServiceGrpc {
         case METHODID_IS_HOST_ALLOWED_TO_RATE:
           serviceImpl.isHostAllowedToRate((proto.RatingReservation.IsHostAllowedToRateRequest) request,
               (io.grpc.stub.StreamObserver<proto.RatingReservation.IsHostAllowedToRateResponse>) responseObserver);
+          break;
+        case METHODID_GET_DISTINGUISHED_HOST_STATUS_FROM_RESERVATIONS:
+          serviceImpl.getDistinguishedHostStatusFromReservations((proto.RatingReservation.DistinguishedHostReservationRequest) request,
+              (io.grpc.stub.StreamObserver<proto.RatingReservation.DistinguishedHostReservationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -308,6 +374,13 @@ public final class RatingServiceGrpc {
               proto.RatingReservation.IsHostAllowedToRateRequest,
               proto.RatingReservation.IsHostAllowedToRateResponse>(
                 service, METHODID_IS_HOST_ALLOWED_TO_RATE)))
+        .addMethod(
+          getGetDistinguishedHostStatusFromReservationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.RatingReservation.DistinguishedHostReservationRequest,
+              proto.RatingReservation.DistinguishedHostReservationResponse>(
+                service, METHODID_GET_DISTINGUISHED_HOST_STATUS_FROM_RESERVATIONS)))
         .build();
   }
 
@@ -358,6 +431,7 @@ public final class RatingServiceGrpc {
               .setSchemaDescriptor(new RatingServiceFileDescriptorSupplier())
               .addMethod(getIsAccommodationAllowedToRateMethod())
               .addMethod(getIsHostAllowedToRateMethod())
+              .addMethod(getGetDistinguishedHostStatusFromReservationsMethod())
               .build();
         }
       }

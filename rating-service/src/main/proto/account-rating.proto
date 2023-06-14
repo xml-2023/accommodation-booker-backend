@@ -6,6 +6,7 @@ service ManageUserService {
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
   rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
+  rpc GetDistinguishedHostStatusFromRatings(DistinguishedHostRatingRequest) returns (DistinguishedHostRatingResponse) {}
 }
 
 message CreateUserRequest {
@@ -44,4 +45,12 @@ message DeleteUserRequest {
 message DeleteUserResponse {
   // Define any response fields, if needed
   bool isDeleted = 15;
+}
+
+message DistinguishedHostRatingRequest {
+  int64 hostId = 16;
+}
+
+message DistinguishedHostRatingResponse {
+  bool isDistinguished = 17;
 }

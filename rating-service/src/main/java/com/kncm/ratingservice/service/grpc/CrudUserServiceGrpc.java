@@ -4,12 +4,18 @@ import com.kncm.ratingservice.model.Role;
 import com.kncm.ratingservice.model.User;
 import com.kncm.ratingservice.repository.RoleRepository;
 import com.kncm.ratingservice.repository.UserRepository;
+import com.kncm.ratingservice.service.hostgrade.HostGradeService;
+import com.kncm.ratingservice.service.user.UserService;
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import proto.ManageUserServiceGrpc;
 import proto.AccountRating;
+import proto.RatingReservation;
+import proto.RatingServiceGrpc;
 
 @GrpcService
 @RequiredArgsConstructor
@@ -17,7 +23,8 @@ public class CrudUserServiceGrpc extends ManageUserServiceGrpc.ManageUserService
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;
     private final RoleRepository roleRepository;
-//    private final UserService service;
+    private final UserService userService;
+    private final HostGradeService hostGradeService;
 
     @Override
     public void createUser(AccountRating.CreateUserRequest request, StreamObserver<AccountRating.CreateUserResponse> responseObserver) {
@@ -82,6 +89,46 @@ public class CrudUserServiceGrpc extends ManageUserServiceGrpc.ManageUserService
         AccountRating.DeleteUserResponse response = AccountRating.DeleteUserResponse.newBuilder()
                 .setIsDeleted(isDeleted)
                 .build();
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void getDistinguishedHostStatusFromRatings(AccountRating.DistinguishedHostRatingRequest request, StreamObserver<AccountRating.DistinguishedHostRatingResponse> responseObserver){
+        boolean isDistinguished;
+        boolean reservationResponseStatus = false;
+        User host = userService.findOne(request.getHostId());
+        if (host != null) {
+            isDistinguished = hostGradeService.isHostGradeBigEnoughForDistinguishedStatus(host);
+            if (isDistinguished) {
+                //-------------------------------------------Grpc begin to reservation service----------------------------------------------
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9080)
+                        .usePlaintext()
+                        .build();
+
+                RatingServiceGrpc.RatingServiceBlockingStub stub = RatingServiceGrpc.newBlockingStub(channel);
+                try {
+                    RatingReservation.DistinguishedHostReservationRequest reservationRequest = RatingReservation.DistinguishedHostReservationRequest.newBuilder()
+                            .setHostId(host.getId())
+                            .build();
+
+                    RatingReservation.DistinguishedHostReservationResponse response = stub.getDistinguishedHostStatusFromReservations(reservationRequest);
+                    if (response.getIsDistinguished()) {
+                        reservationResponseStatus = true;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Grpc exception happened");
+                } finally {
+                    channel.shutdown();
+                }
+                //-------------------------------------------Grpc end ----------------------------------------------
+            }
+        }
+        AccountRating.DistinguishedHostRatingResponse response = AccountRating.DistinguishedHostRatingResponse.newBuilder()
+                .setIsDistinguished(reservationResponseStatus)
+                .build();
+
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

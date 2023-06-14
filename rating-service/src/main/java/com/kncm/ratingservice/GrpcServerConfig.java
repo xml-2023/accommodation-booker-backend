@@ -5,6 +5,8 @@ import com.kncm.ratingservice.repository.RoleRepository;
 import com.kncm.ratingservice.repository.UserRepository;
 import com.kncm.ratingservice.service.grpc.AccommodationServiceGrpc;
 import com.kncm.ratingservice.service.grpc.CrudUserServiceGrpc;
+import com.kncm.ratingservice.service.hostgrade.HostGradeService;
+import com.kncm.ratingservice.service.user.UserService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,10 @@ public class GrpcServerConfig {
     private RoleRepository roleRepository;
     @Autowired
     private UserRepository repository;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private HostGradeService hostGradeService;
 
     @Bean
     public Server grpcServer() throws IOException {
@@ -38,9 +44,18 @@ public class GrpcServerConfig {
     @Bean
     public Server grpcServerManageUsers() throws IOException {
         Server server = ServerBuilder.forPort(9099)
-                .addService(new CrudUserServiceGrpc(repository, passwordEncoder, roleRepository))
+                .addService(new CrudUserServiceGrpc(repository, passwordEncoder, roleRepository,userService, hostGradeService))
                 .build();
         server.start();
         return server;
     }
+
+//    @Bean
+//    public Server grpcServerDistinguished() throws IOException {
+//        Server server = ServerBuilder.forPort(9084)
+//                .addService(new AccountRatingServiceGrpcImpl(userService, hostGradeService))
+//                .build();
+//        server.start();
+//        return server;
+//    }
 }

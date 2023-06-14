@@ -1,9 +1,12 @@
 package com.kncm.ratingservice.service.hostgrade;
 
 import com.kncm.ratingservice.model.HostGrade;
+import com.kncm.ratingservice.model.User;
 import com.kncm.ratingservice.repository.HostGradeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -23,5 +26,16 @@ public class HostGradeServiceImpl implements HostGradeService{
     @Override
     public void delete(HostGrade grade) {
         hostGradeRepository.delete(grade);
+    }
+
+    @Override
+    public boolean isHostGradeBigEnoughForDistinguishedStatus(User host) {
+        List<HostGrade> hostGrades = hostGradeRepository.findAllByGradeReceiver(host);
+        double sum = 0;
+        for (HostGrade hg : hostGrades) {
+            sum += hg.getValue();
+        }
+        double averageGrade = sum / hostGrades.size();
+        return averageGrade > 4.7;
     }
 }

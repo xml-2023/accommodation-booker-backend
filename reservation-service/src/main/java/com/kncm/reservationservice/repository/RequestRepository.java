@@ -20,6 +20,8 @@ public interface RequestRepository extends EntityRepository<ReservationRequest>{
 
     List<ReservationRequest> findByUserIdAndAccommodationIdAndStatus(Long userId, Long accommodationId, RequestStatus status);
     List<ReservationRequest> findByUserIdAndStatusAndAccommodation_HostId(Long guestId, RequestStatus status, Long hostId);
+    List<ReservationRequest> findByStatusAndAccommodation_HostId(RequestStatus status, Long hostId);
+    List<ReservationRequest> findByAccommodation_HostId(Long hostId);
 
 
 }

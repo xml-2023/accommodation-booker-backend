@@ -88,4 +88,14 @@ public class RequestServiceImpl implements RequestService {
         }
         return false;
     }
+
+    @Override
+    public List<ReservationRequest> findByStatusAndAccommodation_HostId(RequestStatus status, Long hostId) {
+        return repository.findByStatusAndAccommodation_HostId(status, hostId);
+    }
+
+    @Override
+    public List<ReservationRequest> findByAccommodation_HostId(Long hostId) {
+        return repository.findByAccommodation_HostId(hostId);
+    }
 }

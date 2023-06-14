@@ -4461,6 +4461,948 @@ public final class AccountRating {
 
   }
 
+  public interface DistinguishedHostRatingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.DistinguishedHostRatingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 hostId = 16;</code>
+     * @return The hostId.
+     */
+    long getHostId();
+  }
+  /**
+   * Protobuf type {@code proto.DistinguishedHostRatingRequest}
+   */
+  public static final class DistinguishedHostRatingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.DistinguishedHostRatingRequest)
+      DistinguishedHostRatingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistinguishedHostRatingRequest.newBuilder() to construct.
+    private DistinguishedHostRatingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistinguishedHostRatingRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistinguishedHostRatingRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.AccountRating.DistinguishedHostRatingRequest.class, proto.AccountRating.DistinguishedHostRatingRequest.Builder.class);
+    }
+
+    public static final int HOSTID_FIELD_NUMBER = 16;
+    private long hostId_;
+    /**
+     * <code>int64 hostId = 16;</code>
+     * @return The hostId.
+     */
+    @java.lang.Override
+    public long getHostId() {
+      return hostId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hostId_ != 0L) {
+        output.writeInt64(16, hostId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hostId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(16, hostId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.AccountRating.DistinguishedHostRatingRequest)) {
+        return super.equals(obj);
+      }
+      proto.AccountRating.DistinguishedHostRatingRequest other = (proto.AccountRating.DistinguishedHostRatingRequest) obj;
+
+      if (getHostId()
+          != other.getHostId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHostId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.AccountRating.DistinguishedHostRatingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.DistinguishedHostRatingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.DistinguishedHostRatingRequest)
+        proto.AccountRating.DistinguishedHostRatingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.AccountRating.DistinguishedHostRatingRequest.class, proto.AccountRating.DistinguishedHostRatingRequest.Builder.class);
+      }
+
+      // Construct using proto.AccountRating.DistinguishedHostRatingRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostId_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingRequest getDefaultInstanceForType() {
+        return proto.AccountRating.DistinguishedHostRatingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingRequest build() {
+        proto.AccountRating.DistinguishedHostRatingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingRequest buildPartial() {
+        proto.AccountRating.DistinguishedHostRatingRequest result = new proto.AccountRating.DistinguishedHostRatingRequest(this);
+        result.hostId_ = hostId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.AccountRating.DistinguishedHostRatingRequest) {
+          return mergeFrom((proto.AccountRating.DistinguishedHostRatingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.AccountRating.DistinguishedHostRatingRequest other) {
+        if (other == proto.AccountRating.DistinguishedHostRatingRequest.getDefaultInstance()) return this;
+        if (other.getHostId() != 0L) {
+          setHostId(other.getHostId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 128: {
+                hostId_ = input.readInt64();
+
+                break;
+              } // case 128
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private long hostId_ ;
+      /**
+       * <code>int64 hostId = 16;</code>
+       * @return The hostId.
+       */
+      @java.lang.Override
+      public long getHostId() {
+        return hostId_;
+      }
+      /**
+       * <code>int64 hostId = 16;</code>
+       * @param value The hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostId(long value) {
+        
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 hostId = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostId() {
+        
+        hostId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.DistinguishedHostRatingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.DistinguishedHostRatingRequest)
+    private static final proto.AccountRating.DistinguishedHostRatingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.AccountRating.DistinguishedHostRatingRequest();
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistinguishedHostRatingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DistinguishedHostRatingRequest>() {
+      @java.lang.Override
+      public DistinguishedHostRatingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistinguishedHostRatingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistinguishedHostRatingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.AccountRating.DistinguishedHostRatingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DistinguishedHostRatingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.DistinguishedHostRatingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool isDistinguished = 17;</code>
+     * @return The isDistinguished.
+     */
+    boolean getIsDistinguished();
+  }
+  /**
+   * Protobuf type {@code proto.DistinguishedHostRatingResponse}
+   */
+  public static final class DistinguishedHostRatingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.DistinguishedHostRatingResponse)
+      DistinguishedHostRatingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistinguishedHostRatingResponse.newBuilder() to construct.
+    private DistinguishedHostRatingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistinguishedHostRatingResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistinguishedHostRatingResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.AccountRating.DistinguishedHostRatingResponse.class, proto.AccountRating.DistinguishedHostRatingResponse.Builder.class);
+    }
+
+    public static final int ISDISTINGUISHED_FIELD_NUMBER = 17;
+    private boolean isDistinguished_;
+    /**
+     * <code>bool isDistinguished = 17;</code>
+     * @return The isDistinguished.
+     */
+    @java.lang.Override
+    public boolean getIsDistinguished() {
+      return isDistinguished_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isDistinguished_ != false) {
+        output.writeBool(17, isDistinguished_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isDistinguished_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, isDistinguished_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.AccountRating.DistinguishedHostRatingResponse)) {
+        return super.equals(obj);
+      }
+      proto.AccountRating.DistinguishedHostRatingResponse other = (proto.AccountRating.DistinguishedHostRatingResponse) obj;
+
+      if (getIsDistinguished()
+          != other.getIsDistinguished()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISDISTINGUISHED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsDistinguished());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.AccountRating.DistinguishedHostRatingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.DistinguishedHostRatingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.DistinguishedHostRatingResponse)
+        proto.AccountRating.DistinguishedHostRatingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.AccountRating.DistinguishedHostRatingResponse.class, proto.AccountRating.DistinguishedHostRatingResponse.Builder.class);
+      }
+
+      // Construct using proto.AccountRating.DistinguishedHostRatingResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        isDistinguished_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingResponse getDefaultInstanceForType() {
+        return proto.AccountRating.DistinguishedHostRatingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingResponse build() {
+        proto.AccountRating.DistinguishedHostRatingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingResponse buildPartial() {
+        proto.AccountRating.DistinguishedHostRatingResponse result = new proto.AccountRating.DistinguishedHostRatingResponse(this);
+        result.isDistinguished_ = isDistinguished_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.AccountRating.DistinguishedHostRatingResponse) {
+          return mergeFrom((proto.AccountRating.DistinguishedHostRatingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.AccountRating.DistinguishedHostRatingResponse other) {
+        if (other == proto.AccountRating.DistinguishedHostRatingResponse.getDefaultInstance()) return this;
+        if (other.getIsDistinguished() != false) {
+          setIsDistinguished(other.getIsDistinguished());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 136: {
+                isDistinguished_ = input.readBool();
+
+                break;
+              } // case 136
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private boolean isDistinguished_ ;
+      /**
+       * <code>bool isDistinguished = 17;</code>
+       * @return The isDistinguished.
+       */
+      @java.lang.Override
+      public boolean getIsDistinguished() {
+        return isDistinguished_;
+      }
+      /**
+       * <code>bool isDistinguished = 17;</code>
+       * @param value The isDistinguished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsDistinguished(boolean value) {
+        
+        isDistinguished_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isDistinguished = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsDistinguished() {
+        
+        isDistinguished_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.DistinguishedHostRatingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.DistinguishedHostRatingResponse)
+    private static final proto.AccountRating.DistinguishedHostRatingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.AccountRating.DistinguishedHostRatingResponse();
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistinguishedHostRatingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DistinguishedHostRatingResponse>() {
+      @java.lang.Override
+      public DistinguishedHostRatingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistinguishedHostRatingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistinguishedHostRatingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.AccountRating.DistinguishedHostRatingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_proto_CreateUserRequest_descriptor;
   private static final 
@@ -4491,6 +5433,16 @@ public final class AccountRating {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_proto_DeleteUserResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4511,12 +5463,18 @@ public final class AccountRating {
       "(\t\"\'\n\022UpdateUserResponse\022\021\n\tisUpdated\030\r " +
       "\001(\010\"#\n\021DeleteUserRequest\022\016\n\006userId\030\016 \001(\003" +
       "\"\'\n\022DeleteUserResponse\022\021\n\tisDeleted\030\017 \001(" +
-      "\0102\342\001\n\021ManageUserService\022C\n\nCreateUser\022\030." +
-      "proto.CreateUserRequest\032\031.proto.CreateUs" +
-      "erResponse\"\000\022C\n\nUpdateUser\022\030.proto.Updat" +
-      "eUserRequest\032\031.proto.UpdateUserResponse\"" +
-      "\000\022C\n\nDeleteUser\022\030.proto.DeleteUserReques" +
-      "t\032\031.proto.DeleteUserResponse\"\000b\006proto3"
+      "\010\"0\n\036DistinguishedHostRatingRequest\022\016\n\006h" +
+      "ostId\030\020 \001(\003\":\n\037DistinguishedHostRatingRe" +
+      "sponse\022\027\n\017isDistinguished\030\021 \001(\0102\334\002\n\021Mana" +
+      "geUserService\022C\n\nCreateUser\022\030.proto.Crea" +
+      "teUserRequest\032\031.proto.CreateUserResponse" +
+      "\"\000\022C\n\nUpdateUser\022\030.proto.UpdateUserReque" +
+      "st\032\031.proto.UpdateUserResponse\"\000\022C\n\nDelet" +
+      "eUser\022\030.proto.DeleteUserRequest\032\031.proto." +
+      "DeleteUserResponse\"\000\022x\n%GetDistinguished" +
+      "HostStatusFromRatings\022%.proto.Distinguis" +
+      "hedHostRatingRequest\032&.proto.Distinguish" +
+      "edHostRatingResponse\"\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4558,6 +5516,18 @@ public final class AccountRating {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_DeleteUserResponse_descriptor,
         new java.lang.String[] { "IsDeleted", });
+    internal_static_proto_DistinguishedHostRatingRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_DistinguishedHostRatingRequest_descriptor,
+        new java.lang.String[] { "HostId", });
+    internal_static_proto_DistinguishedHostRatingResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_DistinguishedHostRatingResponse_descriptor,
+        new java.lang.String[] { "IsDistinguished", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

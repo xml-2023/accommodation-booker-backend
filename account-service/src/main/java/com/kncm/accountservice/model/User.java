@@ -24,4 +24,5 @@ public class User implements Serializable {
     private Address address;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     private Role role;
+    private boolean isDistinguishedHost;
 }

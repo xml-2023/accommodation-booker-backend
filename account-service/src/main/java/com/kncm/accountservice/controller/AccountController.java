@@ -563,6 +563,47 @@ public class AccountController {
         }
     }
 
+    @GetMapping("/distinguishedHost/{hostId}")
+    public ResponseEntity<Boolean> getDistinguishedHostStatus(@PathVariable Long hostId){
+        User user = service.find(hostId);
+        if (user == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        boolean responseStatus = false;
+        //-------------------------------------------Grpc begin to rating service----------------------------------------------
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9099)
+                .usePlaintext()
+                .build();
+
+        ManageUserServiceGrpc.ManageUserServiceBlockingStub stub = ManageUserServiceGrpc.newBlockingStub(channel);
+        try {
+            AccountRating.DistinguishedHostRatingRequest request = AccountRating.DistinguishedHostRatingRequest.newBuilder()
+                    .setHostId(user.getId())
+                    .build();
+
+            AccountRating.DistinguishedHostRatingResponse response = stub.getDistinguishedHostStatusFromRatings(request);
+            if (response.getIsDistinguished()) {
+                responseStatus = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Grpc exception happened");
+        } finally {
+            channel.shutdown();
+        }
+        //-------------------------------------------Grpc end ----------------------------------------------
+        if (responseStatus){
+            user.setDistinguishedHost(true);
+            service.save(user);
+            return new ResponseEntity<>(true, HttpStatus.OK);
+        }
+        else {
+            user.setDistinguishedHost(false);
+            service.save(user);
+            return new ResponseEntity<>(false, HttpStatus.OK);
+        }
+    }
+
 
     private void Map(UserDetailsRequest dto, User user) {
         user.setUsername(dto.getUsername());
@@ -577,6 +618,7 @@ public class AccountController {
         address.setNumber(dto.getNumber());
         user.setAddress(address);
         user.setRole(roleService.find(dto.getRoleName()));
+        user.setDistinguishedHost(false);
 
     }
 
