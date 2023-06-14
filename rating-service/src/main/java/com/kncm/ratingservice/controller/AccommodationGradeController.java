@@ -21,6 +21,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Collection;
 
 @RestController
 @RequestMapping("/api/rating")
@@ -105,6 +106,20 @@ public class AccommodationGradeController {
     public ResponseEntity<Double> getAccommodationAverageGrade(@PathVariable Long accommodationId){
         Double averageGrade = accommodationGradeService.getAccommodationAverageGrade(accommodationId);
         return new ResponseEntity<>(averageGrade, HttpStatus.OK);
+    }
+
+    @GetMapping("/findByUserId")
+    public ResponseEntity<Collection<AccommodationGrade>> findByUserId(@RequestParam Long id){
+        return new ResponseEntity<>(accommodationGradeService.findAllByUserId(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/findByAccommodationId")
+    public ResponseEntity<Collection<AccommodationGrade>> findByAccommodationId(@RequestParam Long id) {
+        return new ResponseEntity<>(accommodationGradeService.findAllByAccommodationId(id), HttpStatus.OK);
+    }
+    @GetMapping("/findById")
+    public ResponseEntity<Collection<AccommodationGrade>> findById(@RequestParam Long id) {
+        return new ResponseEntity<>(accommodationGradeService.findAllById(id), HttpStatus.OK);
     }
 
     private void MapUpdate(UpdateAccommodationGradeRequest request, AccommodationGrade grade){

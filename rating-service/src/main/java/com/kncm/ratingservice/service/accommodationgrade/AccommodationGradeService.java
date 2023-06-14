@@ -10,5 +10,6 @@ public interface AccommodationGradeService {
     void delete(AccommodationGrade grade);
     List<AccommodationGrade> findAllByUserId(Long id);
     List<AccommodationGrade> findAllByAccommodationId(Long id);
+    List<AccommodationGrade> findAllById(Long id);
     Double getAccommodationAverageGrade(Long id);
 }

@@ -38,6 +38,11 @@ public class AccommodationGradeServiceImpl implements AccommodationGradeService{
     }
 
     @Override
+    public List<AccommodationGrade> findAllById(Long id) {
+        return accommodationGradeRepository.findAllById(id);
+    }
+
+    @Override
     public Double getAccommodationAverageGrade(Long id) {
         List<AccommodationGrade> grades =  findAllByAccommodationId(id);
         Double sum = 0.0;

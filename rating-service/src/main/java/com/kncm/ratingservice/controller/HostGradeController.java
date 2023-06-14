@@ -20,6 +20,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Collection;
 
 @RestController
 @RequestMapping("/api/rating")
@@ -96,6 +97,26 @@ public class HostGradeController {
         }
         hostGradeService.delete(toDelete);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/hostGrade/averageGrade/{accommodationId}")
+    public ResponseEntity<Double> getHostAverageGrade(@PathVariable Long hostId){
+        Double averageGrade = hostGradeService.getHostAverageGrade(hostId);
+        return new ResponseEntity<>(averageGrade, HttpStatus.OK);
+    }
+
+    @GetMapping("/hostGrade/findByUserId")
+    public ResponseEntity<Collection<HostGrade>> findByGuestId(@RequestParam Long id){
+        return new ResponseEntity<>(hostGradeService.findAllByGuestId(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/hostGrade/findByHostId")
+    public ResponseEntity<Collection<HostGrade>> findByHostId(@RequestParam Long id) {
+        return new ResponseEntity<>(hostGradeService.findAllByHostId(id), HttpStatus.OK);
+    }
+    @GetMapping("/hostGrade/findById")
+    public ResponseEntity<Collection<HostGrade>> findById(@RequestParam Long id) {
+        return new ResponseEntity<>(hostGradeService.findAllById(id), HttpStatus.OK);
     }
 
     private void MapUpdate(UpdateAccommodationGradeRequest request, HostGrade grade){
