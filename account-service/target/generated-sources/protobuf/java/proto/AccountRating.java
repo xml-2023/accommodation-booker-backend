@@ -28,7 +28,7 @@ public final class AccountRating {
      * <code>string username = 2;</code>
      * @return The username.
      */
-    String getUsername();
+    java.lang.String getUsername();
     /**
      * <code>string username = 2;</code>
      * @return The bytes for username.
@@ -40,7 +40,7 @@ public final class AccountRating {
      * <code>string password = 3;</code>
      * @return The password.
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>string password = 3;</code>
      * @return The bytes for password.
@@ -52,7 +52,7 @@ public final class AccountRating {
      * <code>string name = 4;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 4;</code>
      * @return The bytes for name.
@@ -64,7 +64,7 @@ public final class AccountRating {
      * <code>string surname = 5;</code>
      * @return The surname.
      */
-    String getSurname();
+    java.lang.String getSurname();
     /**
      * <code>string surname = 5;</code>
      * @return The bytes for surname.
@@ -76,7 +76,7 @@ public final class AccountRating {
      * <code>string role = 6;</code>
      * @return The role.
      */
-    String getRole();
+    java.lang.String getRole();
     /**
      * <code>string role = 6;</code>
      * @return The bytes for role.
@@ -104,29 +104,29 @@ public final class AccountRating {
       role_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new CreateUserRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountRating.internal_static_proto_CreateUserRequest_descriptor;
+      return proto.AccountRating.internal_static_proto_CreateUserRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountRating.internal_static_proto_CreateUserRequest_fieldAccessorTable
+      return proto.AccountRating.internal_static_proto_CreateUserRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CreateUserRequest.class, Builder.class);
+              proto.AccountRating.CreateUserRequest.class, proto.AccountRating.CreateUserRequest.Builder.class);
     }
 
     public static final int USERID_FIELD_NUMBER = 1;
@@ -135,26 +135,26 @@ public final class AccountRating {
      * <code>int64 userId = 1;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     public static final int USERNAME_FIELD_NUMBER = 2;
-    private volatile Object username_;
+    private volatile java.lang.Object username_;
     /**
      * <code>string username = 2;</code>
      * @return The username.
      */
-    @Override
-    public String getUsername() {
-      Object ref = username_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         username_ = s;
         return s;
       }
@@ -163,14 +163,14 @@ public final class AccountRating {
      * <code>string username = 2;</code>
      * @return The bytes for username.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      Object ref = username_;
-      if (ref instanceof String) {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         username_ = b;
         return b;
       } else {
@@ -179,20 +179,20 @@ public final class AccountRating {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 3;
-    private volatile Object password_;
+    private volatile java.lang.Object password_;
     /**
      * <code>string password = 3;</code>
      * @return The password.
      */
-    @Override
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -201,14 +201,14 @@ public final class AccountRating {
      * <code>string password = 3;</code>
      * @return The bytes for password.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -217,20 +217,20 @@ public final class AccountRating {
     }
 
     public static final int NAME_FIELD_NUMBER = 4;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 4;</code>
      * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -239,14 +239,14 @@ public final class AccountRating {
      * <code>string name = 4;</code>
      * @return The bytes for name.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -255,20 +255,20 @@ public final class AccountRating {
     }
 
     public static final int SURNAME_FIELD_NUMBER = 5;
-    private volatile Object surname_;
+    private volatile java.lang.Object surname_;
     /**
      * <code>string surname = 5;</code>
      * @return The surname.
      */
-    @Override
-    public String getSurname() {
-      Object ref = surname_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getSurname() {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         surname_ = s;
         return s;
       }
@@ -277,14 +277,14 @@ public final class AccountRating {
      * <code>string surname = 5;</code>
      * @return The bytes for surname.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSurnameBytes() {
-      Object ref = surname_;
-      if (ref instanceof String) {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         surname_ = b;
         return b;
       } else {
@@ -293,20 +293,20 @@ public final class AccountRating {
     }
 
     public static final int ROLE_FIELD_NUMBER = 6;
-    private volatile Object role_;
+    private volatile java.lang.Object role_;
     /**
      * <code>string role = 6;</code>
      * @return The role.
      */
-    @Override
-    public String getRole() {
-      Object ref = role_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getRole() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         role_ = s;
         return s;
       }
@@ -315,14 +315,14 @@ public final class AccountRating {
      * <code>string role = 6;</code>
      * @return The bytes for role.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRoleBytes() {
-      Object ref = role_;
-      if (ref instanceof String) {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         role_ = b;
         return b;
       } else {
@@ -331,7 +331,7 @@ public final class AccountRating {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -341,7 +341,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (userId_ != 0L) {
@@ -365,7 +365,7 @@ public final class AccountRating {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -395,15 +395,15 @@ public final class AccountRating {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CreateUserRequest)) {
+      if (!(obj instanceof proto.AccountRating.CreateUserRequest)) {
         return super.equals(obj);
       }
-      CreateUserRequest other = (CreateUserRequest) obj;
+      proto.AccountRating.CreateUserRequest other = (proto.AccountRating.CreateUserRequest) obj;
 
       if (getUserId()
           != other.getUserId()) return false;
@@ -421,7 +421,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -446,69 +446,69 @@ public final class AccountRating {
       return hash;
     }
 
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateUserRequest parseFrom(byte[] data)
+    public static proto.AccountRating.CreateUserRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateUserRequest parseFrom(java.io.InputStream input)
+    public static proto.AccountRating.CreateUserRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateUserRequest parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountRating.CreateUserRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CreateUserRequest parseDelimitedFrom(
+    public static proto.AccountRating.CreateUserRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateUserRequest parseFrom(
+    public static proto.AccountRating.CreateUserRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -516,23 +516,23 @@ public final class AccountRating {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CreateUserRequest prototype) {
+    public static Builder newBuilder(proto.AccountRating.CreateUserRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -542,18 +542,18 @@ public final class AccountRating {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CreateUserRequest)
-        CreateUserRequestOrBuilder {
+        proto.AccountRating.CreateUserRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountRating.internal_static_proto_CreateUserRequest_descriptor;
+        return proto.AccountRating.internal_static_proto_CreateUserRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountRating.internal_static_proto_CreateUserRequest_fieldAccessorTable
+        return proto.AccountRating.internal_static_proto_CreateUserRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CreateUserRequest.class, Builder.class);
+                proto.AccountRating.CreateUserRequest.class, proto.AccountRating.CreateUserRequest.Builder.class);
       }
 
       // Construct using proto.AccountRating.CreateUserRequest.newBuilder()
@@ -562,11 +562,11 @@ public final class AccountRating {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         userId_ = 0L;
@@ -584,29 +584,29 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountRating.internal_static_proto_CreateUserRequest_descriptor;
+        return proto.AccountRating.internal_static_proto_CreateUserRequest_descriptor;
       }
 
-      @Override
-      public CreateUserRequest getDefaultInstanceForType() {
-        return CreateUserRequest.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountRating.CreateUserRequest getDefaultInstanceForType() {
+        return proto.AccountRating.CreateUserRequest.getDefaultInstance();
       }
 
-      @Override
-      public CreateUserRequest build() {
-        CreateUserRequest result = buildPartial();
+      @java.lang.Override
+      public proto.AccountRating.CreateUserRequest build() {
+        proto.AccountRating.CreateUserRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public CreateUserRequest buildPartial() {
-        CreateUserRequest result = new CreateUserRequest(this);
+      @java.lang.Override
+      public proto.AccountRating.CreateUserRequest buildPartial() {
+        proto.AccountRating.CreateUserRequest result = new proto.AccountRating.CreateUserRequest(this);
         result.userId_ = userId_;
         result.username_ = username_;
         result.password_ = password_;
@@ -617,50 +617,50 @@ public final class AccountRating {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CreateUserRequest) {
-          return mergeFrom((CreateUserRequest)other);
+        if (other instanceof proto.AccountRating.CreateUserRequest) {
+          return mergeFrom((proto.AccountRating.CreateUserRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CreateUserRequest other) {
-        if (other == CreateUserRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountRating.CreateUserRequest other) {
+        if (other == proto.AccountRating.CreateUserRequest.getDefaultInstance()) return this;
         if (other.getUserId() != 0L) {
           setUserId(other.getUserId());
         }
@@ -689,18 +689,18 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -761,7 +761,7 @@ public final class AccountRating {
        * <code>int64 userId = 1;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -787,21 +787,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object username_ = "";
+      private java.lang.Object username_ = "";
       /**
        * <code>string username = 2;</code>
        * @return The username.
        */
-      public String getUsername() {
-        Object ref = username_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           username_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -810,11 +810,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getUsernameBytes() {
-        Object ref = username_;
+        java.lang.Object ref = username_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           username_ = b;
           return b;
         } else {
@@ -827,7 +827,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setUsername(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -863,21 +863,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 3;</code>
        * @return The password.
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -886,11 +886,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -903,7 +903,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setPassword(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -939,21 +939,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 4;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -962,11 +962,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -979,7 +979,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1015,21 +1015,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object surname_ = "";
+      private java.lang.Object surname_ = "";
       /**
        * <code>string surname = 5;</code>
        * @return The surname.
        */
-      public String getSurname() {
-        Object ref = surname_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getSurname() {
+        java.lang.Object ref = surname_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           surname_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1038,11 +1038,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getSurnameBytes() {
-        Object ref = surname_;
+        java.lang.Object ref = surname_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           surname_ = b;
           return b;
         } else {
@@ -1055,7 +1055,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setSurname(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1091,21 +1091,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object role_ = "";
+      private java.lang.Object role_ = "";
       /**
        * <code>string role = 6;</code>
        * @return The role.
        */
-      public String getRole() {
-        Object ref = role_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getRole() {
+        java.lang.Object ref = role_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           role_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1114,11 +1114,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getRoleBytes() {
-        Object ref = role_;
+        java.lang.Object ref = role_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           role_ = b;
           return b;
         } else {
@@ -1131,7 +1131,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setRole(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1166,13 +1166,13 @@ public final class AccountRating {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1183,18 +1183,18 @@ public final class AccountRating {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CreateUserRequest)
-    private static final CreateUserRequest DEFAULT_INSTANCE;
+    private static final proto.AccountRating.CreateUserRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CreateUserRequest();
+      DEFAULT_INSTANCE = new proto.AccountRating.CreateUserRequest();
     }
 
-    public static CreateUserRequest getDefaultInstance() {
+    public static proto.AccountRating.CreateUserRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CreateUserRequest>
         PARSER = new com.google.protobuf.AbstractParser<CreateUserRequest>() {
-      @Override
+      @java.lang.Override
       public CreateUserRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1218,13 +1218,13 @@ public final class AccountRating {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CreateUserRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public CreateUserRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountRating.CreateUserRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1265,29 +1265,29 @@ public final class AccountRating {
     private CreateUserResponse() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new CreateUserResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountRating.internal_static_proto_CreateUserResponse_descriptor;
+      return proto.AccountRating.internal_static_proto_CreateUserResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountRating.internal_static_proto_CreateUserResponse_fieldAccessorTable
+      return proto.AccountRating.internal_static_proto_CreateUserResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CreateUserResponse.class, Builder.class);
+              proto.AccountRating.CreateUserResponse.class, proto.AccountRating.CreateUserResponse.Builder.class);
     }
 
     public static final int ISCREATED_FIELD_NUMBER = 7;
@@ -1300,7 +1300,7 @@ public final class AccountRating {
      * <code>bool isCreated = 7;</code>
      * @return The isCreated.
      */
-    @Override
+    @java.lang.Override
     public boolean getIsCreated() {
       return isCreated_;
     }
@@ -1311,13 +1311,13 @@ public final class AccountRating {
      * <code>int64 userId = 8;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1327,7 +1327,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isCreated_ != false) {
@@ -1339,7 +1339,7 @@ public final class AccountRating {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1358,15 +1358,15 @@ public final class AccountRating {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CreateUserResponse)) {
+      if (!(obj instanceof proto.AccountRating.CreateUserResponse)) {
         return super.equals(obj);
       }
-      CreateUserResponse other = (CreateUserResponse) obj;
+      proto.AccountRating.CreateUserResponse other = (proto.AccountRating.CreateUserResponse) obj;
 
       if (getIsCreated()
           != other.getIsCreated()) return false;
@@ -1376,7 +1376,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1394,69 +1394,69 @@ public final class AccountRating {
       return hash;
     }
 
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateUserResponse parseFrom(byte[] data)
+    public static proto.AccountRating.CreateUserResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateUserResponse parseFrom(java.io.InputStream input)
+    public static proto.AccountRating.CreateUserResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateUserResponse parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountRating.CreateUserResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CreateUserResponse parseDelimitedFrom(
+    public static proto.AccountRating.CreateUserResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateUserResponse parseFrom(
+    public static proto.AccountRating.CreateUserResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1464,23 +1464,23 @@ public final class AccountRating {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CreateUserResponse prototype) {
+    public static Builder newBuilder(proto.AccountRating.CreateUserResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1490,18 +1490,18 @@ public final class AccountRating {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CreateUserResponse)
-        CreateUserResponseOrBuilder {
+        proto.AccountRating.CreateUserResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountRating.internal_static_proto_CreateUserResponse_descriptor;
+        return proto.AccountRating.internal_static_proto_CreateUserResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountRating.internal_static_proto_CreateUserResponse_fieldAccessorTable
+        return proto.AccountRating.internal_static_proto_CreateUserResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CreateUserResponse.class, Builder.class);
+                proto.AccountRating.CreateUserResponse.class, proto.AccountRating.CreateUserResponse.Builder.class);
       }
 
       // Construct using proto.AccountRating.CreateUserResponse.newBuilder()
@@ -1510,11 +1510,11 @@ public final class AccountRating {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         isCreated_ = false;
@@ -1524,79 +1524,79 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountRating.internal_static_proto_CreateUserResponse_descriptor;
+        return proto.AccountRating.internal_static_proto_CreateUserResponse_descriptor;
       }
 
-      @Override
-      public CreateUserResponse getDefaultInstanceForType() {
-        return CreateUserResponse.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountRating.CreateUserResponse getDefaultInstanceForType() {
+        return proto.AccountRating.CreateUserResponse.getDefaultInstance();
       }
 
-      @Override
-      public CreateUserResponse build() {
-        CreateUserResponse result = buildPartial();
+      @java.lang.Override
+      public proto.AccountRating.CreateUserResponse build() {
+        proto.AccountRating.CreateUserResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public CreateUserResponse buildPartial() {
-        CreateUserResponse result = new CreateUserResponse(this);
+      @java.lang.Override
+      public proto.AccountRating.CreateUserResponse buildPartial() {
+        proto.AccountRating.CreateUserResponse result = new proto.AccountRating.CreateUserResponse(this);
         result.isCreated_ = isCreated_;
         result.userId_ = userId_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CreateUserResponse) {
-          return mergeFrom((CreateUserResponse)other);
+        if (other instanceof proto.AccountRating.CreateUserResponse) {
+          return mergeFrom((proto.AccountRating.CreateUserResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CreateUserResponse other) {
-        if (other == CreateUserResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountRating.CreateUserResponse other) {
+        if (other == proto.AccountRating.CreateUserResponse.getDefaultInstance()) return this;
         if (other.getIsCreated() != false) {
           setIsCreated(other.getIsCreated());
         }
@@ -1608,18 +1608,18 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -1664,7 +1664,7 @@ public final class AccountRating {
        * <code>bool isCreated = 7;</code>
        * @return The isCreated.
        */
-      @Override
+      @java.lang.Override
       public boolean getIsCreated() {
         return isCreated_;
       }
@@ -1703,7 +1703,7 @@ public final class AccountRating {
        * <code>int64 userId = 8;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -1728,13 +1728,13 @@ public final class AccountRating {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1745,18 +1745,18 @@ public final class AccountRating {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CreateUserResponse)
-    private static final CreateUserResponse DEFAULT_INSTANCE;
+    private static final proto.AccountRating.CreateUserResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CreateUserResponse();
+      DEFAULT_INSTANCE = new proto.AccountRating.CreateUserResponse();
     }
 
-    public static CreateUserResponse getDefaultInstance() {
+    public static proto.AccountRating.CreateUserResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CreateUserResponse>
         PARSER = new com.google.protobuf.AbstractParser<CreateUserResponse>() {
-      @Override
+      @java.lang.Override
       public CreateUserResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1780,13 +1780,13 @@ public final class AccountRating {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CreateUserResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public CreateUserResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountRating.CreateUserResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1806,7 +1806,7 @@ public final class AccountRating {
      * <code>string username = 10;</code>
      * @return The username.
      */
-    String getUsername();
+    java.lang.String getUsername();
     /**
      * <code>string username = 10;</code>
      * @return The bytes for username.
@@ -1818,7 +1818,7 @@ public final class AccountRating {
      * <code>string password = 11;</code>
      * @return The password.
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>string password = 11;</code>
      * @return The bytes for password.
@@ -1830,7 +1830,7 @@ public final class AccountRating {
      * <code>string name = 12;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 12;</code>
      * @return The bytes for name.
@@ -1842,7 +1842,7 @@ public final class AccountRating {
      * <code>string surname = 13;</code>
      * @return The surname.
      */
-    String getSurname();
+    java.lang.String getSurname();
     /**
      * <code>string surname = 13;</code>
      * @return The bytes for surname.
@@ -1854,7 +1854,7 @@ public final class AccountRating {
      * <code>string role = 14;</code>
      * @return The role.
      */
-    String getRole();
+    java.lang.String getRole();
     /**
      * <code>string role = 14;</code>
      * @return The bytes for role.
@@ -1882,29 +1882,29 @@ public final class AccountRating {
       role_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new UpdateUserRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountRating.internal_static_proto_UpdateUserRequest_descriptor;
+      return proto.AccountRating.internal_static_proto_UpdateUserRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountRating.internal_static_proto_UpdateUserRequest_fieldAccessorTable
+      return proto.AccountRating.internal_static_proto_UpdateUserRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              UpdateUserRequest.class, Builder.class);
+              proto.AccountRating.UpdateUserRequest.class, proto.AccountRating.UpdateUserRequest.Builder.class);
     }
 
     public static final int USERID_FIELD_NUMBER = 9;
@@ -1913,26 +1913,26 @@ public final class AccountRating {
      * <code>int64 userId = 9;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     public static final int USERNAME_FIELD_NUMBER = 10;
-    private volatile Object username_;
+    private volatile java.lang.Object username_;
     /**
      * <code>string username = 10;</code>
      * @return The username.
      */
-    @Override
-    public String getUsername() {
-      Object ref = username_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         username_ = s;
         return s;
       }
@@ -1941,14 +1941,14 @@ public final class AccountRating {
      * <code>string username = 10;</code>
      * @return The bytes for username.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      Object ref = username_;
-      if (ref instanceof String) {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         username_ = b;
         return b;
       } else {
@@ -1957,20 +1957,20 @@ public final class AccountRating {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 11;
-    private volatile Object password_;
+    private volatile java.lang.Object password_;
     /**
      * <code>string password = 11;</code>
      * @return The password.
      */
-    @Override
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -1979,14 +1979,14 @@ public final class AccountRating {
      * <code>string password = 11;</code>
      * @return The bytes for password.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -1995,20 +1995,20 @@ public final class AccountRating {
     }
 
     public static final int NAME_FIELD_NUMBER = 12;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 12;</code>
      * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -2017,14 +2017,14 @@ public final class AccountRating {
      * <code>string name = 12;</code>
      * @return The bytes for name.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -2033,20 +2033,20 @@ public final class AccountRating {
     }
 
     public static final int SURNAME_FIELD_NUMBER = 13;
-    private volatile Object surname_;
+    private volatile java.lang.Object surname_;
     /**
      * <code>string surname = 13;</code>
      * @return The surname.
      */
-    @Override
-    public String getSurname() {
-      Object ref = surname_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getSurname() {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         surname_ = s;
         return s;
       }
@@ -2055,14 +2055,14 @@ public final class AccountRating {
      * <code>string surname = 13;</code>
      * @return The bytes for surname.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSurnameBytes() {
-      Object ref = surname_;
-      if (ref instanceof String) {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         surname_ = b;
         return b;
       } else {
@@ -2071,20 +2071,20 @@ public final class AccountRating {
     }
 
     public static final int ROLE_FIELD_NUMBER = 14;
-    private volatile Object role_;
+    private volatile java.lang.Object role_;
     /**
      * <code>string role = 14;</code>
      * @return The role.
      */
-    @Override
-    public String getRole() {
-      Object ref = role_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getRole() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         role_ = s;
         return s;
       }
@@ -2093,14 +2093,14 @@ public final class AccountRating {
      * <code>string role = 14;</code>
      * @return The bytes for role.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRoleBytes() {
-      Object ref = role_;
-      if (ref instanceof String) {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         role_ = b;
         return b;
       } else {
@@ -2109,7 +2109,7 @@ public final class AccountRating {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2119,7 +2119,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (userId_ != 0L) {
@@ -2143,7 +2143,7 @@ public final class AccountRating {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2173,15 +2173,15 @@ public final class AccountRating {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof UpdateUserRequest)) {
+      if (!(obj instanceof proto.AccountRating.UpdateUserRequest)) {
         return super.equals(obj);
       }
-      UpdateUserRequest other = (UpdateUserRequest) obj;
+      proto.AccountRating.UpdateUserRequest other = (proto.AccountRating.UpdateUserRequest) obj;
 
       if (getUserId()
           != other.getUserId()) return false;
@@ -2199,7 +2199,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2224,69 +2224,69 @@ public final class AccountRating {
       return hash;
     }
 
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateUserRequest parseFrom(byte[] data)
+    public static proto.AccountRating.UpdateUserRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateUserRequest parseFrom(java.io.InputStream input)
+    public static proto.AccountRating.UpdateUserRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateUserRequest parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountRating.UpdateUserRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static UpdateUserRequest parseDelimitedFrom(
+    public static proto.AccountRating.UpdateUserRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateUserRequest parseFrom(
+    public static proto.AccountRating.UpdateUserRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2294,23 +2294,23 @@ public final class AccountRating {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(UpdateUserRequest prototype) {
+    public static Builder newBuilder(proto.AccountRating.UpdateUserRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2320,18 +2320,18 @@ public final class AccountRating {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.UpdateUserRequest)
-        UpdateUserRequestOrBuilder {
+        proto.AccountRating.UpdateUserRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountRating.internal_static_proto_UpdateUserRequest_descriptor;
+        return proto.AccountRating.internal_static_proto_UpdateUserRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountRating.internal_static_proto_UpdateUserRequest_fieldAccessorTable
+        return proto.AccountRating.internal_static_proto_UpdateUserRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                UpdateUserRequest.class, Builder.class);
+                proto.AccountRating.UpdateUserRequest.class, proto.AccountRating.UpdateUserRequest.Builder.class);
       }
 
       // Construct using proto.AccountRating.UpdateUserRequest.newBuilder()
@@ -2340,11 +2340,11 @@ public final class AccountRating {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         userId_ = 0L;
@@ -2362,29 +2362,29 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountRating.internal_static_proto_UpdateUserRequest_descriptor;
+        return proto.AccountRating.internal_static_proto_UpdateUserRequest_descriptor;
       }
 
-      @Override
-      public UpdateUserRequest getDefaultInstanceForType() {
-        return UpdateUserRequest.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountRating.UpdateUserRequest getDefaultInstanceForType() {
+        return proto.AccountRating.UpdateUserRequest.getDefaultInstance();
       }
 
-      @Override
-      public UpdateUserRequest build() {
-        UpdateUserRequest result = buildPartial();
+      @java.lang.Override
+      public proto.AccountRating.UpdateUserRequest build() {
+        proto.AccountRating.UpdateUserRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public UpdateUserRequest buildPartial() {
-        UpdateUserRequest result = new UpdateUserRequest(this);
+      @java.lang.Override
+      public proto.AccountRating.UpdateUserRequest buildPartial() {
+        proto.AccountRating.UpdateUserRequest result = new proto.AccountRating.UpdateUserRequest(this);
         result.userId_ = userId_;
         result.username_ = username_;
         result.password_ = password_;
@@ -2395,50 +2395,50 @@ public final class AccountRating {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof UpdateUserRequest) {
-          return mergeFrom((UpdateUserRequest)other);
+        if (other instanceof proto.AccountRating.UpdateUserRequest) {
+          return mergeFrom((proto.AccountRating.UpdateUserRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(UpdateUserRequest other) {
-        if (other == UpdateUserRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountRating.UpdateUserRequest other) {
+        if (other == proto.AccountRating.UpdateUserRequest.getDefaultInstance()) return this;
         if (other.getUserId() != 0L) {
           setUserId(other.getUserId());
         }
@@ -2467,18 +2467,18 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -2539,7 +2539,7 @@ public final class AccountRating {
        * <code>int64 userId = 9;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -2565,21 +2565,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object username_ = "";
+      private java.lang.Object username_ = "";
       /**
        * <code>string username = 10;</code>
        * @return The username.
        */
-      public String getUsername() {
-        Object ref = username_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           username_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2588,11 +2588,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getUsernameBytes() {
-        Object ref = username_;
+        java.lang.Object ref = username_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           username_ = b;
           return b;
         } else {
@@ -2605,7 +2605,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setUsername(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2641,21 +2641,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 11;</code>
        * @return The password.
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2664,11 +2664,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -2681,7 +2681,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setPassword(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2717,21 +2717,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 12;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2740,11 +2740,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -2757,7 +2757,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2793,21 +2793,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object surname_ = "";
+      private java.lang.Object surname_ = "";
       /**
        * <code>string surname = 13;</code>
        * @return The surname.
        */
-      public String getSurname() {
-        Object ref = surname_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getSurname() {
+        java.lang.Object ref = surname_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           surname_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2816,11 +2816,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getSurnameBytes() {
-        Object ref = surname_;
+        java.lang.Object ref = surname_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           surname_ = b;
           return b;
         } else {
@@ -2833,7 +2833,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setSurname(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2869,21 +2869,21 @@ public final class AccountRating {
         return this;
       }
 
-      private Object role_ = "";
+      private java.lang.Object role_ = "";
       /**
        * <code>string role = 14;</code>
        * @return The role.
        */
-      public String getRole() {
-        Object ref = role_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getRole() {
+        java.lang.Object ref = role_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           role_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2892,11 +2892,11 @@ public final class AccountRating {
        */
       public com.google.protobuf.ByteString
           getRoleBytes() {
-        Object ref = role_;
+        java.lang.Object ref = role_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           role_ = b;
           return b;
         } else {
@@ -2909,7 +2909,7 @@ public final class AccountRating {
        * @return This builder for chaining.
        */
       public Builder setRole(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2944,13 +2944,13 @@ public final class AccountRating {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2961,18 +2961,18 @@ public final class AccountRating {
     }
 
     // @@protoc_insertion_point(class_scope:proto.UpdateUserRequest)
-    private static final UpdateUserRequest DEFAULT_INSTANCE;
+    private static final proto.AccountRating.UpdateUserRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new UpdateUserRequest();
+      DEFAULT_INSTANCE = new proto.AccountRating.UpdateUserRequest();
     }
 
-    public static UpdateUserRequest getDefaultInstance() {
+    public static proto.AccountRating.UpdateUserRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<UpdateUserRequest>
         PARSER = new com.google.protobuf.AbstractParser<UpdateUserRequest>() {
-      @Override
+      @java.lang.Override
       public UpdateUserRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2996,13 +2996,13 @@ public final class AccountRating {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<UpdateUserRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public UpdateUserRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountRating.UpdateUserRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3037,29 +3037,29 @@ public final class AccountRating {
     private UpdateUserResponse() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new UpdateUserResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountRating.internal_static_proto_UpdateUserResponse_descriptor;
+      return proto.AccountRating.internal_static_proto_UpdateUserResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountRating.internal_static_proto_UpdateUserResponse_fieldAccessorTable
+      return proto.AccountRating.internal_static_proto_UpdateUserResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              UpdateUserResponse.class, Builder.class);
+              proto.AccountRating.UpdateUserResponse.class, proto.AccountRating.UpdateUserResponse.Builder.class);
     }
 
     public static final int ISUPDATED_FIELD_NUMBER = 13;
@@ -3072,13 +3072,13 @@ public final class AccountRating {
      * <code>bool isUpdated = 13;</code>
      * @return The isUpdated.
      */
-    @Override
+    @java.lang.Override
     public boolean getIsUpdated() {
       return isUpdated_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3088,7 +3088,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isUpdated_ != false) {
@@ -3097,7 +3097,7 @@ public final class AccountRating {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3112,15 +3112,15 @@ public final class AccountRating {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof UpdateUserResponse)) {
+      if (!(obj instanceof proto.AccountRating.UpdateUserResponse)) {
         return super.equals(obj);
       }
-      UpdateUserResponse other = (UpdateUserResponse) obj;
+      proto.AccountRating.UpdateUserResponse other = (proto.AccountRating.UpdateUserResponse) obj;
 
       if (getIsUpdated()
           != other.getIsUpdated()) return false;
@@ -3128,7 +3128,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3143,69 +3143,69 @@ public final class AccountRating {
       return hash;
     }
 
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateUserResponse parseFrom(byte[] data)
+    public static proto.AccountRating.UpdateUserResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateUserResponse parseFrom(java.io.InputStream input)
+    public static proto.AccountRating.UpdateUserResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateUserResponse parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountRating.UpdateUserResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static UpdateUserResponse parseDelimitedFrom(
+    public static proto.AccountRating.UpdateUserResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateUserResponse parseFrom(
+    public static proto.AccountRating.UpdateUserResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3213,23 +3213,23 @@ public final class AccountRating {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(UpdateUserResponse prototype) {
+    public static Builder newBuilder(proto.AccountRating.UpdateUserResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3239,18 +3239,18 @@ public final class AccountRating {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.UpdateUserResponse)
-        UpdateUserResponseOrBuilder {
+        proto.AccountRating.UpdateUserResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountRating.internal_static_proto_UpdateUserResponse_descriptor;
+        return proto.AccountRating.internal_static_proto_UpdateUserResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountRating.internal_static_proto_UpdateUserResponse_fieldAccessorTable
+        return proto.AccountRating.internal_static_proto_UpdateUserResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                UpdateUserResponse.class, Builder.class);
+                proto.AccountRating.UpdateUserResponse.class, proto.AccountRating.UpdateUserResponse.Builder.class);
       }
 
       // Construct using proto.AccountRating.UpdateUserResponse.newBuilder()
@@ -3259,11 +3259,11 @@ public final class AccountRating {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         isUpdated_ = false;
@@ -3271,78 +3271,78 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountRating.internal_static_proto_UpdateUserResponse_descriptor;
+        return proto.AccountRating.internal_static_proto_UpdateUserResponse_descriptor;
       }
 
-      @Override
-      public UpdateUserResponse getDefaultInstanceForType() {
-        return UpdateUserResponse.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountRating.UpdateUserResponse getDefaultInstanceForType() {
+        return proto.AccountRating.UpdateUserResponse.getDefaultInstance();
       }
 
-      @Override
-      public UpdateUserResponse build() {
-        UpdateUserResponse result = buildPartial();
+      @java.lang.Override
+      public proto.AccountRating.UpdateUserResponse build() {
+        proto.AccountRating.UpdateUserResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public UpdateUserResponse buildPartial() {
-        UpdateUserResponse result = new UpdateUserResponse(this);
+      @java.lang.Override
+      public proto.AccountRating.UpdateUserResponse buildPartial() {
+        proto.AccountRating.UpdateUserResponse result = new proto.AccountRating.UpdateUserResponse(this);
         result.isUpdated_ = isUpdated_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof UpdateUserResponse) {
-          return mergeFrom((UpdateUserResponse)other);
+        if (other instanceof proto.AccountRating.UpdateUserResponse) {
+          return mergeFrom((proto.AccountRating.UpdateUserResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(UpdateUserResponse other) {
-        if (other == UpdateUserResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountRating.UpdateUserResponse other) {
+        if (other == proto.AccountRating.UpdateUserResponse.getDefaultInstance()) return this;
         if (other.getIsUpdated() != false) {
           setIsUpdated(other.getIsUpdated());
         }
@@ -3351,18 +3351,18 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -3402,7 +3402,7 @@ public final class AccountRating {
        * <code>bool isUpdated = 13;</code>
        * @return The isUpdated.
        */
-      @Override
+      @java.lang.Override
       public boolean getIsUpdated() {
         return isUpdated_;
       }
@@ -3435,13 +3435,13 @@ public final class AccountRating {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3452,18 +3452,18 @@ public final class AccountRating {
     }
 
     // @@protoc_insertion_point(class_scope:proto.UpdateUserResponse)
-    private static final UpdateUserResponse DEFAULT_INSTANCE;
+    private static final proto.AccountRating.UpdateUserResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new UpdateUserResponse();
+      DEFAULT_INSTANCE = new proto.AccountRating.UpdateUserResponse();
     }
 
-    public static UpdateUserResponse getDefaultInstance() {
+    public static proto.AccountRating.UpdateUserResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<UpdateUserResponse>
         PARSER = new com.google.protobuf.AbstractParser<UpdateUserResponse>() {
-      @Override
+      @java.lang.Override
       public UpdateUserResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3487,13 +3487,13 @@ public final class AccountRating {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<UpdateUserResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public UpdateUserResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountRating.UpdateUserResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3524,29 +3524,29 @@ public final class AccountRating {
     private DeleteUserRequest() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new DeleteUserRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountRating.internal_static_proto_DeleteUserRequest_descriptor;
+      return proto.AccountRating.internal_static_proto_DeleteUserRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountRating.internal_static_proto_DeleteUserRequest_fieldAccessorTable
+      return proto.AccountRating.internal_static_proto_DeleteUserRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              DeleteUserRequest.class, Builder.class);
+              proto.AccountRating.DeleteUserRequest.class, proto.AccountRating.DeleteUserRequest.Builder.class);
     }
 
     public static final int USERID_FIELD_NUMBER = 14;
@@ -3555,13 +3555,13 @@ public final class AccountRating {
      * <code>int64 userId = 14;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3571,7 +3571,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (userId_ != 0L) {
@@ -3580,7 +3580,7 @@ public final class AccountRating {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3595,15 +3595,15 @@ public final class AccountRating {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof DeleteUserRequest)) {
+      if (!(obj instanceof proto.AccountRating.DeleteUserRequest)) {
         return super.equals(obj);
       }
-      DeleteUserRequest other = (DeleteUserRequest) obj;
+      proto.AccountRating.DeleteUserRequest other = (proto.AccountRating.DeleteUserRequest) obj;
 
       if (getUserId()
           != other.getUserId()) return false;
@@ -3611,7 +3611,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3626,69 +3626,69 @@ public final class AccountRating {
       return hash;
     }
 
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteUserRequest parseFrom(byte[] data)
+    public static proto.AccountRating.DeleteUserRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteUserRequest parseFrom(java.io.InputStream input)
+    public static proto.AccountRating.DeleteUserRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteUserRequest parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountRating.DeleteUserRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static DeleteUserRequest parseDelimitedFrom(
+    public static proto.AccountRating.DeleteUserRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteUserRequest parseFrom(
+    public static proto.AccountRating.DeleteUserRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3696,23 +3696,23 @@ public final class AccountRating {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(DeleteUserRequest prototype) {
+    public static Builder newBuilder(proto.AccountRating.DeleteUserRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3722,18 +3722,18 @@ public final class AccountRating {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.DeleteUserRequest)
-        DeleteUserRequestOrBuilder {
+        proto.AccountRating.DeleteUserRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountRating.internal_static_proto_DeleteUserRequest_descriptor;
+        return proto.AccountRating.internal_static_proto_DeleteUserRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountRating.internal_static_proto_DeleteUserRequest_fieldAccessorTable
+        return proto.AccountRating.internal_static_proto_DeleteUserRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                DeleteUserRequest.class, Builder.class);
+                proto.AccountRating.DeleteUserRequest.class, proto.AccountRating.DeleteUserRequest.Builder.class);
       }
 
       // Construct using proto.AccountRating.DeleteUserRequest.newBuilder()
@@ -3742,11 +3742,11 @@ public final class AccountRating {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         userId_ = 0L;
@@ -3754,78 +3754,78 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountRating.internal_static_proto_DeleteUserRequest_descriptor;
+        return proto.AccountRating.internal_static_proto_DeleteUserRequest_descriptor;
       }
 
-      @Override
-      public DeleteUserRequest getDefaultInstanceForType() {
-        return DeleteUserRequest.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountRating.DeleteUserRequest getDefaultInstanceForType() {
+        return proto.AccountRating.DeleteUserRequest.getDefaultInstance();
       }
 
-      @Override
-      public DeleteUserRequest build() {
-        DeleteUserRequest result = buildPartial();
+      @java.lang.Override
+      public proto.AccountRating.DeleteUserRequest build() {
+        proto.AccountRating.DeleteUserRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public DeleteUserRequest buildPartial() {
-        DeleteUserRequest result = new DeleteUserRequest(this);
+      @java.lang.Override
+      public proto.AccountRating.DeleteUserRequest buildPartial() {
+        proto.AccountRating.DeleteUserRequest result = new proto.AccountRating.DeleteUserRequest(this);
         result.userId_ = userId_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof DeleteUserRequest) {
-          return mergeFrom((DeleteUserRequest)other);
+        if (other instanceof proto.AccountRating.DeleteUserRequest) {
+          return mergeFrom((proto.AccountRating.DeleteUserRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(DeleteUserRequest other) {
-        if (other == DeleteUserRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountRating.DeleteUserRequest other) {
+        if (other == proto.AccountRating.DeleteUserRequest.getDefaultInstance()) return this;
         if (other.getUserId() != 0L) {
           setUserId(other.getUserId());
         }
@@ -3834,18 +3834,18 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -3881,7 +3881,7 @@ public final class AccountRating {
        * <code>int64 userId = 14;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -3906,13 +3906,13 @@ public final class AccountRating {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3923,18 +3923,18 @@ public final class AccountRating {
     }
 
     // @@protoc_insertion_point(class_scope:proto.DeleteUserRequest)
-    private static final DeleteUserRequest DEFAULT_INSTANCE;
+    private static final proto.AccountRating.DeleteUserRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new DeleteUserRequest();
+      DEFAULT_INSTANCE = new proto.AccountRating.DeleteUserRequest();
     }
 
-    public static DeleteUserRequest getDefaultInstance() {
+    public static proto.AccountRating.DeleteUserRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<DeleteUserRequest>
         PARSER = new com.google.protobuf.AbstractParser<DeleteUserRequest>() {
-      @Override
+      @java.lang.Override
       public DeleteUserRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3958,13 +3958,13 @@ public final class AccountRating {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<DeleteUserRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public DeleteUserRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountRating.DeleteUserRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3999,29 +3999,29 @@ public final class AccountRating {
     private DeleteUserResponse() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new DeleteUserResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountRating.internal_static_proto_DeleteUserResponse_descriptor;
+      return proto.AccountRating.internal_static_proto_DeleteUserResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountRating.internal_static_proto_DeleteUserResponse_fieldAccessorTable
+      return proto.AccountRating.internal_static_proto_DeleteUserResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              DeleteUserResponse.class, Builder.class);
+              proto.AccountRating.DeleteUserResponse.class, proto.AccountRating.DeleteUserResponse.Builder.class);
     }
 
     public static final int ISDELETED_FIELD_NUMBER = 15;
@@ -4034,13 +4034,13 @@ public final class AccountRating {
      * <code>bool isDeleted = 15;</code>
      * @return The isDeleted.
      */
-    @Override
+    @java.lang.Override
     public boolean getIsDeleted() {
       return isDeleted_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4050,7 +4050,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isDeleted_ != false) {
@@ -4059,7 +4059,7 @@ public final class AccountRating {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4074,15 +4074,15 @@ public final class AccountRating {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof DeleteUserResponse)) {
+      if (!(obj instanceof proto.AccountRating.DeleteUserResponse)) {
         return super.equals(obj);
       }
-      DeleteUserResponse other = (DeleteUserResponse) obj;
+      proto.AccountRating.DeleteUserResponse other = (proto.AccountRating.DeleteUserResponse) obj;
 
       if (getIsDeleted()
           != other.getIsDeleted()) return false;
@@ -4090,7 +4090,7 @@ public final class AccountRating {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -4105,69 +4105,69 @@ public final class AccountRating {
       return hash;
     }
 
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteUserResponse parseFrom(byte[] data)
+    public static proto.AccountRating.DeleteUserResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteUserResponse parseFrom(java.io.InputStream input)
+    public static proto.AccountRating.DeleteUserResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteUserResponse parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountRating.DeleteUserResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static DeleteUserResponse parseDelimitedFrom(
+    public static proto.AccountRating.DeleteUserResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteUserResponse parseFrom(
+    public static proto.AccountRating.DeleteUserResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4175,23 +4175,23 @@ public final class AccountRating {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(DeleteUserResponse prototype) {
+    public static Builder newBuilder(proto.AccountRating.DeleteUserResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4201,18 +4201,18 @@ public final class AccountRating {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.DeleteUserResponse)
-        DeleteUserResponseOrBuilder {
+        proto.AccountRating.DeleteUserResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountRating.internal_static_proto_DeleteUserResponse_descriptor;
+        return proto.AccountRating.internal_static_proto_DeleteUserResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountRating.internal_static_proto_DeleteUserResponse_fieldAccessorTable
+        return proto.AccountRating.internal_static_proto_DeleteUserResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                DeleteUserResponse.class, Builder.class);
+                proto.AccountRating.DeleteUserResponse.class, proto.AccountRating.DeleteUserResponse.Builder.class);
       }
 
       // Construct using proto.AccountRating.DeleteUserResponse.newBuilder()
@@ -4221,11 +4221,11 @@ public final class AccountRating {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         isDeleted_ = false;
@@ -4233,78 +4233,78 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountRating.internal_static_proto_DeleteUserResponse_descriptor;
+        return proto.AccountRating.internal_static_proto_DeleteUserResponse_descriptor;
       }
 
-      @Override
-      public DeleteUserResponse getDefaultInstanceForType() {
-        return DeleteUserResponse.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountRating.DeleteUserResponse getDefaultInstanceForType() {
+        return proto.AccountRating.DeleteUserResponse.getDefaultInstance();
       }
 
-      @Override
-      public DeleteUserResponse build() {
-        DeleteUserResponse result = buildPartial();
+      @java.lang.Override
+      public proto.AccountRating.DeleteUserResponse build() {
+        proto.AccountRating.DeleteUserResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public DeleteUserResponse buildPartial() {
-        DeleteUserResponse result = new DeleteUserResponse(this);
+      @java.lang.Override
+      public proto.AccountRating.DeleteUserResponse buildPartial() {
+        proto.AccountRating.DeleteUserResponse result = new proto.AccountRating.DeleteUserResponse(this);
         result.isDeleted_ = isDeleted_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof DeleteUserResponse) {
-          return mergeFrom((DeleteUserResponse)other);
+        if (other instanceof proto.AccountRating.DeleteUserResponse) {
+          return mergeFrom((proto.AccountRating.DeleteUserResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(DeleteUserResponse other) {
-        if (other == DeleteUserResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountRating.DeleteUserResponse other) {
+        if (other == proto.AccountRating.DeleteUserResponse.getDefaultInstance()) return this;
         if (other.getIsDeleted() != false) {
           setIsDeleted(other.getIsDeleted());
         }
@@ -4313,18 +4313,18 @@ public final class AccountRating {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -4364,7 +4364,7 @@ public final class AccountRating {
        * <code>bool isDeleted = 15;</code>
        * @return The isDeleted.
        */
-      @Override
+      @java.lang.Override
       public boolean getIsDeleted() {
         return isDeleted_;
       }
@@ -4397,13 +4397,13 @@ public final class AccountRating {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4414,18 +4414,18 @@ public final class AccountRating {
     }
 
     // @@protoc_insertion_point(class_scope:proto.DeleteUserResponse)
-    private static final DeleteUserResponse DEFAULT_INSTANCE;
+    private static final proto.AccountRating.DeleteUserResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new DeleteUserResponse();
+      DEFAULT_INSTANCE = new proto.AccountRating.DeleteUserResponse();
     }
 
-    public static DeleteUserResponse getDefaultInstance() {
+    public static proto.AccountRating.DeleteUserResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<DeleteUserResponse>
         PARSER = new com.google.protobuf.AbstractParser<DeleteUserResponse>() {
-      @Override
+      @java.lang.Override
       public DeleteUserResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4449,13 +4449,955 @@ public final class AccountRating {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<DeleteUserResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public DeleteUserResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountRating.DeleteUserResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DistinguishedHostRatingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.DistinguishedHostRatingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 hostId = 16;</code>
+     * @return The hostId.
+     */
+    long getHostId();
+  }
+  /**
+   * Protobuf type {@code proto.DistinguishedHostRatingRequest}
+   */
+  public static final class DistinguishedHostRatingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.DistinguishedHostRatingRequest)
+      DistinguishedHostRatingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistinguishedHostRatingRequest.newBuilder() to construct.
+    private DistinguishedHostRatingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistinguishedHostRatingRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistinguishedHostRatingRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.AccountRating.DistinguishedHostRatingRequest.class, proto.AccountRating.DistinguishedHostRatingRequest.Builder.class);
+    }
+
+    public static final int HOSTID_FIELD_NUMBER = 16;
+    private long hostId_;
+    /**
+     * <code>int64 hostId = 16;</code>
+     * @return The hostId.
+     */
+    @java.lang.Override
+    public long getHostId() {
+      return hostId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hostId_ != 0L) {
+        output.writeInt64(16, hostId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hostId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(16, hostId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.AccountRating.DistinguishedHostRatingRequest)) {
+        return super.equals(obj);
+      }
+      proto.AccountRating.DistinguishedHostRatingRequest other = (proto.AccountRating.DistinguishedHostRatingRequest) obj;
+
+      if (getHostId()
+          != other.getHostId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHostId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.AccountRating.DistinguishedHostRatingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.DistinguishedHostRatingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.DistinguishedHostRatingRequest)
+        proto.AccountRating.DistinguishedHostRatingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.AccountRating.DistinguishedHostRatingRequest.class, proto.AccountRating.DistinguishedHostRatingRequest.Builder.class);
+      }
+
+      // Construct using proto.AccountRating.DistinguishedHostRatingRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostId_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingRequest getDefaultInstanceForType() {
+        return proto.AccountRating.DistinguishedHostRatingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingRequest build() {
+        proto.AccountRating.DistinguishedHostRatingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingRequest buildPartial() {
+        proto.AccountRating.DistinguishedHostRatingRequest result = new proto.AccountRating.DistinguishedHostRatingRequest(this);
+        result.hostId_ = hostId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.AccountRating.DistinguishedHostRatingRequest) {
+          return mergeFrom((proto.AccountRating.DistinguishedHostRatingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.AccountRating.DistinguishedHostRatingRequest other) {
+        if (other == proto.AccountRating.DistinguishedHostRatingRequest.getDefaultInstance()) return this;
+        if (other.getHostId() != 0L) {
+          setHostId(other.getHostId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 128: {
+                hostId_ = input.readInt64();
+
+                break;
+              } // case 128
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private long hostId_ ;
+      /**
+       * <code>int64 hostId = 16;</code>
+       * @return The hostId.
+       */
+      @java.lang.Override
+      public long getHostId() {
+        return hostId_;
+      }
+      /**
+       * <code>int64 hostId = 16;</code>
+       * @param value The hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostId(long value) {
+        
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 hostId = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostId() {
+        
+        hostId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.DistinguishedHostRatingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.DistinguishedHostRatingRequest)
+    private static final proto.AccountRating.DistinguishedHostRatingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.AccountRating.DistinguishedHostRatingRequest();
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistinguishedHostRatingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DistinguishedHostRatingRequest>() {
+      @java.lang.Override
+      public DistinguishedHostRatingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistinguishedHostRatingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistinguishedHostRatingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.AccountRating.DistinguishedHostRatingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DistinguishedHostRatingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.DistinguishedHostRatingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool isDistinguished = 17;</code>
+     * @return The isDistinguished.
+     */
+    boolean getIsDistinguished();
+  }
+  /**
+   * Protobuf type {@code proto.DistinguishedHostRatingResponse}
+   */
+  public static final class DistinguishedHostRatingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.DistinguishedHostRatingResponse)
+      DistinguishedHostRatingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistinguishedHostRatingResponse.newBuilder() to construct.
+    private DistinguishedHostRatingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistinguishedHostRatingResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistinguishedHostRatingResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.AccountRating.DistinguishedHostRatingResponse.class, proto.AccountRating.DistinguishedHostRatingResponse.Builder.class);
+    }
+
+    public static final int ISDISTINGUISHED_FIELD_NUMBER = 17;
+    private boolean isDistinguished_;
+    /**
+     * <code>bool isDistinguished = 17;</code>
+     * @return The isDistinguished.
+     */
+    @java.lang.Override
+    public boolean getIsDistinguished() {
+      return isDistinguished_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isDistinguished_ != false) {
+        output.writeBool(17, isDistinguished_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isDistinguished_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, isDistinguished_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.AccountRating.DistinguishedHostRatingResponse)) {
+        return super.equals(obj);
+      }
+      proto.AccountRating.DistinguishedHostRatingResponse other = (proto.AccountRating.DistinguishedHostRatingResponse) obj;
+
+      if (getIsDistinguished()
+          != other.getIsDistinguished()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISDISTINGUISHED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsDistinguished());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.AccountRating.DistinguishedHostRatingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.AccountRating.DistinguishedHostRatingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.DistinguishedHostRatingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.DistinguishedHostRatingResponse)
+        proto.AccountRating.DistinguishedHostRatingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.AccountRating.DistinguishedHostRatingResponse.class, proto.AccountRating.DistinguishedHostRatingResponse.Builder.class);
+      }
+
+      // Construct using proto.AccountRating.DistinguishedHostRatingResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        isDistinguished_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.AccountRating.internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingResponse getDefaultInstanceForType() {
+        return proto.AccountRating.DistinguishedHostRatingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingResponse build() {
+        proto.AccountRating.DistinguishedHostRatingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.AccountRating.DistinguishedHostRatingResponse buildPartial() {
+        proto.AccountRating.DistinguishedHostRatingResponse result = new proto.AccountRating.DistinguishedHostRatingResponse(this);
+        result.isDistinguished_ = isDistinguished_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.AccountRating.DistinguishedHostRatingResponse) {
+          return mergeFrom((proto.AccountRating.DistinguishedHostRatingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.AccountRating.DistinguishedHostRatingResponse other) {
+        if (other == proto.AccountRating.DistinguishedHostRatingResponse.getDefaultInstance()) return this;
+        if (other.getIsDistinguished() != false) {
+          setIsDistinguished(other.getIsDistinguished());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 136: {
+                isDistinguished_ = input.readBool();
+
+                break;
+              } // case 136
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private boolean isDistinguished_ ;
+      /**
+       * <code>bool isDistinguished = 17;</code>
+       * @return The isDistinguished.
+       */
+      @java.lang.Override
+      public boolean getIsDistinguished() {
+        return isDistinguished_;
+      }
+      /**
+       * <code>bool isDistinguished = 17;</code>
+       * @param value The isDistinguished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsDistinguished(boolean value) {
+        
+        isDistinguished_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isDistinguished = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsDistinguished() {
+        
+        isDistinguished_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.DistinguishedHostRatingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.DistinguishedHostRatingResponse)
+    private static final proto.AccountRating.DistinguishedHostRatingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.AccountRating.DistinguishedHostRatingResponse();
+    }
+
+    public static proto.AccountRating.DistinguishedHostRatingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistinguishedHostRatingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DistinguishedHostRatingResponse>() {
+      @java.lang.Override
+      public DistinguishedHostRatingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistinguishedHostRatingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistinguishedHostRatingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.AccountRating.DistinguishedHostRatingResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4491,6 +5433,16 @@ public final class AccountRating {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_proto_DeleteUserResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_DistinguishedHostRatingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_DistinguishedHostRatingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4499,7 +5451,7 @@ public final class AccountRating {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\024account-rating.proto\022\005proto\"t\n\021CreateU" +
       "serRequest\022\016\n\006userId\030\001 \001(\003\022\020\n\010username\030\002" +
       " \001(\t\022\020\n\010password\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\017\n\007" +
@@ -4511,12 +5463,18 @@ public final class AccountRating {
       "(\t\"\'\n\022UpdateUserResponse\022\021\n\tisUpdated\030\r " +
       "\001(\010\"#\n\021DeleteUserRequest\022\016\n\006userId\030\016 \001(\003" +
       "\"\'\n\022DeleteUserResponse\022\021\n\tisDeleted\030\017 \001(" +
-      "\0102\342\001\n\021ManageUserService\022C\n\nCreateUser\022\030." +
-      "proto.CreateUserRequest\032\031.proto.CreateUs" +
-      "erResponse\"\000\022C\n\nUpdateUser\022\030.proto.Updat" +
-      "eUserRequest\032\031.proto.UpdateUserResponse\"" +
-      "\000\022C\n\nDeleteUser\022\030.proto.DeleteUserReques" +
-      "t\032\031.proto.DeleteUserResponse\"\000b\006proto3"
+      "\010\"0\n\036DistinguishedHostRatingRequest\022\016\n\006h" +
+      "ostId\030\020 \001(\003\":\n\037DistinguishedHostRatingRe" +
+      "sponse\022\027\n\017isDistinguished\030\021 \001(\0102\334\002\n\021Mana" +
+      "geUserService\022C\n\nCreateUser\022\030.proto.Crea" +
+      "teUserRequest\032\031.proto.CreateUserResponse" +
+      "\"\000\022C\n\nUpdateUser\022\030.proto.UpdateUserReque" +
+      "st\032\031.proto.UpdateUserResponse\"\000\022C\n\nDelet" +
+      "eUser\022\030.proto.DeleteUserRequest\032\031.proto." +
+      "DeleteUserResponse\"\000\022x\n%GetDistinguished" +
+      "HostStatusFromRatings\022%.proto.Distinguis" +
+      "hedHostRatingRequest\032&.proto.Distinguish" +
+      "edHostRatingResponse\"\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4527,37 +5485,49 @@ public final class AccountRating {
     internal_static_proto_CreateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CreateUserRequest_descriptor,
-        new String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
+        new java.lang.String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
     internal_static_proto_CreateUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_proto_CreateUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CreateUserResponse_descriptor,
-        new String[] { "IsCreated", "UserId", });
+        new java.lang.String[] { "IsCreated", "UserId", });
     internal_static_proto_UpdateUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_proto_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_UpdateUserRequest_descriptor,
-        new String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
+        new java.lang.String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
     internal_static_proto_UpdateUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_proto_UpdateUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_UpdateUserResponse_descriptor,
-        new String[] { "IsUpdated", });
+        new java.lang.String[] { "IsUpdated", });
     internal_static_proto_DeleteUserRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_proto_DeleteUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_DeleteUserRequest_descriptor,
-        new String[] { "UserId", });
+        new java.lang.String[] { "UserId", });
     internal_static_proto_DeleteUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_proto_DeleteUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_DeleteUserResponse_descriptor,
-        new String[] { "IsDeleted", });
+        new java.lang.String[] { "IsDeleted", });
+    internal_static_proto_DistinguishedHostRatingRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_proto_DistinguishedHostRatingRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_DistinguishedHostRatingRequest_descriptor,
+        new java.lang.String[] { "HostId", });
+    internal_static_proto_DistinguishedHostRatingResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_proto_DistinguishedHostRatingResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_DistinguishedHostRatingResponse_descriptor,
+        new java.lang.String[] { "IsDistinguished", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

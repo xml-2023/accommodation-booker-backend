@@ -5,6 +5,7 @@ package proto;
 service RatingService {
   rpc IsAccommodationAllowedToRate(IsAccommodationAllowedToRateRequest) returns (IsAccommodationAllowedToRateResponse) {}
   rpc IsHostAllowedToRate(IsHostAllowedToRateRequest) returns (IsHostAllowedToRateResponse) {}
+  rpc GetDistinguishedHostStatusFromReservations(DistinguishedHostReservationRequest) returns (DistinguishedHostReservationResponse) {}
 }
 
 message IsAccommodationAllowedToRateRequest {
@@ -23,4 +24,12 @@ message IsHostAllowedToRateRequest {
 
 message IsHostAllowedToRateResponse {
   bool isAllowed = 3;
+}
+
+message DistinguishedHostReservationRequest {
+  int64 hostId = 4;
+}
+
+message DistinguishedHostReservationResponse {
+  bool isDistinguished = 5;
 }
