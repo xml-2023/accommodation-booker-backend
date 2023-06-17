@@ -1,0 +1,168 @@
+version: "3.8"
+name: accommodation-booker
+services:
+  #pg admin --------------------------------
+  pgadmin-acc-booker:
+    image: dpage/pgadmin4
+    container_name: pgadmin_acc_booker
+    restart: on-failure
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: user@email.com
+      PGADMIN_DEFAULT_PASSWORD: user
+    volumes:
+      - pgadmin_acc_booker_data:/var/lib/pgadmin
+  #account db --------------------------------
+  account-db:
+    image: postgres
+    container_name: account-db
+    restart: always
+    expose:
+      - "54321"
+    ports:
+      - "54321:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: account-service_db
+      POSTGRES_PASSWORD: user
+      POSTGRES_HOST: localhost
+    volumes:
+      - account_pgdata:/var/lib/account
+  #rating db --------------------------------
+  rating-db:
+    image: postgres
+    container_name: rating-db
+    restart: always
+    expose:
+      - "54322"
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: rating-service_db
+      POSTGRES_PASSWORD: user
+      POSTGRES_HOST: localhost
+    volumes:
+      - rating_pgdata:/var/lib/rating
+  #reservation db --------------------------------
+  reservation-db:
+    image: postgres
+    container_name: reservation-db
+    restart: always
+    expose:
+      - "54323"
+    ports:
+      - "54323:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: reservation-service_db
+      POSTGRES_PASSWORD: user
+      POSTGRES_HOST: localhost
+    volumes:
+      - reservation_pgdata:/var/lib/reservation
+  #discovery-server --------------------------------
+  discovery-server:
+    build:
+      context: ./../discovery-server
+      dockerfile: Dockerfile
+    #image: discovery-server-1.0-snapshot
+    container_name: discovery-server
+    restart: on-failure
+    expose:
+      - "8761"
+    ports:
+      - "8761:8761"
+    volumes:
+      - discovery_server_data:/var/lib/discovery
+  #api-gateway-server --------------------------------
+  api-gateway:
+    build:
+      context: ./../api-gateway
+      dockerfile: Dockerfile
+    #image: api-gateway-1.0-snapshot
+    container_name: api-gateway
+    restart: on-failure
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    volumes:
+      - api_gateway_data:/var/lib/api_gateway
+  #accommodation-service --------------------------------
+  accommodation-service:
+    build:
+      context: ./../accommodation-service
+      dockerfile: Dockerfile
+    #image: accommodation-service-1.0-snapshot
+    container_name: accommodation-service
+    restart: on-failure
+    expose:
+      - "8084"
+    ports:
+      - "8084:8084"
+    volumes:
+      - accommodation_service_data:/var/lib/accommodation_service
+  #account-service --------------------------------
+  account-service:
+    build:
+      context: ./../account-service
+      dockerfile: Dockerfile
+    #image: account-service-1.0-snapshot
+    container_name: account-service
+    restart: on-failure
+    expose:
+      - "8081"
+    ports:
+      - "8081:8081"
+    volumes:
+      - account_service_data:/var/lib/account_service
+  #rating-service --------------------------------
+  rating-service:
+    build:
+      context: ./../rating-service
+      dockerfile: Dockerfile
+    #image: rating-service-1.0-snapshot
+    container_name: rating-service
+    restart: on-failure
+    expose:
+      - "8085"
+    ports:
+      - "8085:8085"
+    volumes:
+      - rating_service_data:/var/lib/rating_service
+  #reservation-service --------------------------------
+  reservation-service:
+    build:
+      context: ./../reservation-service
+      dockerfile: Dockerfile
+    #image: reservation-service-1.0-snapshot
+    container_name: reservation-service
+    restart: on-failure
+    expose:
+      - "8082"
+    ports:
+      - "8082:8082"
+    volumes:
+      - reservation_service_data:/var/lib/reservation_service
+volumes:
+  pgadmin_acc_booker_data:
+    driver: local
+  account_pgdata:
+    driver: local
+  rating_pgdata:
+    driver: local
+  reservation_pgdata:
+    driver: local
+  discovery_server_data:
+    driver: local
+  api_gateway_data:
+    driver: local
+  accommodation_service_data:
+    driver: local
+  account_service_data:
+    driver: local
+  rating_service_data:
+    driver: local
+  reservation_service_data:
+    driver: local
