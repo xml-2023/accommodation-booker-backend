@@ -28,7 +28,7 @@ public final class AccountReservation {
      * <code>string username = 1;</code>
      * @return The username.
      */
-    String getUsername();
+    java.lang.String getUsername();
     /**
      * <code>string username = 1;</code>
      * @return The bytes for username.
@@ -40,7 +40,7 @@ public final class AccountReservation {
      * <code>string password = 2;</code>
      * @return The password.
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>string password = 2;</code>
      * @return The bytes for password.
@@ -52,7 +52,7 @@ public final class AccountReservation {
      * <code>string name = 3;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 3;</code>
      * @return The bytes for name.
@@ -64,7 +64,7 @@ public final class AccountReservation {
      * <code>string surname = 4;</code>
      * @return The surname.
      */
-    String getSurname();
+    java.lang.String getSurname();
     /**
      * <code>string surname = 4;</code>
      * @return The bytes for surname.
@@ -76,7 +76,7 @@ public final class AccountReservation {
      * <code>string role = 5;</code>
      * @return The role.
      */
-    String getRole();
+    java.lang.String getRole();
     /**
      * <code>string role = 5;</code>
      * @return The bytes for role.
@@ -104,29 +104,29 @@ public final class AccountReservation {
       role_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new CreateGuestRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_CreateGuestRequest_descriptor;
+      return proto.AccountReservation.internal_static_proto_CreateGuestRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_CreateGuestRequest_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_CreateGuestRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CreateGuestRequest.class, Builder.class);
+              proto.AccountReservation.CreateGuestRequest.class, proto.AccountReservation.CreateGuestRequest.Builder.class);
     }
 
     public static final int USERID_FIELD_NUMBER = 25;
@@ -135,26 +135,26 @@ public final class AccountReservation {
      * <code>int64 userId = 25;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile Object username_;
+    private volatile java.lang.Object username_;
     /**
      * <code>string username = 1;</code>
      * @return The username.
      */
-    @Override
-    public String getUsername() {
-      Object ref = username_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         username_ = s;
         return s;
       }
@@ -163,14 +163,14 @@ public final class AccountReservation {
      * <code>string username = 1;</code>
      * @return The bytes for username.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      Object ref = username_;
-      if (ref instanceof String) {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         username_ = b;
         return b;
       } else {
@@ -179,20 +179,20 @@ public final class AccountReservation {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile Object password_;
+    private volatile java.lang.Object password_;
     /**
      * <code>string password = 2;</code>
      * @return The password.
      */
-    @Override
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -201,14 +201,14 @@ public final class AccountReservation {
      * <code>string password = 2;</code>
      * @return The bytes for password.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -217,20 +217,20 @@ public final class AccountReservation {
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 3;</code>
      * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -239,14 +239,14 @@ public final class AccountReservation {
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -255,20 +255,20 @@ public final class AccountReservation {
     }
 
     public static final int SURNAME_FIELD_NUMBER = 4;
-    private volatile Object surname_;
+    private volatile java.lang.Object surname_;
     /**
      * <code>string surname = 4;</code>
      * @return The surname.
      */
-    @Override
-    public String getSurname() {
-      Object ref = surname_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getSurname() {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         surname_ = s;
         return s;
       }
@@ -277,14 +277,14 @@ public final class AccountReservation {
      * <code>string surname = 4;</code>
      * @return The bytes for surname.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSurnameBytes() {
-      Object ref = surname_;
-      if (ref instanceof String) {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         surname_ = b;
         return b;
       } else {
@@ -293,20 +293,20 @@ public final class AccountReservation {
     }
 
     public static final int ROLE_FIELD_NUMBER = 5;
-    private volatile Object role_;
+    private volatile java.lang.Object role_;
     /**
      * <code>string role = 5;</code>
      * @return The role.
      */
-    @Override
-    public String getRole() {
-      Object ref = role_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getRole() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         role_ = s;
         return s;
       }
@@ -315,14 +315,14 @@ public final class AccountReservation {
      * <code>string role = 5;</code>
      * @return The bytes for role.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRoleBytes() {
-      Object ref = role_;
-      if (ref instanceof String) {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         role_ = b;
         return b;
       } else {
@@ -331,7 +331,7 @@ public final class AccountReservation {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -341,7 +341,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
@@ -365,7 +365,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -395,15 +395,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CreateGuestRequest)) {
+      if (!(obj instanceof proto.AccountReservation.CreateGuestRequest)) {
         return super.equals(obj);
       }
-      CreateGuestRequest other = (CreateGuestRequest) obj;
+      proto.AccountReservation.CreateGuestRequest other = (proto.AccountReservation.CreateGuestRequest) obj;
 
       if (getUserId()
           != other.getUserId()) return false;
@@ -421,7 +421,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -446,69 +446,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateGuestRequest parseFrom(byte[] data)
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateGuestRequest parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateGuestRequest parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CreateGuestRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CreateGuestRequest parseDelimitedFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateGuestRequest parseFrom(
+    public static proto.AccountReservation.CreateGuestRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -516,23 +516,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CreateGuestRequest prototype) {
+    public static Builder newBuilder(proto.AccountReservation.CreateGuestRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -542,18 +542,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CreateGuestRequest)
-        CreateGuestRequestOrBuilder {
+        proto.AccountReservation.CreateGuestRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_CreateGuestRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_CreateGuestRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_CreateGuestRequest_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_CreateGuestRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CreateGuestRequest.class, Builder.class);
+                proto.AccountReservation.CreateGuestRequest.class, proto.AccountReservation.CreateGuestRequest.Builder.class);
       }
 
       // Construct using proto.AccountReservation.CreateGuestRequest.newBuilder()
@@ -562,11 +562,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         userId_ = 0L;
@@ -584,29 +584,29 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_CreateGuestRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_CreateGuestRequest_descriptor;
       }
 
-      @Override
-      public CreateGuestRequest getDefaultInstanceForType() {
-        return CreateGuestRequest.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.CreateGuestRequest getDefaultInstanceForType() {
+        return proto.AccountReservation.CreateGuestRequest.getDefaultInstance();
       }
 
-      @Override
-      public CreateGuestRequest build() {
-        CreateGuestRequest result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.CreateGuestRequest build() {
+        proto.AccountReservation.CreateGuestRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public CreateGuestRequest buildPartial() {
-        CreateGuestRequest result = new CreateGuestRequest(this);
+      @java.lang.Override
+      public proto.AccountReservation.CreateGuestRequest buildPartial() {
+        proto.AccountReservation.CreateGuestRequest result = new proto.AccountReservation.CreateGuestRequest(this);
         result.userId_ = userId_;
         result.username_ = username_;
         result.password_ = password_;
@@ -617,50 +617,50 @@ public final class AccountReservation {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CreateGuestRequest) {
-          return mergeFrom((CreateGuestRequest)other);
+        if (other instanceof proto.AccountReservation.CreateGuestRequest) {
+          return mergeFrom((proto.AccountReservation.CreateGuestRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CreateGuestRequest other) {
-        if (other == CreateGuestRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.CreateGuestRequest other) {
+        if (other == proto.AccountReservation.CreateGuestRequest.getDefaultInstance()) return this;
         if (other.getUserId() != 0L) {
           setUserId(other.getUserId());
         }
@@ -689,18 +689,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -761,7 +761,7 @@ public final class AccountReservation {
        * <code>int64 userId = 25;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -787,21 +787,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object username_ = "";
+      private java.lang.Object username_ = "";
       /**
        * <code>string username = 1;</code>
        * @return The username.
        */
-      public String getUsername() {
-        Object ref = username_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           username_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -810,11 +810,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getUsernameBytes() {
-        Object ref = username_;
+        java.lang.Object ref = username_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           username_ = b;
           return b;
         } else {
@@ -827,7 +827,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setUsername(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -863,21 +863,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 2;</code>
        * @return The password.
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -886,11 +886,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -903,7 +903,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setPassword(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -939,21 +939,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 3;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -962,11 +962,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -979,7 +979,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1015,21 +1015,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object surname_ = "";
+      private java.lang.Object surname_ = "";
       /**
        * <code>string surname = 4;</code>
        * @return The surname.
        */
-      public String getSurname() {
-        Object ref = surname_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getSurname() {
+        java.lang.Object ref = surname_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           surname_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1038,11 +1038,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getSurnameBytes() {
-        Object ref = surname_;
+        java.lang.Object ref = surname_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           surname_ = b;
           return b;
         } else {
@@ -1055,7 +1055,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setSurname(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1091,21 +1091,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object role_ = "";
+      private java.lang.Object role_ = "";
       /**
        * <code>string role = 5;</code>
        * @return The role.
        */
-      public String getRole() {
-        Object ref = role_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getRole() {
+        java.lang.Object ref = role_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           role_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1114,11 +1114,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getRoleBytes() {
-        Object ref = role_;
+        java.lang.Object ref = role_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           role_ = b;
           return b;
         } else {
@@ -1131,7 +1131,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setRole(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1166,13 +1166,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1183,18 +1183,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CreateGuestRequest)
-    private static final CreateGuestRequest DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.CreateGuestRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CreateGuestRequest();
+      DEFAULT_INSTANCE = new proto.AccountReservation.CreateGuestRequest();
     }
 
-    public static CreateGuestRequest getDefaultInstance() {
+    public static proto.AccountReservation.CreateGuestRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CreateGuestRequest>
         PARSER = new com.google.protobuf.AbstractParser<CreateGuestRequest>() {
-      @Override
+      @java.lang.Override
       public CreateGuestRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1218,13 +1218,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CreateGuestRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public CreateGuestRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.CreateGuestRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1265,29 +1265,29 @@ public final class AccountReservation {
     private CreateGuestResponse() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new CreateGuestResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_CreateGuestResponse_descriptor;
+      return proto.AccountReservation.internal_static_proto_CreateGuestResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_CreateGuestResponse_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_CreateGuestResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CreateGuestResponse.class, Builder.class);
+              proto.AccountReservation.CreateGuestResponse.class, proto.AccountReservation.CreateGuestResponse.Builder.class);
     }
 
     public static final int ISCREATED_FIELD_NUMBER = 6;
@@ -1300,7 +1300,7 @@ public final class AccountReservation {
      * <code>bool isCreated = 6;</code>
      * @return The isCreated.
      */
-    @Override
+    @java.lang.Override
     public boolean getIsCreated() {
       return isCreated_;
     }
@@ -1311,13 +1311,13 @@ public final class AccountReservation {
      * <code>int64 userId = 12;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1327,7 +1327,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isCreated_ != false) {
@@ -1339,7 +1339,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1358,15 +1358,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CreateGuestResponse)) {
+      if (!(obj instanceof proto.AccountReservation.CreateGuestResponse)) {
         return super.equals(obj);
       }
-      CreateGuestResponse other = (CreateGuestResponse) obj;
+      proto.AccountReservation.CreateGuestResponse other = (proto.AccountReservation.CreateGuestResponse) obj;
 
       if (getIsCreated()
           != other.getIsCreated()) return false;
@@ -1376,7 +1376,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1394,69 +1394,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateGuestResponse parseFrom(byte[] data)
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CreateGuestResponse parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateGuestResponse parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CreateGuestResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CreateGuestResponse parseDelimitedFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CreateGuestResponse parseFrom(
+    public static proto.AccountReservation.CreateGuestResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1464,23 +1464,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CreateGuestResponse prototype) {
+    public static Builder newBuilder(proto.AccountReservation.CreateGuestResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1490,18 +1490,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CreateGuestResponse)
-        CreateGuestResponseOrBuilder {
+        proto.AccountReservation.CreateGuestResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_CreateGuestResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_CreateGuestResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_CreateGuestResponse_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_CreateGuestResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CreateGuestResponse.class, Builder.class);
+                proto.AccountReservation.CreateGuestResponse.class, proto.AccountReservation.CreateGuestResponse.Builder.class);
       }
 
       // Construct using proto.AccountReservation.CreateGuestResponse.newBuilder()
@@ -1510,11 +1510,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         isCreated_ = false;
@@ -1524,79 +1524,79 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_CreateGuestResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_CreateGuestResponse_descriptor;
       }
 
-      @Override
-      public CreateGuestResponse getDefaultInstanceForType() {
-        return CreateGuestResponse.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.CreateGuestResponse getDefaultInstanceForType() {
+        return proto.AccountReservation.CreateGuestResponse.getDefaultInstance();
       }
 
-      @Override
-      public CreateGuestResponse build() {
-        CreateGuestResponse result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.CreateGuestResponse build() {
+        proto.AccountReservation.CreateGuestResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public CreateGuestResponse buildPartial() {
-        CreateGuestResponse result = new CreateGuestResponse(this);
+      @java.lang.Override
+      public proto.AccountReservation.CreateGuestResponse buildPartial() {
+        proto.AccountReservation.CreateGuestResponse result = new proto.AccountReservation.CreateGuestResponse(this);
         result.isCreated_ = isCreated_;
         result.userId_ = userId_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CreateGuestResponse) {
-          return mergeFrom((CreateGuestResponse)other);
+        if (other instanceof proto.AccountReservation.CreateGuestResponse) {
+          return mergeFrom((proto.AccountReservation.CreateGuestResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CreateGuestResponse other) {
-        if (other == CreateGuestResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.CreateGuestResponse other) {
+        if (other == proto.AccountReservation.CreateGuestResponse.getDefaultInstance()) return this;
         if (other.getIsCreated() != false) {
           setIsCreated(other.getIsCreated());
         }
@@ -1608,18 +1608,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -1664,7 +1664,7 @@ public final class AccountReservation {
        * <code>bool isCreated = 6;</code>
        * @return The isCreated.
        */
-      @Override
+      @java.lang.Override
       public boolean getIsCreated() {
         return isCreated_;
       }
@@ -1703,7 +1703,7 @@ public final class AccountReservation {
        * <code>int64 userId = 12;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -1728,13 +1728,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1745,18 +1745,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CreateGuestResponse)
-    private static final CreateGuestResponse DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.CreateGuestResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CreateGuestResponse();
+      DEFAULT_INSTANCE = new proto.AccountReservation.CreateGuestResponse();
     }
 
-    public static CreateGuestResponse getDefaultInstance() {
+    public static proto.AccountReservation.CreateGuestResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CreateGuestResponse>
         PARSER = new com.google.protobuf.AbstractParser<CreateGuestResponse>() {
-      @Override
+      @java.lang.Override
       public CreateGuestResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1780,13 +1780,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CreateGuestResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public CreateGuestResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.CreateGuestResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1806,7 +1806,7 @@ public final class AccountReservation {
      * <code>string username = 7;</code>
      * @return The username.
      */
-    String getUsername();
+    java.lang.String getUsername();
     /**
      * <code>string username = 7;</code>
      * @return The bytes for username.
@@ -1818,7 +1818,7 @@ public final class AccountReservation {
      * <code>string password = 8;</code>
      * @return The password.
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>string password = 8;</code>
      * @return The bytes for password.
@@ -1830,7 +1830,7 @@ public final class AccountReservation {
      * <code>string name = 9;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 9;</code>
      * @return The bytes for name.
@@ -1842,7 +1842,7 @@ public final class AccountReservation {
      * <code>string surname = 10;</code>
      * @return The surname.
      */
-    String getSurname();
+    java.lang.String getSurname();
     /**
      * <code>string surname = 10;</code>
      * @return The bytes for surname.
@@ -1854,7 +1854,7 @@ public final class AccountReservation {
      * <code>string role = 11;</code>
      * @return The role.
      */
-    String getRole();
+    java.lang.String getRole();
     /**
      * <code>string role = 11;</code>
      * @return The bytes for role.
@@ -1882,29 +1882,29 @@ public final class AccountReservation {
       role_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new UpdateGuestRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_UpdateGuestRequest_descriptor;
+      return proto.AccountReservation.internal_static_proto_UpdateGuestRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_UpdateGuestRequest_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_UpdateGuestRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              UpdateGuestRequest.class, Builder.class);
+              proto.AccountReservation.UpdateGuestRequest.class, proto.AccountReservation.UpdateGuestRequest.Builder.class);
     }
 
     public static final int USERID_FIELD_NUMBER = 16;
@@ -1913,26 +1913,26 @@ public final class AccountReservation {
      * <code>int64 userId = 16;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     public static final int USERNAME_FIELD_NUMBER = 7;
-    private volatile Object username_;
+    private volatile java.lang.Object username_;
     /**
      * <code>string username = 7;</code>
      * @return The username.
      */
-    @Override
-    public String getUsername() {
-      Object ref = username_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         username_ = s;
         return s;
       }
@@ -1941,14 +1941,14 @@ public final class AccountReservation {
      * <code>string username = 7;</code>
      * @return The bytes for username.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      Object ref = username_;
-      if (ref instanceof String) {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         username_ = b;
         return b;
       } else {
@@ -1957,20 +1957,20 @@ public final class AccountReservation {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 8;
-    private volatile Object password_;
+    private volatile java.lang.Object password_;
     /**
      * <code>string password = 8;</code>
      * @return The password.
      */
-    @Override
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -1979,14 +1979,14 @@ public final class AccountReservation {
      * <code>string password = 8;</code>
      * @return The bytes for password.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -1995,20 +1995,20 @@ public final class AccountReservation {
     }
 
     public static final int NAME_FIELD_NUMBER = 9;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 9;</code>
      * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -2017,14 +2017,14 @@ public final class AccountReservation {
      * <code>string name = 9;</code>
      * @return The bytes for name.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -2033,20 +2033,20 @@ public final class AccountReservation {
     }
 
     public static final int SURNAME_FIELD_NUMBER = 10;
-    private volatile Object surname_;
+    private volatile java.lang.Object surname_;
     /**
      * <code>string surname = 10;</code>
      * @return The surname.
      */
-    @Override
-    public String getSurname() {
-      Object ref = surname_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getSurname() {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         surname_ = s;
         return s;
       }
@@ -2055,14 +2055,14 @@ public final class AccountReservation {
      * <code>string surname = 10;</code>
      * @return The bytes for surname.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSurnameBytes() {
-      Object ref = surname_;
-      if (ref instanceof String) {
+      java.lang.Object ref = surname_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         surname_ = b;
         return b;
       } else {
@@ -2071,20 +2071,20 @@ public final class AccountReservation {
     }
 
     public static final int ROLE_FIELD_NUMBER = 11;
-    private volatile Object role_;
+    private volatile java.lang.Object role_;
     /**
      * <code>string role = 11;</code>
      * @return The role.
      */
-    @Override
-    public String getRole() {
-      Object ref = role_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getRole() {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         role_ = s;
         return s;
       }
@@ -2093,14 +2093,14 @@ public final class AccountReservation {
      * <code>string role = 11;</code>
      * @return The bytes for role.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRoleBytes() {
-      Object ref = role_;
-      if (ref instanceof String) {
+      java.lang.Object ref = role_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         role_ = b;
         return b;
       } else {
@@ -2109,7 +2109,7 @@ public final class AccountReservation {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2119,7 +2119,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
@@ -2143,7 +2143,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2173,15 +2173,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof UpdateGuestRequest)) {
+      if (!(obj instanceof proto.AccountReservation.UpdateGuestRequest)) {
         return super.equals(obj);
       }
-      UpdateGuestRequest other = (UpdateGuestRequest) obj;
+      proto.AccountReservation.UpdateGuestRequest other = (proto.AccountReservation.UpdateGuestRequest) obj;
 
       if (getUserId()
           != other.getUserId()) return false;
@@ -2199,7 +2199,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2224,69 +2224,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateGuestRequest parseFrom(byte[] data)
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateGuestRequest parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateGuestRequest parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.UpdateGuestRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static UpdateGuestRequest parseDelimitedFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateGuestRequest parseFrom(
+    public static proto.AccountReservation.UpdateGuestRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2294,23 +2294,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(UpdateGuestRequest prototype) {
+    public static Builder newBuilder(proto.AccountReservation.UpdateGuestRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2320,18 +2320,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.UpdateGuestRequest)
-        UpdateGuestRequestOrBuilder {
+        proto.AccountReservation.UpdateGuestRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_UpdateGuestRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_UpdateGuestRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_UpdateGuestRequest_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_UpdateGuestRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                UpdateGuestRequest.class, Builder.class);
+                proto.AccountReservation.UpdateGuestRequest.class, proto.AccountReservation.UpdateGuestRequest.Builder.class);
       }
 
       // Construct using proto.AccountReservation.UpdateGuestRequest.newBuilder()
@@ -2340,11 +2340,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         userId_ = 0L;
@@ -2362,29 +2362,29 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_UpdateGuestRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_UpdateGuestRequest_descriptor;
       }
 
-      @Override
-      public UpdateGuestRequest getDefaultInstanceForType() {
-        return UpdateGuestRequest.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.UpdateGuestRequest getDefaultInstanceForType() {
+        return proto.AccountReservation.UpdateGuestRequest.getDefaultInstance();
       }
 
-      @Override
-      public UpdateGuestRequest build() {
-        UpdateGuestRequest result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.UpdateGuestRequest build() {
+        proto.AccountReservation.UpdateGuestRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public UpdateGuestRequest buildPartial() {
-        UpdateGuestRequest result = new UpdateGuestRequest(this);
+      @java.lang.Override
+      public proto.AccountReservation.UpdateGuestRequest buildPartial() {
+        proto.AccountReservation.UpdateGuestRequest result = new proto.AccountReservation.UpdateGuestRequest(this);
         result.userId_ = userId_;
         result.username_ = username_;
         result.password_ = password_;
@@ -2395,50 +2395,50 @@ public final class AccountReservation {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof UpdateGuestRequest) {
-          return mergeFrom((UpdateGuestRequest)other);
+        if (other instanceof proto.AccountReservation.UpdateGuestRequest) {
+          return mergeFrom((proto.AccountReservation.UpdateGuestRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(UpdateGuestRequest other) {
-        if (other == UpdateGuestRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.UpdateGuestRequest other) {
+        if (other == proto.AccountReservation.UpdateGuestRequest.getDefaultInstance()) return this;
         if (other.getUserId() != 0L) {
           setUserId(other.getUserId());
         }
@@ -2467,18 +2467,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -2539,7 +2539,7 @@ public final class AccountReservation {
        * <code>int64 userId = 16;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -2565,21 +2565,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object username_ = "";
+      private java.lang.Object username_ = "";
       /**
        * <code>string username = 7;</code>
        * @return The username.
        */
-      public String getUsername() {
-        Object ref = username_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           username_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2588,11 +2588,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getUsernameBytes() {
-        Object ref = username_;
+        java.lang.Object ref = username_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           username_ = b;
           return b;
         } else {
@@ -2605,7 +2605,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setUsername(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2641,21 +2641,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 8;</code>
        * @return The password.
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2664,11 +2664,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -2681,7 +2681,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setPassword(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2717,21 +2717,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 9;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2740,11 +2740,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -2757,7 +2757,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2793,21 +2793,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object surname_ = "";
+      private java.lang.Object surname_ = "";
       /**
        * <code>string surname = 10;</code>
        * @return The surname.
        */
-      public String getSurname() {
-        Object ref = surname_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getSurname() {
+        java.lang.Object ref = surname_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           surname_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2816,11 +2816,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getSurnameBytes() {
-        Object ref = surname_;
+        java.lang.Object ref = surname_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           surname_ = b;
           return b;
         } else {
@@ -2833,7 +2833,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setSurname(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2869,21 +2869,21 @@ public final class AccountReservation {
         return this;
       }
 
-      private Object role_ = "";
+      private java.lang.Object role_ = "";
       /**
        * <code>string role = 11;</code>
        * @return The role.
        */
-      public String getRole() {
-        Object ref = role_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getRole() {
+        java.lang.Object ref = role_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           role_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2892,11 +2892,11 @@ public final class AccountReservation {
        */
       public com.google.protobuf.ByteString
           getRoleBytes() {
-        Object ref = role_;
+        java.lang.Object ref = role_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           role_ = b;
           return b;
         } else {
@@ -2909,7 +2909,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder setRole(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2944,13 +2944,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2961,18 +2961,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.UpdateGuestRequest)
-    private static final UpdateGuestRequest DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.UpdateGuestRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new UpdateGuestRequest();
+      DEFAULT_INSTANCE = new proto.AccountReservation.UpdateGuestRequest();
     }
 
-    public static UpdateGuestRequest getDefaultInstance() {
+    public static proto.AccountReservation.UpdateGuestRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<UpdateGuestRequest>
         PARSER = new com.google.protobuf.AbstractParser<UpdateGuestRequest>() {
-      @Override
+      @java.lang.Override
       public UpdateGuestRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2996,13 +2996,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<UpdateGuestRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public UpdateGuestRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.UpdateGuestRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3037,29 +3037,29 @@ public final class AccountReservation {
     private UpdateGuestResponse() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new UpdateGuestResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_UpdateGuestResponse_descriptor;
+      return proto.AccountReservation.internal_static_proto_UpdateGuestResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_UpdateGuestResponse_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_UpdateGuestResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              UpdateGuestResponse.class, Builder.class);
+              proto.AccountReservation.UpdateGuestResponse.class, proto.AccountReservation.UpdateGuestResponse.Builder.class);
     }
 
     public static final int ISUPDATED_FIELD_NUMBER = 13;
@@ -3072,13 +3072,13 @@ public final class AccountReservation {
      * <code>bool isUpdated = 13;</code>
      * @return The isUpdated.
      */
-    @Override
+    @java.lang.Override
     public boolean getIsUpdated() {
       return isUpdated_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3088,7 +3088,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isUpdated_ != false) {
@@ -3097,7 +3097,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3112,15 +3112,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof UpdateGuestResponse)) {
+      if (!(obj instanceof proto.AccountReservation.UpdateGuestResponse)) {
         return super.equals(obj);
       }
-      UpdateGuestResponse other = (UpdateGuestResponse) obj;
+      proto.AccountReservation.UpdateGuestResponse other = (proto.AccountReservation.UpdateGuestResponse) obj;
 
       if (getIsUpdated()
           != other.getIsUpdated()) return false;
@@ -3128,7 +3128,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3143,69 +3143,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateGuestResponse parseFrom(byte[] data)
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static UpdateGuestResponse parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateGuestResponse parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.UpdateGuestResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static UpdateGuestResponse parseDelimitedFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static UpdateGuestResponse parseFrom(
+    public static proto.AccountReservation.UpdateGuestResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3213,23 +3213,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(UpdateGuestResponse prototype) {
+    public static Builder newBuilder(proto.AccountReservation.UpdateGuestResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3239,18 +3239,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.UpdateGuestResponse)
-        UpdateGuestResponseOrBuilder {
+        proto.AccountReservation.UpdateGuestResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_UpdateGuestResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_UpdateGuestResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_UpdateGuestResponse_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_UpdateGuestResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                UpdateGuestResponse.class, Builder.class);
+                proto.AccountReservation.UpdateGuestResponse.class, proto.AccountReservation.UpdateGuestResponse.Builder.class);
       }
 
       // Construct using proto.AccountReservation.UpdateGuestResponse.newBuilder()
@@ -3259,11 +3259,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         isUpdated_ = false;
@@ -3271,78 +3271,78 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_UpdateGuestResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_UpdateGuestResponse_descriptor;
       }
 
-      @Override
-      public UpdateGuestResponse getDefaultInstanceForType() {
-        return UpdateGuestResponse.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.UpdateGuestResponse getDefaultInstanceForType() {
+        return proto.AccountReservation.UpdateGuestResponse.getDefaultInstance();
       }
 
-      @Override
-      public UpdateGuestResponse build() {
-        UpdateGuestResponse result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.UpdateGuestResponse build() {
+        proto.AccountReservation.UpdateGuestResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public UpdateGuestResponse buildPartial() {
-        UpdateGuestResponse result = new UpdateGuestResponse(this);
+      @java.lang.Override
+      public proto.AccountReservation.UpdateGuestResponse buildPartial() {
+        proto.AccountReservation.UpdateGuestResponse result = new proto.AccountReservation.UpdateGuestResponse(this);
         result.isUpdated_ = isUpdated_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof UpdateGuestResponse) {
-          return mergeFrom((UpdateGuestResponse)other);
+        if (other instanceof proto.AccountReservation.UpdateGuestResponse) {
+          return mergeFrom((proto.AccountReservation.UpdateGuestResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(UpdateGuestResponse other) {
-        if (other == UpdateGuestResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.UpdateGuestResponse other) {
+        if (other == proto.AccountReservation.UpdateGuestResponse.getDefaultInstance()) return this;
         if (other.getIsUpdated() != false) {
           setIsUpdated(other.getIsUpdated());
         }
@@ -3351,18 +3351,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -3402,7 +3402,7 @@ public final class AccountReservation {
        * <code>bool isUpdated = 13;</code>
        * @return The isUpdated.
        */
-      @Override
+      @java.lang.Override
       public boolean getIsUpdated() {
         return isUpdated_;
       }
@@ -3435,13 +3435,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3452,18 +3452,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.UpdateGuestResponse)
-    private static final UpdateGuestResponse DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.UpdateGuestResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new UpdateGuestResponse();
+      DEFAULT_INSTANCE = new proto.AccountReservation.UpdateGuestResponse();
     }
 
-    public static UpdateGuestResponse getDefaultInstance() {
+    public static proto.AccountReservation.UpdateGuestResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<UpdateGuestResponse>
         PARSER = new com.google.protobuf.AbstractParser<UpdateGuestResponse>() {
-      @Override
+      @java.lang.Override
       public UpdateGuestResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3487,13 +3487,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<UpdateGuestResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public UpdateGuestResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.UpdateGuestResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3524,29 +3524,29 @@ public final class AccountReservation {
     private DeleteGuestRequest() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new DeleteGuestRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_DeleteGuestRequest_descriptor;
+      return proto.AccountReservation.internal_static_proto_DeleteGuestRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_DeleteGuestRequest_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_DeleteGuestRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              DeleteGuestRequest.class, Builder.class);
+              proto.AccountReservation.DeleteGuestRequest.class, proto.AccountReservation.DeleteGuestRequest.Builder.class);
     }
 
     public static final int USERID_FIELD_NUMBER = 14;
@@ -3555,13 +3555,13 @@ public final class AccountReservation {
      * <code>int64 userId = 14;</code>
      * @return The userId.
      */
-    @Override
+    @java.lang.Override
     public long getUserId() {
       return userId_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3571,7 +3571,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (userId_ != 0L) {
@@ -3580,7 +3580,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3595,15 +3595,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof DeleteGuestRequest)) {
+      if (!(obj instanceof proto.AccountReservation.DeleteGuestRequest)) {
         return super.equals(obj);
       }
-      DeleteGuestRequest other = (DeleteGuestRequest) obj;
+      proto.AccountReservation.DeleteGuestRequest other = (proto.AccountReservation.DeleteGuestRequest) obj;
 
       if (getUserId()
           != other.getUserId()) return false;
@@ -3611,7 +3611,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3626,69 +3626,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteGuestRequest parseFrom(byte[] data)
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteGuestRequest parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteGuestRequest parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.DeleteGuestRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static DeleteGuestRequest parseDelimitedFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteGuestRequest parseFrom(
+    public static proto.AccountReservation.DeleteGuestRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3696,23 +3696,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(DeleteGuestRequest prototype) {
+    public static Builder newBuilder(proto.AccountReservation.DeleteGuestRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3722,18 +3722,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.DeleteGuestRequest)
-        DeleteGuestRequestOrBuilder {
+        proto.AccountReservation.DeleteGuestRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_DeleteGuestRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_DeleteGuestRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_DeleteGuestRequest_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_DeleteGuestRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                DeleteGuestRequest.class, Builder.class);
+                proto.AccountReservation.DeleteGuestRequest.class, proto.AccountReservation.DeleteGuestRequest.Builder.class);
       }
 
       // Construct using proto.AccountReservation.DeleteGuestRequest.newBuilder()
@@ -3742,11 +3742,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         userId_ = 0L;
@@ -3754,78 +3754,78 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_DeleteGuestRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_DeleteGuestRequest_descriptor;
       }
 
-      @Override
-      public DeleteGuestRequest getDefaultInstanceForType() {
-        return DeleteGuestRequest.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.DeleteGuestRequest getDefaultInstanceForType() {
+        return proto.AccountReservation.DeleteGuestRequest.getDefaultInstance();
       }
 
-      @Override
-      public DeleteGuestRequest build() {
-        DeleteGuestRequest result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.DeleteGuestRequest build() {
+        proto.AccountReservation.DeleteGuestRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public DeleteGuestRequest buildPartial() {
-        DeleteGuestRequest result = new DeleteGuestRequest(this);
+      @java.lang.Override
+      public proto.AccountReservation.DeleteGuestRequest buildPartial() {
+        proto.AccountReservation.DeleteGuestRequest result = new proto.AccountReservation.DeleteGuestRequest(this);
         result.userId_ = userId_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof DeleteGuestRequest) {
-          return mergeFrom((DeleteGuestRequest)other);
+        if (other instanceof proto.AccountReservation.DeleteGuestRequest) {
+          return mergeFrom((proto.AccountReservation.DeleteGuestRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(DeleteGuestRequest other) {
-        if (other == DeleteGuestRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.DeleteGuestRequest other) {
+        if (other == proto.AccountReservation.DeleteGuestRequest.getDefaultInstance()) return this;
         if (other.getUserId() != 0L) {
           setUserId(other.getUserId());
         }
@@ -3834,18 +3834,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -3881,7 +3881,7 @@ public final class AccountReservation {
        * <code>int64 userId = 14;</code>
        * @return The userId.
        */
-      @Override
+      @java.lang.Override
       public long getUserId() {
         return userId_;
       }
@@ -3906,13 +3906,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3923,18 +3923,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.DeleteGuestRequest)
-    private static final DeleteGuestRequest DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.DeleteGuestRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new DeleteGuestRequest();
+      DEFAULT_INSTANCE = new proto.AccountReservation.DeleteGuestRequest();
     }
 
-    public static DeleteGuestRequest getDefaultInstance() {
+    public static proto.AccountReservation.DeleteGuestRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<DeleteGuestRequest>
         PARSER = new com.google.protobuf.AbstractParser<DeleteGuestRequest>() {
-      @Override
+      @java.lang.Override
       public DeleteGuestRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3958,13 +3958,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<DeleteGuestRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public DeleteGuestRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.DeleteGuestRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3999,29 +3999,29 @@ public final class AccountReservation {
     private DeleteGuestResponse() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new DeleteGuestResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_DeleteGuestResponse_descriptor;
+      return proto.AccountReservation.internal_static_proto_DeleteGuestResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_DeleteGuestResponse_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_DeleteGuestResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              DeleteGuestResponse.class, Builder.class);
+              proto.AccountReservation.DeleteGuestResponse.class, proto.AccountReservation.DeleteGuestResponse.Builder.class);
     }
 
     public static final int ISDELETED_FIELD_NUMBER = 15;
@@ -4034,13 +4034,13 @@ public final class AccountReservation {
      * <code>bool isDeleted = 15;</code>
      * @return The isDeleted.
      */
-    @Override
+    @java.lang.Override
     public boolean getIsDeleted() {
       return isDeleted_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4050,7 +4050,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isDeleted_ != false) {
@@ -4059,7 +4059,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4074,15 +4074,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof DeleteGuestResponse)) {
+      if (!(obj instanceof proto.AccountReservation.DeleteGuestResponse)) {
         return super.equals(obj);
       }
-      DeleteGuestResponse other = (DeleteGuestResponse) obj;
+      proto.AccountReservation.DeleteGuestResponse other = (proto.AccountReservation.DeleteGuestResponse) obj;
 
       if (getIsDeleted()
           != other.getIsDeleted()) return false;
@@ -4090,7 +4090,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -4105,69 +4105,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteGuestResponse parseFrom(byte[] data)
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static DeleteGuestResponse parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteGuestResponse parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.DeleteGuestResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static DeleteGuestResponse parseDelimitedFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static DeleteGuestResponse parseFrom(
+    public static proto.AccountReservation.DeleteGuestResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4175,23 +4175,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(DeleteGuestResponse prototype) {
+    public static Builder newBuilder(proto.AccountReservation.DeleteGuestResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4201,18 +4201,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.DeleteGuestResponse)
-        DeleteGuestResponseOrBuilder {
+        proto.AccountReservation.DeleteGuestResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_DeleteGuestResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_DeleteGuestResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_DeleteGuestResponse_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_DeleteGuestResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                DeleteGuestResponse.class, Builder.class);
+                proto.AccountReservation.DeleteGuestResponse.class, proto.AccountReservation.DeleteGuestResponse.Builder.class);
       }
 
       // Construct using proto.AccountReservation.DeleteGuestResponse.newBuilder()
@@ -4221,11 +4221,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         isDeleted_ = false;
@@ -4233,78 +4233,78 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_DeleteGuestResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_DeleteGuestResponse_descriptor;
       }
 
-      @Override
-      public DeleteGuestResponse getDefaultInstanceForType() {
-        return DeleteGuestResponse.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.DeleteGuestResponse getDefaultInstanceForType() {
+        return proto.AccountReservation.DeleteGuestResponse.getDefaultInstance();
       }
 
-      @Override
-      public DeleteGuestResponse build() {
-        DeleteGuestResponse result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.DeleteGuestResponse build() {
+        proto.AccountReservation.DeleteGuestResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public DeleteGuestResponse buildPartial() {
-        DeleteGuestResponse result = new DeleteGuestResponse(this);
+      @java.lang.Override
+      public proto.AccountReservation.DeleteGuestResponse buildPartial() {
+        proto.AccountReservation.DeleteGuestResponse result = new proto.AccountReservation.DeleteGuestResponse(this);
         result.isDeleted_ = isDeleted_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof DeleteGuestResponse) {
-          return mergeFrom((DeleteGuestResponse)other);
+        if (other instanceof proto.AccountReservation.DeleteGuestResponse) {
+          return mergeFrom((proto.AccountReservation.DeleteGuestResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(DeleteGuestResponse other) {
-        if (other == DeleteGuestResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.DeleteGuestResponse other) {
+        if (other == proto.AccountReservation.DeleteGuestResponse.getDefaultInstance()) return this;
         if (other.getIsDeleted() != false) {
           setIsDeleted(other.getIsDeleted());
         }
@@ -4313,18 +4313,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -4364,7 +4364,7 @@ public final class AccountReservation {
        * <code>bool isDeleted = 15;</code>
        * @return The isDeleted.
        */
-      @Override
+      @java.lang.Override
       public boolean getIsDeleted() {
         return isDeleted_;
       }
@@ -4397,13 +4397,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4414,18 +4414,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.DeleteGuestResponse)
-    private static final DeleteGuestResponse DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.DeleteGuestResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new DeleteGuestResponse();
+      DEFAULT_INSTANCE = new proto.AccountReservation.DeleteGuestResponse();
     }
 
-    public static DeleteGuestResponse getDefaultInstance() {
+    public static proto.AccountReservation.DeleteGuestResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<DeleteGuestResponse>
         PARSER = new com.google.protobuf.AbstractParser<DeleteGuestResponse>() {
-      @Override
+      @java.lang.Override
       public DeleteGuestResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4449,13 +4449,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<DeleteGuestResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public DeleteGuestResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.DeleteGuestResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4469,7 +4469,7 @@ public final class AccountReservation {
      * <code>repeated int64 accommodationIds = 26;</code>
      * @return A list containing the accommodationIds.
      */
-    java.util.List<Long> getAccommodationIdsList();
+    java.util.List<java.lang.Long> getAccommodationIdsList();
     /**
      * <code>repeated int64 accommodationIds = 26;</code>
      * @return The count of accommodationIds.
@@ -4498,29 +4498,29 @@ public final class AccountReservation {
       accommodationIds_ = emptyLongList();
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new CanHostBeDeletedRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
+      return proto.AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CanHostBeDeletedRequest.class, Builder.class);
+              proto.AccountReservation.CanHostBeDeletedRequest.class, proto.AccountReservation.CanHostBeDeletedRequest.Builder.class);
     }
 
     public static final int ACCOMMODATIONIDS_FIELD_NUMBER = 26;
@@ -4529,8 +4529,8 @@ public final class AccountReservation {
      * <code>repeated int64 accommodationIds = 26;</code>
      * @return A list containing the accommodationIds.
      */
-    @Override
-    public java.util.List<Long>
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
         getAccommodationIdsList() {
       return accommodationIds_;
     }
@@ -4552,7 +4552,7 @@ public final class AccountReservation {
     private int accommodationIdsMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4562,7 +4562,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -4576,7 +4576,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4601,15 +4601,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CanHostBeDeletedRequest)) {
+      if (!(obj instanceof proto.AccountReservation.CanHostBeDeletedRequest)) {
         return super.equals(obj);
       }
-      CanHostBeDeletedRequest other = (CanHostBeDeletedRequest) obj;
+      proto.AccountReservation.CanHostBeDeletedRequest other = (proto.AccountReservation.CanHostBeDeletedRequest) obj;
 
       if (!getAccommodationIdsList()
           .equals(other.getAccommodationIdsList())) return false;
@@ -4617,7 +4617,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -4633,69 +4633,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CanHostBeDeletedRequest parseFrom(byte[] data)
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CanHostBeDeletedRequest parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CanHostBeDeletedRequest parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CanHostBeDeletedRequest parseDelimitedFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CanHostBeDeletedRequest parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4703,23 +4703,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CanHostBeDeletedRequest prototype) {
+    public static Builder newBuilder(proto.AccountReservation.CanHostBeDeletedRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4729,18 +4729,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CanHostBeDeletedRequest)
-        CanHostBeDeletedRequestOrBuilder {
+        proto.AccountReservation.CanHostBeDeletedRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CanHostBeDeletedRequest.class, Builder.class);
+                proto.AccountReservation.CanHostBeDeletedRequest.class, proto.AccountReservation.CanHostBeDeletedRequest.Builder.class);
       }
 
       // Construct using proto.AccountReservation.CanHostBeDeletedRequest.newBuilder()
@@ -4749,11 +4749,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         accommodationIds_ = emptyLongList();
@@ -4761,29 +4761,29 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
+        return proto.AccountReservation.internal_static_proto_CanHostBeDeletedRequest_descriptor;
       }
 
-      @Override
-      public CanHostBeDeletedRequest getDefaultInstanceForType() {
-        return CanHostBeDeletedRequest.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.CanHostBeDeletedRequest getDefaultInstanceForType() {
+        return proto.AccountReservation.CanHostBeDeletedRequest.getDefaultInstance();
       }
 
-      @Override
-      public CanHostBeDeletedRequest build() {
-        CanHostBeDeletedRequest result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.CanHostBeDeletedRequest build() {
+        proto.AccountReservation.CanHostBeDeletedRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public CanHostBeDeletedRequest buildPartial() {
-        CanHostBeDeletedRequest result = new CanHostBeDeletedRequest(this);
+      @java.lang.Override
+      public proto.AccountReservation.CanHostBeDeletedRequest buildPartial() {
+        proto.AccountReservation.CanHostBeDeletedRequest result = new proto.AccountReservation.CanHostBeDeletedRequest(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           accommodationIds_.makeImmutable();
@@ -4794,50 +4794,50 @@ public final class AccountReservation {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CanHostBeDeletedRequest) {
-          return mergeFrom((CanHostBeDeletedRequest)other);
+        if (other instanceof proto.AccountReservation.CanHostBeDeletedRequest) {
+          return mergeFrom((proto.AccountReservation.CanHostBeDeletedRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CanHostBeDeletedRequest other) {
-        if (other == CanHostBeDeletedRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.CanHostBeDeletedRequest other) {
+        if (other == proto.AccountReservation.CanHostBeDeletedRequest.getDefaultInstance()) return this;
         if (!other.accommodationIds_.isEmpty()) {
           if (accommodationIds_.isEmpty()) {
             accommodationIds_ = other.accommodationIds_;
@@ -4853,18 +4853,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -4918,7 +4918,7 @@ public final class AccountReservation {
        * <code>repeated int64 accommodationIds = 26;</code>
        * @return A list containing the accommodationIds.
        */
-      public java.util.List<Long>
+      public java.util.List<java.lang.Long>
           getAccommodationIdsList() {
         return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(accommodationIds_) : accommodationIds_;
@@ -4968,7 +4968,7 @@ public final class AccountReservation {
        * @return This builder for chaining.
        */
       public Builder addAllAccommodationIds(
-          Iterable<? extends Long> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         ensureAccommodationIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, accommodationIds_);
@@ -4985,13 +4985,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5002,18 +5002,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CanHostBeDeletedRequest)
-    private static final CanHostBeDeletedRequest DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.CanHostBeDeletedRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CanHostBeDeletedRequest();
+      DEFAULT_INSTANCE = new proto.AccountReservation.CanHostBeDeletedRequest();
     }
 
-    public static CanHostBeDeletedRequest getDefaultInstance() {
+    public static proto.AccountReservation.CanHostBeDeletedRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CanHostBeDeletedRequest>
         PARSER = new com.google.protobuf.AbstractParser<CanHostBeDeletedRequest>() {
-      @Override
+      @java.lang.Override
       public CanHostBeDeletedRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5037,13 +5037,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CanHostBeDeletedRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public CanHostBeDeletedRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.CanHostBeDeletedRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5074,29 +5074,29 @@ public final class AccountReservation {
     private CanHostBeDeletedResponse() {
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new CanHostBeDeletedResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
+      return proto.AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable
+      return proto.AccountReservation.internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              CanHostBeDeletedResponse.class, Builder.class);
+              proto.AccountReservation.CanHostBeDeletedResponse.class, proto.AccountReservation.CanHostBeDeletedResponse.Builder.class);
     }
 
     public static final int CANBEDELETED_FIELD_NUMBER = 27;
@@ -5105,13 +5105,13 @@ public final class AccountReservation {
      * <code>bool canBeDeleted = 27;</code>
      * @return The canBeDeleted.
      */
-    @Override
+    @java.lang.Override
     public boolean getCanBeDeleted() {
       return canBeDeleted_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5121,7 +5121,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (canBeDeleted_ != false) {
@@ -5130,7 +5130,7 @@ public final class AccountReservation {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5145,15 +5145,15 @@ public final class AccountReservation {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof CanHostBeDeletedResponse)) {
+      if (!(obj instanceof proto.AccountReservation.CanHostBeDeletedResponse)) {
         return super.equals(obj);
       }
-      CanHostBeDeletedResponse other = (CanHostBeDeletedResponse) obj;
+      proto.AccountReservation.CanHostBeDeletedResponse other = (proto.AccountReservation.CanHostBeDeletedResponse) obj;
 
       if (getCanBeDeleted()
           != other.getCanBeDeleted()) return false;
@@ -5161,7 +5161,7 @@ public final class AccountReservation {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5176,69 +5176,69 @@ public final class AccountReservation {
       return hash;
     }
 
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CanHostBeDeletedResponse parseFrom(byte[] data)
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static CanHostBeDeletedResponse parseFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CanHostBeDeletedResponse parseDelimitedFrom(java.io.InputStream input)
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static CanHostBeDeletedResponse parseDelimitedFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static CanHostBeDeletedResponse parseFrom(
+    public static proto.AccountReservation.CanHostBeDeletedResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5246,23 +5246,23 @@ public final class AccountReservation {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(CanHostBeDeletedResponse prototype) {
+    public static Builder newBuilder(proto.AccountReservation.CanHostBeDeletedResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5272,18 +5272,18 @@ public final class AccountReservation {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CanHostBeDeletedResponse)
-        CanHostBeDeletedResponseOrBuilder {
+        proto.AccountReservation.CanHostBeDeletedResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable
+        return proto.AccountReservation.internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                CanHostBeDeletedResponse.class, Builder.class);
+                proto.AccountReservation.CanHostBeDeletedResponse.class, proto.AccountReservation.CanHostBeDeletedResponse.Builder.class);
       }
 
       // Construct using proto.AccountReservation.CanHostBeDeletedResponse.newBuilder()
@@ -5292,11 +5292,11 @@ public final class AccountReservation {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         canBeDeleted_ = false;
@@ -5304,78 +5304,78 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
+        return proto.AccountReservation.internal_static_proto_CanHostBeDeletedResponse_descriptor;
       }
 
-      @Override
-      public CanHostBeDeletedResponse getDefaultInstanceForType() {
-        return CanHostBeDeletedResponse.getDefaultInstance();
+      @java.lang.Override
+      public proto.AccountReservation.CanHostBeDeletedResponse getDefaultInstanceForType() {
+        return proto.AccountReservation.CanHostBeDeletedResponse.getDefaultInstance();
       }
 
-      @Override
-      public CanHostBeDeletedResponse build() {
-        CanHostBeDeletedResponse result = buildPartial();
+      @java.lang.Override
+      public proto.AccountReservation.CanHostBeDeletedResponse build() {
+        proto.AccountReservation.CanHostBeDeletedResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public CanHostBeDeletedResponse buildPartial() {
-        CanHostBeDeletedResponse result = new CanHostBeDeletedResponse(this);
+      @java.lang.Override
+      public proto.AccountReservation.CanHostBeDeletedResponse buildPartial() {
+        proto.AccountReservation.CanHostBeDeletedResponse result = new proto.AccountReservation.CanHostBeDeletedResponse(this);
         result.canBeDeleted_ = canBeDeleted_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof CanHostBeDeletedResponse) {
-          return mergeFrom((CanHostBeDeletedResponse)other);
+        if (other instanceof proto.AccountReservation.CanHostBeDeletedResponse) {
+          return mergeFrom((proto.AccountReservation.CanHostBeDeletedResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(CanHostBeDeletedResponse other) {
-        if (other == CanHostBeDeletedResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.AccountReservation.CanHostBeDeletedResponse other) {
+        if (other == proto.AccountReservation.CanHostBeDeletedResponse.getDefaultInstance()) return this;
         if (other.getCanBeDeleted() != false) {
           setCanBeDeleted(other.getCanBeDeleted());
         }
@@ -5384,18 +5384,18 @@ public final class AccountReservation {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -5431,7 +5431,7 @@ public final class AccountReservation {
        * <code>bool canBeDeleted = 27;</code>
        * @return The canBeDeleted.
        */
-      @Override
+      @java.lang.Override
       public boolean getCanBeDeleted() {
         return canBeDeleted_;
       }
@@ -5456,13 +5456,13 @@ public final class AccountReservation {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5473,18 +5473,18 @@ public final class AccountReservation {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CanHostBeDeletedResponse)
-    private static final CanHostBeDeletedResponse DEFAULT_INSTANCE;
+    private static final proto.AccountReservation.CanHostBeDeletedResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new CanHostBeDeletedResponse();
+      DEFAULT_INSTANCE = new proto.AccountReservation.CanHostBeDeletedResponse();
     }
 
-    public static CanHostBeDeletedResponse getDefaultInstance() {
+    public static proto.AccountReservation.CanHostBeDeletedResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<CanHostBeDeletedResponse>
         PARSER = new com.google.protobuf.AbstractParser<CanHostBeDeletedResponse>() {
-      @Override
+      @java.lang.Override
       public CanHostBeDeletedResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5508,13 +5508,13 @@ public final class AccountReservation {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<CanHostBeDeletedResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public CanHostBeDeletedResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public proto.AccountReservation.CanHostBeDeletedResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5568,7 +5568,7 @@ public final class AccountReservation {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\031account-reservation.proto\022\005proto\"u\n\022Cr" +
       "eateGuestRequest\022\016\n\006userId\030\031 \001(\003\022\020\n\010user" +
       "name\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\014\n\004name\030\003 \001" +
@@ -5602,49 +5602,49 @@ public final class AccountReservation {
     internal_static_proto_CreateGuestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CreateGuestRequest_descriptor,
-        new String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
+        new java.lang.String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
     internal_static_proto_CreateGuestResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_proto_CreateGuestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CreateGuestResponse_descriptor,
-        new String[] { "IsCreated", "UserId", });
+        new java.lang.String[] { "IsCreated", "UserId", });
     internal_static_proto_UpdateGuestRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_proto_UpdateGuestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_UpdateGuestRequest_descriptor,
-        new String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
+        new java.lang.String[] { "UserId", "Username", "Password", "Name", "Surname", "Role", });
     internal_static_proto_UpdateGuestResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_proto_UpdateGuestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_UpdateGuestResponse_descriptor,
-        new String[] { "IsUpdated", });
+        new java.lang.String[] { "IsUpdated", });
     internal_static_proto_DeleteGuestRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_proto_DeleteGuestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_DeleteGuestRequest_descriptor,
-        new String[] { "UserId", });
+        new java.lang.String[] { "UserId", });
     internal_static_proto_DeleteGuestResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_proto_DeleteGuestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_DeleteGuestResponse_descriptor,
-        new String[] { "IsDeleted", });
+        new java.lang.String[] { "IsDeleted", });
     internal_static_proto_CanHostBeDeletedRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_proto_CanHostBeDeletedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CanHostBeDeletedRequest_descriptor,
-        new String[] { "AccommodationIds", });
+        new java.lang.String[] { "AccommodationIds", });
     internal_static_proto_CanHostBeDeletedResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_proto_CanHostBeDeletedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CanHostBeDeletedResponse_descriptor,
-        new String[] { "CanBeDeleted", });
+        new java.lang.String[] { "CanBeDeleted", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

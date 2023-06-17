@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package proto;
+
+service CreateUserService {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
+}
+
+message CreateUserRequest {
+  string username = 1;
+  string password = 2;
+  string name = 3;
+  string surname = 4;
+  string role = 5;
+}
+
+message CreateUserResponse {
+  // Define any response fields, if needed
+  bool isCreated = 6;
+  int64 userId = 12;
+}
+
+message UpdateUserRequest {
+  int64 userId = 16;
+  string username = 7;
+  string password = 8;
+  string name = 9;
+  string surname = 10;
+  string role = 11;
+}
+
+message UpdateUserResponse {
+  // Define any response fields, if needed
+  bool isUpdated = 13;
+}
+
+message DeleteUserRequest {
+  int64 userId = 14;
+}
+
+message DeleteUserResponse {
+  // Define any response fields, if needed
+  bool isDeleted = 15;
+}

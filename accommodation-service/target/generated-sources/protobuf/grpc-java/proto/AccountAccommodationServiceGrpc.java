@@ -52,7 +52,7 @@ public final class AccountAccommodationServiceGrpc {
   public static AccountAccommodationServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<AccountAccommodationServiceStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<AccountAccommodationServiceStub>() {
-        @Override
+        @java.lang.Override
         public AccountAccommodationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new AccountAccommodationServiceStub(channel, callOptions);
         }
@@ -67,7 +67,7 @@ public final class AccountAccommodationServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<AccountAccommodationServiceBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<AccountAccommodationServiceBlockingStub>() {
-        @Override
+        @java.lang.Override
         public AccountAccommodationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new AccountAccommodationServiceBlockingStub(channel, callOptions);
         }
@@ -82,7 +82,7 @@ public final class AccountAccommodationServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<AccountAccommodationServiceFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<AccountAccommodationServiceFutureStub>() {
-        @Override
+        @java.lang.Override
         public AccountAccommodationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new AccountAccommodationServiceFutureStub(channel, callOptions);
         }
@@ -108,7 +108,7 @@ public final class AccountAccommodationServiceGrpc {
   public static abstract class AccountAccommodationServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return AccountAccommodationServiceGrpc.bindService(this);
     }
   }
@@ -123,7 +123,7 @@ public final class AccountAccommodationServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected AccountAccommodationServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAccommodationServiceStub(channel, callOptions);
@@ -148,7 +148,7 @@ public final class AccountAccommodationServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected AccountAccommodationServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAccommodationServiceBlockingStub(channel, callOptions);
@@ -172,7 +172,7 @@ public final class AccountAccommodationServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected AccountAccommodationServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAccommodationServiceFutureStub(channel, callOptions);
@@ -202,8 +202,8 @@ public final class AccountAccommodationServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ACCOMMODATIONS:
@@ -215,8 +215,8 @@ public final class AccountAccommodationServiceGrpc {
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -242,12 +242,12 @@ public final class AccountAccommodationServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     AccountAccommodationServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return proto.AccountAccommodation.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("AccountAccommodationService");
     }
@@ -267,7 +267,7 @@ public final class AccountAccommodationServiceGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }

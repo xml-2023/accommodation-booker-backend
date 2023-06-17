@@ -4439,13 +4439,13 @@ public final class Accommodation {
       "rname\030\n \001(\t\022\014\n\004role\030\013 \001(\t\"\'\n\022UpdateUserR" +
       "esponse\022\021\n\tisUpdated\030\r \001(\010\"#\n\021DeleteUser" +
       "Request\022\016\n\006userId\030\016 \001(\003\"\'\n\022DeleteUserRes" +
-      "ponse\022\021\n\tisDeleted\030\017 \001(\0102\334\001\n\013UserService" +
-      "\022C\n\nCreateUser\022\030.proto.CreateUserRequest" +
-      "\032\031.proto.CreateUserResponse\"\000\022C\n\nUpdateU" +
-      "ser\022\030.proto.UpdateUserRequest\032\031.proto.Up" +
-      "dateUserResponse\"\000\022C\n\nDeleteUser\022\030.proto" +
-      ".DeleteUserRequest\032\031.proto.DeleteUserRes" +
-      "ponse\"\000b\006proto3"
+      "ponse\022\021\n\tisDeleted\030\017 \001(\0102\342\001\n\021CreateUserS" +
+      "ervice\022C\n\nCreateUser\022\030.proto.CreateUserR" +
+      "equest\032\031.proto.CreateUserResponse\"\000\022C\n\nU" +
+      "pdateUser\022\030.proto.UpdateUserRequest\032\031.pr" +
+      "oto.UpdateUserResponse\"\000\022C\n\nDeleteUser\022\030" +
+      ".proto.DeleteUserRequest\032\031.proto.DeleteU" +
+      "serResponse\"\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

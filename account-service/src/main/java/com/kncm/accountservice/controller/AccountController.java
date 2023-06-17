@@ -59,7 +59,7 @@ public class AccountController {
                         .build();
 
                 // Create a gRPC client stub for the accommodation-service
-                UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel);
+                CreateUserServiceGrpc.CreateUserServiceBlockingStub userServiceStub = CreateUserServiceGrpc.newBlockingStub(channel);
                 try {
                     // Create a gRPC request to create a user in the accommodation-service
                     Accommodation.CreateUserRequest accommodationRequest = Accommodation.CreateUserRequest.newBuilder()
@@ -236,7 +236,7 @@ public class AccountController {
                         .build();
 
                 // Create a gRPC client stub for the accommodation-service
-                UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel);
+                CreateUserServiceGrpc.CreateUserServiceBlockingStub userServiceStub = CreateUserServiceGrpc.newBlockingStub(channel);
                 try {
                     // Create a gRPC request to update a user in the accommodation-service
                     Accommodation.UpdateUserRequest accommodationRequest = Accommodation.UpdateUserRequest.newBuilder()
@@ -475,7 +475,7 @@ public class AccountController {
                                 .build();
 
                         // Create a gRPC client stub for the accommodation-service
-                        UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel2);
+                        CreateUserServiceGrpc.CreateUserServiceBlockingStub userServiceStub = CreateUserServiceGrpc.newBlockingStub(channel2);
                         try {
                             // Create a gRPC request to update a user in the accommodation-service
                             Accommodation.DeleteUserRequest deleteRequest = Accommodation.DeleteUserRequest.newBuilder()

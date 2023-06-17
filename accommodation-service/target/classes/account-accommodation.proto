@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+service AccountAccommodationService {
+  rpc GetAccommodations(CreateAccountAccommodationRequest) returns (CreateAccountAccommodationResponse) {}
+
+}
+
+
+message CreateAccountAccommodationRequest {
+  int64 userId = 1;
+}
+
+message CreateAccountAccommodationResponse {
+  repeated  int64 accommodationIds = 2;
+}

@@ -1,0 +1,13 @@
+proto\CreateUserServiceGrpc$CreateUserServiceImplBase.class
+proto\CreateUserServiceGrpc$CreateUserServiceBaseDescriptorSupplier.class
+proto\CreateUserServiceGrpc$CreateUserServiceStub.class
+proto\CreateUserServiceGrpc$2.class
+proto\CreateUserServiceGrpc$3.class
+proto\CreateUserServiceGrpc$AsyncService.class
+proto\CreateUserServiceGrpc$CreateUserServiceBlockingStub.class
+proto\CreateUserServiceGrpc$1.class
+proto\CreateUserServiceGrpc$CreateUserServiceFileDescriptorSupplier.class
+proto\CreateUserServiceGrpc.class
+proto\CreateUserServiceGrpc$CreateUserServiceFutureStub.class
+proto\CreateUserServiceGrpc$CreateUserServiceMethodDescriptorSupplier.class
+proto\CreateUserServiceGrpc$MethodHandlers.class
