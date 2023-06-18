@@ -133,5 +133,6 @@ public class AccommodationServiceImpl implements AccommodationService {
         response.setMinGuests(accommodation.getMinGuests());
         response.setMaxGuests(accommodation.getMaxGuests());
         response.setId(accommodation.getId());
+        response.setHostId(accommodation.getUser().getId());
     }
 }
