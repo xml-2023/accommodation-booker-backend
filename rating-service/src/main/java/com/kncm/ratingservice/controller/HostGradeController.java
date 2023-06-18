@@ -99,7 +99,7 @@ public class HostGradeController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/hostGrade/averageGrade/{accommodationId}")
+    @GetMapping("/hostGrade/averageGrade/{hostId}")
     public ResponseEntity<Double> getHostAverageGrade(@PathVariable Long hostId){
         Double averageGrade = hostGradeService.getHostAverageGrade(hostId);
         return new ResponseEntity<>(averageGrade, HttpStatus.OK);
