@@ -21,4 +21,5 @@ public class SearchAccommodationResponse {
     private double unitPrice;
     private String startDate;
     private String endDate;
+    private Long hostId;
 }

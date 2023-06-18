@@ -1,0 +1,195 @@
+version: "3.8"
+name: accommodation-booker
+#trebalo bi se i definisati za svaki servis onaj eureka client iz app properties da bude discovery server umesto localhost a u app properties da ostane localhost kako bi radilo u localu
+
+services:
+  #pg admin --------------------------------
+  pgadmin-acc-booker:
+    image: dpage/pgadmin4
+    container_name: pgadmin_acc_booker
+    restart: on-failure
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: user@email.com
+      PGADMIN_DEFAULT_PASSWORD: user
+    volumes:
+      - pgadmin_acc_booker_data:/var/lib/pgadmin
+  #account db --------------------------------
+  account-db:
+    image: postgres
+    container_name: account-db
+    restart: always
+    ports:
+      - "54321:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: account-service_db
+      POSTGRES_PASSWORD: user
+    volumes:
+      - account_pgdata:/var/lib/account
+  #rating db --------------------------------
+  rating-db:
+    image: postgres
+    container_name: rating-db
+    restart: always
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: rating-service_db
+      POSTGRES_PASSWORD: user
+    volumes:
+      - rating_pgdata:/var/lib/rating
+  #reservation db --------------------------------
+  reservation-db:
+    image: postgres
+    container_name: reservation-db
+    restart: always
+    ports:
+      - "54323:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_DB: reservation-service_db
+      POSTGRES_PASSWORD: user
+    volumes:
+      - reservation_pgdata:/var/lib/reservation
+  #discovery-server --------------------------------
+  discovery-server:
+    build:
+      context: ./../discovery-server
+      dockerfile: Dockerfile
+    container_name: discovery-server
+    restart: on-failure
+    expose:
+      - "8761"
+    ports:
+      - "8761:8761"
+    volumes:
+      - discovery_server_data:/var/lib/discovery
+  #api-gateway-server --------------------------------
+  api-gateway:
+    build:
+      context: ./../api-gateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    restart: on-failure
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery-server
+    volumes:
+      - api_gateway_data:/var/lib/api_gateway
+  #accommodation-service --------------------------------
+  accommodation-service:
+    build:
+      context: ./../accommodation-service
+      dockerfile: Dockerfile
+    container_name: accommodation-service
+    restart: on-failure
+    expose:
+      - "8084"
+    ports:
+      - "8084:8084"
+    depends_on:
+      - discovery-server
+    volumes:
+      - accommodation_service_data:/var/lib/accommodation_service
+    #networks:
+     # - grpc-network
+  #account-service --------------------------------
+  account-service:
+    build:
+      context: ./../account-service
+      dockerfile: Dockerfile
+    container_name: account-service
+    restart: on-failure
+    expose:
+      - "8081"
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://account-db:5432/account-service_db
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=user
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - account-db
+      - discovery-server
+    volumes:
+      - account_service_data:/var/lib/account_service
+    #networks:
+      #- grpc-network
+  #rating-service --------------------------------
+  rating-service:
+    build:
+      context: ./../rating-service
+      dockerfile: Dockerfile
+    container_name: rating-service
+    restart: on-failure
+    expose:
+      - "8085"
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://rating-db:5432/rating-service_db
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=user
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - rating-db
+      - discovery-server
+    volumes:
+      - rating_service_data:/var/lib/rating_service
+    #networks:
+      #- grpc-network
+  #reservation-service --------------------------------
+  reservation-service:
+    build:
+      context: ./../reservation-service
+      dockerfile: Dockerfile
+    #image: reservation-service-1.0-snapshot
+    container_name: reservation-service
+    restart: on-failure
+    expose:
+      - "8082"
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://reservation-db:5432/reservation-service_db
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=user
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - reservation-db
+      - discovery-server
+    volumes:
+      - reservation_service_data:/var/lib/reservation_service
+    #networks:
+      #- grpc-network
+volumes:
+  pgadmin_acc_booker_data:
+    driver: local
+  account_pgdata:
+    driver: local
+  rating_pgdata:
+    driver: local
+  reservation_pgdata:
+    driver: local
+  discovery_server_data:
+    driver: local
+  api_gateway_data:
+    driver: local
+  accommodation_service_data:
+    driver: local
+  account_service_data:
+    driver: local
+  rating_service_data:
+    driver: local
+  reservation_service_data:
+    driver: local
+#networks:
+  #grpc-network:
+    #driver: bridge

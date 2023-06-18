@@ -91,7 +91,7 @@ public class AccommodationController {
         //------------------------------------------Create accommodation in reservation service end------------------------------
 
         //------------------------------------------Create accommodation in rating service------------------------------
-        ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("localhost", 9098)
+        ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("rating-service", 9098)
                 .usePlaintext()
                 .build();
 

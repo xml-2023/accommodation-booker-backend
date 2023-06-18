@@ -10,13 +10,13 @@ import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import proto.Accommodation;
-import proto.UserServiceGrpc;
+import proto.CreateUserServiceGrpc;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 @GrpcService
-public class UserServiceGrpcImpl extends UserServiceGrpc.UserServiceImplBase {
+public class UserServiceGrpcImpl extends CreateUserServiceGrpc.CreateUserServiceImplBase {
     private final SequenceGenerator generator;
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;

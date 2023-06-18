@@ -47,7 +47,7 @@ public class HostGradeController {
         boolean responseStatus = false;
 
         //-------------------------------------grpc poziv na rezervation service----------------------------------------
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9080)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("reservation-service", 9080)
                 .usePlaintext()
                 .build();
 
@@ -99,7 +99,7 @@ public class HostGradeController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/hostGrade/averageGrade/{accommodationId}")
+    @GetMapping("/hostGrade/averageGrade/{hostId}")
     public ResponseEntity<Double> getHostAverageGrade(@PathVariable Long hostId){
         Double averageGrade = hostGradeService.getHostAverageGrade(hostId);
         return new ResponseEntity<>(averageGrade, HttpStatus.OK);

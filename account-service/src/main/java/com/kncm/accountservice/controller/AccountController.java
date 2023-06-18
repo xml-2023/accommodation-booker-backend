@@ -54,12 +54,12 @@ public class AccountController {
             if (!service.exists(user.getUsername())) {
                 // Create a gRPC channel to the accommodation-service
                 //-------------------------------------------Create host in accommodation service----------------------------------------------
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9091)
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("accommodation-service", 9091)
                         .usePlaintext()
                         .build();
 
                 // Create a gRPC client stub for the accommodation-service
-                UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel);
+                CreateUserServiceGrpc.CreateUserServiceBlockingStub userServiceStub = CreateUserServiceGrpc.newBlockingStub(channel);
                 try {
                     // Create a gRPC request to create a user in the accommodation-service
                     Accommodation.CreateUserRequest accommodationRequest = Accommodation.CreateUserRequest.newBuilder()
@@ -92,7 +92,7 @@ public class AccountController {
                 //-------------------------------------------Create host in accommodation service end ----------------------------------------------
 
                 //-------------------------------------------Create host in rating service----------------------------------------------
-                ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("localhost", 9099)
+                ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("rating-service", 9099)
                         .usePlaintext()
                         .build();
 
@@ -152,7 +152,7 @@ public class AccountController {
 
                 //-------------------------------------------Create host in reservation service----------------------------------------------
                 // Create a gRPC channel to the accommodation-service
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9094)
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("reservation-service", 9094)
                         .usePlaintext()
                         .build();
 
@@ -186,7 +186,7 @@ public class AccountController {
                 }
                 //-------------------------------------------Create host in reservation service end----------------------------------------------
                 //-------------------------------------------Create host in rating service----------------------------------------------
-                ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("localhost", 9099)
+                ManagedChannel ratingChannel = ManagedChannelBuilder.forAddress("rating-service", 9099)
                         .usePlaintext()
                         .build();
 
@@ -231,12 +231,12 @@ public class AccountController {
             User user = service.find(id);
             if (user != null) {
                 // Create a gRPC channel to the accommodation-service
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9091)
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("accommodation-service", 9091)
                         .usePlaintext()
                         .build();
 
                 // Create a gRPC client stub for the accommodation-service
-                UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel);
+                CreateUserServiceGrpc.CreateUserServiceBlockingStub userServiceStub = CreateUserServiceGrpc.newBlockingStub(channel);
                 try {
                     // Create a gRPC request to update a user in the accommodation-service
                     Accommodation.UpdateUserRequest accommodationRequest = Accommodation.UpdateUserRequest.newBuilder()
@@ -297,7 +297,7 @@ public class AccountController {
             User user = service.find(id);
             if (user != null) {
                 // Create a gRPC channel to the accommodation-service
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9094)
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("reservation-service", 9094)
                         .usePlaintext()
                         .build();
 
@@ -362,7 +362,7 @@ public class AccountController {
         User user = service.find(id);
         boolean responseStatus = false;
         if (user != null) {
-            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9094)
+            ManagedChannel channel = ManagedChannelBuilder.forAddress("reservation-service", 9094)
                     .usePlaintext()
                     .build();
 
@@ -409,7 +409,7 @@ public class AccountController {
         boolean canBeDeleted = false;
         boolean responseStatus = false;
         if (user != null) {
-            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9095)
+            ManagedChannel channel = ManagedChannelBuilder.forAddress("accommodation-service", 9095)
                     .usePlaintext()
                     .build();
 
@@ -437,7 +437,7 @@ public class AccountController {
 
                 //********************************************************************************
 
-                ManagedChannel channel1 = ManagedChannelBuilder.forAddress("localhost", 9094)
+                ManagedChannel channel1 = ManagedChannelBuilder.forAddress("reservation-service", 9094)
                         .usePlaintext()
                         .build();
 
@@ -470,12 +470,12 @@ public class AccountController {
                     //*********************************************************************************
 
                     if (canBeDeleted) {
-                        ManagedChannel channel2 = ManagedChannelBuilder.forAddress("localhost", 9091)
+                        ManagedChannel channel2 = ManagedChannelBuilder.forAddress("accommodation-service", 9091)
                                 .usePlaintext()
                                 .build();
 
                         // Create a gRPC client stub for the accommodation-service
-                        UserServiceGrpc.UserServiceBlockingStub userServiceStub = UserServiceGrpc.newBlockingStub(channel2);
+                        CreateUserServiceGrpc.CreateUserServiceBlockingStub userServiceStub = CreateUserServiceGrpc.newBlockingStub(channel2);
                         try {
                             // Create a gRPC request to update a user in the accommodation-service
                             Accommodation.DeleteUserRequest deleteRequest = Accommodation.DeleteUserRequest.newBuilder()
@@ -571,7 +571,7 @@ public class AccountController {
         }
         boolean responseStatus = false;
         //-------------------------------------------Grpc begin to rating service----------------------------------------------
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9099)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("rating-service", 9099)
                 .usePlaintext()
                 .build();
 

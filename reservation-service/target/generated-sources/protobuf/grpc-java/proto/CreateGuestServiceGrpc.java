@@ -15,29 +15,29 @@ public final class CreateGuestServiceGrpc {
   public static final String SERVICE_NAME = "proto.CreateGuestService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<AccountReservation.CreateGuestRequest,
-      AccountReservation.CreateGuestResponse> getCreateUserMethod;
+  private static volatile io.grpc.MethodDescriptor<proto.AccountReservation.CreateGuestRequest,
+      proto.AccountReservation.CreateGuestResponse> getCreateUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateUser",
-      requestType = AccountReservation.CreateGuestRequest.class,
-      responseType = AccountReservation.CreateGuestResponse.class,
+      requestType = proto.AccountReservation.CreateGuestRequest.class,
+      responseType = proto.AccountReservation.CreateGuestResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<AccountReservation.CreateGuestRequest,
-      AccountReservation.CreateGuestResponse> getCreateUserMethod() {
-    io.grpc.MethodDescriptor<AccountReservation.CreateGuestRequest, AccountReservation.CreateGuestResponse> getCreateUserMethod;
+  public static io.grpc.MethodDescriptor<proto.AccountReservation.CreateGuestRequest,
+      proto.AccountReservation.CreateGuestResponse> getCreateUserMethod() {
+    io.grpc.MethodDescriptor<proto.AccountReservation.CreateGuestRequest, proto.AccountReservation.CreateGuestResponse> getCreateUserMethod;
     if ((getCreateUserMethod = CreateGuestServiceGrpc.getCreateUserMethod) == null) {
       synchronized (CreateGuestServiceGrpc.class) {
         if ((getCreateUserMethod = CreateGuestServiceGrpc.getCreateUserMethod) == null) {
           CreateGuestServiceGrpc.getCreateUserMethod = getCreateUserMethod =
-              io.grpc.MethodDescriptor.<AccountReservation.CreateGuestRequest, AccountReservation.CreateGuestResponse>newBuilder()
+              io.grpc.MethodDescriptor.<proto.AccountReservation.CreateGuestRequest, proto.AccountReservation.CreateGuestResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.CreateGuestRequest.getDefaultInstance()))
+                  proto.AccountReservation.CreateGuestRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.CreateGuestResponse.getDefaultInstance()))
+                  proto.AccountReservation.CreateGuestResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CreateGuestServiceMethodDescriptorSupplier("CreateUser"))
               .build();
         }
@@ -46,29 +46,29 @@ public final class CreateGuestServiceGrpc {
     return getCreateUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<AccountReservation.UpdateGuestRequest,
-      AccountReservation.UpdateGuestResponse> getUpdateUserMethod;
+  private static volatile io.grpc.MethodDescriptor<proto.AccountReservation.UpdateGuestRequest,
+      proto.AccountReservation.UpdateGuestResponse> getUpdateUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "UpdateUser",
-      requestType = AccountReservation.UpdateGuestRequest.class,
-      responseType = AccountReservation.UpdateGuestResponse.class,
+      requestType = proto.AccountReservation.UpdateGuestRequest.class,
+      responseType = proto.AccountReservation.UpdateGuestResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<AccountReservation.UpdateGuestRequest,
-      AccountReservation.UpdateGuestResponse> getUpdateUserMethod() {
-    io.grpc.MethodDescriptor<AccountReservation.UpdateGuestRequest, AccountReservation.UpdateGuestResponse> getUpdateUserMethod;
+  public static io.grpc.MethodDescriptor<proto.AccountReservation.UpdateGuestRequest,
+      proto.AccountReservation.UpdateGuestResponse> getUpdateUserMethod() {
+    io.grpc.MethodDescriptor<proto.AccountReservation.UpdateGuestRequest, proto.AccountReservation.UpdateGuestResponse> getUpdateUserMethod;
     if ((getUpdateUserMethod = CreateGuestServiceGrpc.getUpdateUserMethod) == null) {
       synchronized (CreateGuestServiceGrpc.class) {
         if ((getUpdateUserMethod = CreateGuestServiceGrpc.getUpdateUserMethod) == null) {
           CreateGuestServiceGrpc.getUpdateUserMethod = getUpdateUserMethod =
-              io.grpc.MethodDescriptor.<AccountReservation.UpdateGuestRequest, AccountReservation.UpdateGuestResponse>newBuilder()
+              io.grpc.MethodDescriptor.<proto.AccountReservation.UpdateGuestRequest, proto.AccountReservation.UpdateGuestResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.UpdateGuestRequest.getDefaultInstance()))
+                  proto.AccountReservation.UpdateGuestRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.UpdateGuestResponse.getDefaultInstance()))
+                  proto.AccountReservation.UpdateGuestResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CreateGuestServiceMethodDescriptorSupplier("UpdateUser"))
               .build();
         }
@@ -77,29 +77,29 @@ public final class CreateGuestServiceGrpc {
     return getUpdateUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<AccountReservation.DeleteGuestRequest,
-      AccountReservation.DeleteGuestResponse> getDeleteUserMethod;
+  private static volatile io.grpc.MethodDescriptor<proto.AccountReservation.DeleteGuestRequest,
+      proto.AccountReservation.DeleteGuestResponse> getDeleteUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DeleteUser",
-      requestType = AccountReservation.DeleteGuestRequest.class,
-      responseType = AccountReservation.DeleteGuestResponse.class,
+      requestType = proto.AccountReservation.DeleteGuestRequest.class,
+      responseType = proto.AccountReservation.DeleteGuestResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<AccountReservation.DeleteGuestRequest,
-      AccountReservation.DeleteGuestResponse> getDeleteUserMethod() {
-    io.grpc.MethodDescriptor<AccountReservation.DeleteGuestRequest, AccountReservation.DeleteGuestResponse> getDeleteUserMethod;
+  public static io.grpc.MethodDescriptor<proto.AccountReservation.DeleteGuestRequest,
+      proto.AccountReservation.DeleteGuestResponse> getDeleteUserMethod() {
+    io.grpc.MethodDescriptor<proto.AccountReservation.DeleteGuestRequest, proto.AccountReservation.DeleteGuestResponse> getDeleteUserMethod;
     if ((getDeleteUserMethod = CreateGuestServiceGrpc.getDeleteUserMethod) == null) {
       synchronized (CreateGuestServiceGrpc.class) {
         if ((getDeleteUserMethod = CreateGuestServiceGrpc.getDeleteUserMethod) == null) {
           CreateGuestServiceGrpc.getDeleteUserMethod = getDeleteUserMethod =
-              io.grpc.MethodDescriptor.<AccountReservation.DeleteGuestRequest, AccountReservation.DeleteGuestResponse>newBuilder()
+              io.grpc.MethodDescriptor.<proto.AccountReservation.DeleteGuestRequest, proto.AccountReservation.DeleteGuestResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.DeleteGuestRequest.getDefaultInstance()))
+                  proto.AccountReservation.DeleteGuestRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.DeleteGuestResponse.getDefaultInstance()))
+                  proto.AccountReservation.DeleteGuestResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CreateGuestServiceMethodDescriptorSupplier("DeleteUser"))
               .build();
         }
@@ -108,29 +108,29 @@ public final class CreateGuestServiceGrpc {
     return getDeleteUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<AccountReservation.CanHostBeDeletedRequest,
-      AccountReservation.CanHostBeDeletedResponse> getCanHostBeDeletedMethod;
+  private static volatile io.grpc.MethodDescriptor<proto.AccountReservation.CanHostBeDeletedRequest,
+      proto.AccountReservation.CanHostBeDeletedResponse> getCanHostBeDeletedMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CanHostBeDeleted",
-      requestType = AccountReservation.CanHostBeDeletedRequest.class,
-      responseType = AccountReservation.CanHostBeDeletedResponse.class,
+      requestType = proto.AccountReservation.CanHostBeDeletedRequest.class,
+      responseType = proto.AccountReservation.CanHostBeDeletedResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<AccountReservation.CanHostBeDeletedRequest,
-      AccountReservation.CanHostBeDeletedResponse> getCanHostBeDeletedMethod() {
-    io.grpc.MethodDescriptor<AccountReservation.CanHostBeDeletedRequest, AccountReservation.CanHostBeDeletedResponse> getCanHostBeDeletedMethod;
+  public static io.grpc.MethodDescriptor<proto.AccountReservation.CanHostBeDeletedRequest,
+      proto.AccountReservation.CanHostBeDeletedResponse> getCanHostBeDeletedMethod() {
+    io.grpc.MethodDescriptor<proto.AccountReservation.CanHostBeDeletedRequest, proto.AccountReservation.CanHostBeDeletedResponse> getCanHostBeDeletedMethod;
     if ((getCanHostBeDeletedMethod = CreateGuestServiceGrpc.getCanHostBeDeletedMethod) == null) {
       synchronized (CreateGuestServiceGrpc.class) {
         if ((getCanHostBeDeletedMethod = CreateGuestServiceGrpc.getCanHostBeDeletedMethod) == null) {
           CreateGuestServiceGrpc.getCanHostBeDeletedMethod = getCanHostBeDeletedMethod =
-              io.grpc.MethodDescriptor.<AccountReservation.CanHostBeDeletedRequest, AccountReservation.CanHostBeDeletedResponse>newBuilder()
+              io.grpc.MethodDescriptor.<proto.AccountReservation.CanHostBeDeletedRequest, proto.AccountReservation.CanHostBeDeletedResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CanHostBeDeleted"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.CanHostBeDeletedRequest.getDefaultInstance()))
+                  proto.AccountReservation.CanHostBeDeletedRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  AccountReservation.CanHostBeDeletedResponse.getDefaultInstance()))
+                  proto.AccountReservation.CanHostBeDeletedResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CreateGuestServiceMethodDescriptorSupplier("CanHostBeDeleted"))
               .build();
         }
@@ -145,7 +145,7 @@ public final class CreateGuestServiceGrpc {
   public static CreateGuestServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<CreateGuestServiceStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<CreateGuestServiceStub>() {
-        @Override
+        @java.lang.Override
         public CreateGuestServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new CreateGuestServiceStub(channel, callOptions);
         }
@@ -160,7 +160,7 @@ public final class CreateGuestServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<CreateGuestServiceBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<CreateGuestServiceBlockingStub>() {
-        @Override
+        @java.lang.Override
         public CreateGuestServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new CreateGuestServiceBlockingStub(channel, callOptions);
         }
@@ -175,7 +175,7 @@ public final class CreateGuestServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<CreateGuestServiceFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<CreateGuestServiceFutureStub>() {
-        @Override
+        @java.lang.Override
         public CreateGuestServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new CreateGuestServiceFutureStub(channel, callOptions);
         }
@@ -189,29 +189,29 @@ public final class CreateGuestServiceGrpc {
 
     /**
      */
-    default void createUser(AccountReservation.CreateGuestRequest request,
-                            io.grpc.stub.StreamObserver<AccountReservation.CreateGuestResponse> responseObserver) {
+    default void createUser(proto.AccountReservation.CreateGuestRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.CreateGuestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateUser(AccountReservation.UpdateGuestRequest request,
-                            io.grpc.stub.StreamObserver<AccountReservation.UpdateGuestResponse> responseObserver) {
+    default void updateUser(proto.AccountReservation.UpdateGuestRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.UpdateGuestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteUser(AccountReservation.DeleteGuestRequest request,
-                            io.grpc.stub.StreamObserver<AccountReservation.DeleteGuestResponse> responseObserver) {
+    default void deleteUser(proto.AccountReservation.DeleteGuestRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.DeleteGuestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteUserMethod(), responseObserver);
     }
 
     /**
      */
-    default void canHostBeDeleted(AccountReservation.CanHostBeDeletedRequest request,
-                                  io.grpc.stub.StreamObserver<AccountReservation.CanHostBeDeletedResponse> responseObserver) {
+    default void canHostBeDeleted(proto.AccountReservation.CanHostBeDeletedRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.CanHostBeDeletedResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCanHostBeDeletedMethod(), responseObserver);
     }
   }
@@ -222,7 +222,7 @@ public final class CreateGuestServiceGrpc {
   public static abstract class CreateGuestServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return CreateGuestServiceGrpc.bindService(this);
     }
   }
@@ -237,7 +237,7 @@ public final class CreateGuestServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected CreateGuestServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CreateGuestServiceStub(channel, callOptions);
@@ -245,32 +245,32 @@ public final class CreateGuestServiceGrpc {
 
     /**
      */
-    public void createUser(AccountReservation.CreateGuestRequest request,
-                           io.grpc.stub.StreamObserver<AccountReservation.CreateGuestResponse> responseObserver) {
+    public void createUser(proto.AccountReservation.CreateGuestRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.CreateGuestResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void updateUser(AccountReservation.UpdateGuestRequest request,
-                           io.grpc.stub.StreamObserver<AccountReservation.UpdateGuestResponse> responseObserver) {
+    public void updateUser(proto.AccountReservation.UpdateGuestRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.UpdateGuestResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateUserMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void deleteUser(AccountReservation.DeleteGuestRequest request,
-                           io.grpc.stub.StreamObserver<AccountReservation.DeleteGuestResponse> responseObserver) {
+    public void deleteUser(proto.AccountReservation.DeleteGuestRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.DeleteGuestResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteUserMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void canHostBeDeleted(AccountReservation.CanHostBeDeletedRequest request,
-                                 io.grpc.stub.StreamObserver<AccountReservation.CanHostBeDeletedResponse> responseObserver) {
+    public void canHostBeDeleted(proto.AccountReservation.CanHostBeDeletedRequest request,
+        io.grpc.stub.StreamObserver<proto.AccountReservation.CanHostBeDeletedResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCanHostBeDeletedMethod(), getCallOptions()), request, responseObserver);
     }
@@ -286,7 +286,7 @@ public final class CreateGuestServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected CreateGuestServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CreateGuestServiceBlockingStub(channel, callOptions);
@@ -294,28 +294,28 @@ public final class CreateGuestServiceGrpc {
 
     /**
      */
-    public AccountReservation.CreateGuestResponse createUser(AccountReservation.CreateGuestRequest request) {
+    public proto.AccountReservation.CreateGuestResponse createUser(proto.AccountReservation.CreateGuestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public AccountReservation.UpdateGuestResponse updateUser(AccountReservation.UpdateGuestRequest request) {
+    public proto.AccountReservation.UpdateGuestResponse updateUser(proto.AccountReservation.UpdateGuestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public AccountReservation.DeleteGuestResponse deleteUser(AccountReservation.DeleteGuestRequest request) {
+    public proto.AccountReservation.DeleteGuestResponse deleteUser(proto.AccountReservation.DeleteGuestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public AccountReservation.CanHostBeDeletedResponse canHostBeDeleted(AccountReservation.CanHostBeDeletedRequest request) {
+    public proto.AccountReservation.CanHostBeDeletedResponse canHostBeDeleted(proto.AccountReservation.CanHostBeDeletedRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCanHostBeDeletedMethod(), getCallOptions(), request);
     }
@@ -331,7 +331,7 @@ public final class CreateGuestServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected CreateGuestServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CreateGuestServiceFutureStub(channel, callOptions);
@@ -339,32 +339,32 @@ public final class CreateGuestServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<AccountReservation.CreateGuestResponse> createUser(
-        AccountReservation.CreateGuestRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<proto.AccountReservation.CreateGuestResponse> createUser(
+        proto.AccountReservation.CreateGuestRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<AccountReservation.UpdateGuestResponse> updateUser(
-        AccountReservation.UpdateGuestRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<proto.AccountReservation.UpdateGuestResponse> updateUser(
+        proto.AccountReservation.UpdateGuestRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateUserMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<AccountReservation.DeleteGuestResponse> deleteUser(
-        AccountReservation.DeleteGuestRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<proto.AccountReservation.DeleteGuestResponse> deleteUser(
+        proto.AccountReservation.DeleteGuestRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteUserMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<AccountReservation.CanHostBeDeletedResponse> canHostBeDeleted(
-        AccountReservation.CanHostBeDeletedRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<proto.AccountReservation.CanHostBeDeletedResponse> canHostBeDeleted(
+        proto.AccountReservation.CanHostBeDeletedRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCanHostBeDeletedMethod(), getCallOptions()), request);
     }
@@ -388,33 +388,33 @@ public final class CreateGuestServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_USER:
-          serviceImpl.createUser((AccountReservation.CreateGuestRequest) request,
-              (io.grpc.stub.StreamObserver<AccountReservation.CreateGuestResponse>) responseObserver);
+          serviceImpl.createUser((proto.AccountReservation.CreateGuestRequest) request,
+              (io.grpc.stub.StreamObserver<proto.AccountReservation.CreateGuestResponse>) responseObserver);
           break;
         case METHODID_UPDATE_USER:
-          serviceImpl.updateUser((AccountReservation.UpdateGuestRequest) request,
-              (io.grpc.stub.StreamObserver<AccountReservation.UpdateGuestResponse>) responseObserver);
+          serviceImpl.updateUser((proto.AccountReservation.UpdateGuestRequest) request,
+              (io.grpc.stub.StreamObserver<proto.AccountReservation.UpdateGuestResponse>) responseObserver);
           break;
         case METHODID_DELETE_USER:
-          serviceImpl.deleteUser((AccountReservation.DeleteGuestRequest) request,
-              (io.grpc.stub.StreamObserver<AccountReservation.DeleteGuestResponse>) responseObserver);
+          serviceImpl.deleteUser((proto.AccountReservation.DeleteGuestRequest) request,
+              (io.grpc.stub.StreamObserver<proto.AccountReservation.DeleteGuestResponse>) responseObserver);
           break;
         case METHODID_CAN_HOST_BE_DELETED:
-          serviceImpl.canHostBeDeleted((AccountReservation.CanHostBeDeletedRequest) request,
-              (io.grpc.stub.StreamObserver<AccountReservation.CanHostBeDeletedResponse>) responseObserver);
+          serviceImpl.canHostBeDeleted((proto.AccountReservation.CanHostBeDeletedRequest) request,
+              (io.grpc.stub.StreamObserver<proto.AccountReservation.CanHostBeDeletedResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -430,29 +430,29 @@ public final class CreateGuestServiceGrpc {
           getCreateUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              AccountReservation.CreateGuestRequest,
-              AccountReservation.CreateGuestResponse>(
+              proto.AccountReservation.CreateGuestRequest,
+              proto.AccountReservation.CreateGuestResponse>(
                 service, METHODID_CREATE_USER)))
         .addMethod(
           getUpdateUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              AccountReservation.UpdateGuestRequest,
-              AccountReservation.UpdateGuestResponse>(
+              proto.AccountReservation.UpdateGuestRequest,
+              proto.AccountReservation.UpdateGuestResponse>(
                 service, METHODID_UPDATE_USER)))
         .addMethod(
           getDeleteUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              AccountReservation.DeleteGuestRequest,
-              AccountReservation.DeleteGuestResponse>(
+              proto.AccountReservation.DeleteGuestRequest,
+              proto.AccountReservation.DeleteGuestResponse>(
                 service, METHODID_DELETE_USER)))
         .addMethod(
           getCanHostBeDeletedMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              AccountReservation.CanHostBeDeletedRequest,
-              AccountReservation.CanHostBeDeletedResponse>(
+              proto.AccountReservation.CanHostBeDeletedRequest,
+              proto.AccountReservation.CanHostBeDeletedResponse>(
                 service, METHODID_CAN_HOST_BE_DELETED)))
         .build();
   }
@@ -461,12 +461,12 @@ public final class CreateGuestServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     CreateGuestServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return AccountReservation.getDescriptor();
+      return proto.AccountReservation.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("CreateGuestService");
     }
@@ -486,7 +486,7 @@ public final class CreateGuestServiceGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }

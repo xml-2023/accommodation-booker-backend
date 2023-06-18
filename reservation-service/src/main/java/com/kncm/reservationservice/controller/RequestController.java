@@ -75,7 +75,7 @@ public class RequestController {
         boolean responseStatus = false;
 
         //grpc za accommodation da se updatuju termini
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9092)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("accommodation-service", 9092)
                 .usePlaintext()
                 .build();
         ReservationRequestServiceGrpc.ReservationRequestServiceBlockingStub requestServiceBlockingStub = ReservationRequestServiceGrpc.newBlockingStub(channel);
@@ -139,7 +139,7 @@ public class RequestController {
         String reservationStatus = "";
 
         // Create a gRPC channel to the accommodation-service
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9092)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("accommodation-service", 9092)
                 .usePlaintext()
                 .build();
 
