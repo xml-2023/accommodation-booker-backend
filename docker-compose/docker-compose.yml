@@ -97,6 +97,8 @@ services:
       - discovery-server
     volumes:
       - accommodation_service_data:/var/lib/accommodation_service
+    #networks:
+     # - grpc-network
   #account-service --------------------------------
   account-service:
     build:
@@ -118,6 +120,8 @@ services:
       - discovery-server
     volumes:
       - account_service_data:/var/lib/account_service
+    #networks:
+      #- grpc-network
   #rating-service --------------------------------
   rating-service:
     build:
@@ -139,6 +143,8 @@ services:
       - discovery-server
     volumes:
       - rating_service_data:/var/lib/rating_service
+    #networks:
+      #- grpc-network
   #reservation-service --------------------------------
   reservation-service:
     build:
@@ -161,6 +167,8 @@ services:
       - discovery-server
     volumes:
       - reservation_service_data:/var/lib/reservation_service
+    #networks:
+      #- grpc-network
 volumes:
   pgadmin_acc_booker_data:
     driver: local
@@ -182,3 +190,6 @@ volumes:
     driver: local
   reservation_service_data:
     driver: local
+#networks:
+  #grpc-network:
+    #driver: bridge

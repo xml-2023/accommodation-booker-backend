@@ -102,7 +102,7 @@ public class CrudUserServiceGrpc extends ManageUserServiceGrpc.ManageUserService
             isDistinguished = hostGradeService.isHostGradeBigEnoughForDistinguishedStatus(host);
             if (isDistinguished) {
                 //-------------------------------------------Grpc begin to reservation service----------------------------------------------
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9080)
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("reservation-service", 9080)
                         .usePlaintext()
                         .build();
 
